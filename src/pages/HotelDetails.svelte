@@ -64,6 +64,14 @@
             Book Now
           </button>
         </div>
+
+        <!-- Comments Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <div>
+            
+            Comment 1
+          </div>
+        </div>
       </div>
     </div>
   </div>
