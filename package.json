@@ -1,0 +1,29 @@
+{
+  "name": "hotelscape-svelte",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://smurfedgithubio.github.io/pi100-tripadvisor",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@tsconfig/svelte": "^5.0.2",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.4.24",
+    "svelte": "^4.2.8",
+    "svelte-check": "^3.4.6",
+    "tailwindcss": "^3.3.2",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "svelte-spa-router": "^3.3.0"
+  }
+}
