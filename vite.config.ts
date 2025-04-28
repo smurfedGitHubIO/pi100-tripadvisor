@@ -5,4 +5,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   base: "/pi100-tripadvisor/",
   plugins: [svelte()],
+  build: {
+    outDir: 'docs',
+  }
 })
