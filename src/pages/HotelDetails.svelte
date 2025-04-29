@@ -7,7 +7,6 @@
   let hotel: any;
   
   $: {
-    // Ensure params.id exists before trying to find the hotel
     hotel = $params?.id ? hotels.find(h => h.id === $params.id) : null;
   }
 </script>
@@ -68,7 +67,7 @@
         <!-- Comments Section -->
         <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
           <div>
-            
+
             Comment 1
           </div>
         </div>
