@@ -191,7 +191,6 @@
     border-radius: var(--radius-md);
     padding: var(--spacing-6);
     box-shadow: var(--shadow-md);
-    position: sticky;
     top: 100px;
     margin-bottom: var(--spacing-6);
     text-align: center;
