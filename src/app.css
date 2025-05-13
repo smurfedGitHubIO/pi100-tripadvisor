@@ -1,37 +1,41 @@
 :root {
-  /* Color system */
-  --color-primary: #2A9D8F;
-  --color-primary-light: #57BEB0;
-  --color-primary-dark: #1E7268;
+  /* Color system - Golden Era Marcos-inspired Theme */
+  --color-primary: #C5AF4B; /* Rich gold color */
+  --color-primary-light: #D9C779;
+  --color-primary-dark: #9E8C3C;
   
-  --color-secondary: #E9C46A;
-  --color-secondary-light: #F4D58D;
-  --color-secondary-dark: #C89F41;
+  --color-secondary: #2C5F91; /* Royal blue */
+  --color-secondary-light: #4F7DAA;
+  --color-secondary-dark: #1D4065;
   
-  --color-accent: #E76F51;
-  --color-accent-light: #F19880;
-  --color-accent-dark: #C04F33;
+  --color-accent: #C85246; /* Deep mahogany red */
+  --color-accent-light: #D77C72;
+  --color-accent-dark: #A04238;
   
-  --color-success: #4CAF50;
-  --color-warning: #FF9800;
-  --color-error: #F44336;
+  --color-tertiary: #9B6919; /* Rich wood brown */
+  --color-tertiary-light: #BC8A41;
+  --color-tertiary-dark: #754F13;
   
-  --color-gray-100: #F8F9FA;
-  --color-gray-200: #E9ECEF;
-  --color-gray-300: #DEE2E6;
-  --color-gray-400: #CED4DA;
-  --color-gray-500: #ADB5BD;
-  --color-gray-600: #6C757D;
-  --color-gray-700: #495057;
-  --color-gray-800: #343A40;
-  --color-gray-900: #212529;
+  --color-success: #4D865A; /* Deep forest green */
+  --color-warning: #D4A72C; /* Golden amber */
+  --color-error: #AB3232; /* Deep red */
   
-  --color-white: #FFFFFF;
-  --color-black: #000000;
+  --color-gray-100: #F9F7F1; /* Ivory/parchment tone */
+  --color-gray-200: #EFE9D8;
+  --color-gray-300: #E2D9C0;
+  --color-gray-400: #D4C9A8;
+  --color-gray-500: #BDB190;
+  --color-gray-600: #9D9178;
+  --color-gray-700: #7C7260;
+  --color-gray-800: #5C5448;
+  --color-gray-900: #3C3630;
+  
+  --color-white: #FBF9F4; /* Off-white parchment */
+  --color-black: #1A1611; /* Rich dark brown instead of pure black */
   
   /* Typography */
-  --font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-heading: 'Playfair Display', Georgia, serif;
+  --font-family: 'Cormorant Garamond', 'Times New Roman', serif; /* More regal, serif font */
+  --font-family-heading: 'Cinzel', 'Palatino', serif; /* Formal, ceremonial font */
   
   /* Spacing */
   --spacing-1: 0.25rem;
@@ -46,15 +50,17 @@
   --spacing-16: 4rem;
   
   /* Border radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
+  --radius-sm: 0.125rem; /* More subtle, conservative radii */
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
   --radius-full: 9999px;
   
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.07);
+  --shadow-sm: 0 1px 3px rgba(26, 22, 17, 0.1);
+  --shadow-md: 0 4px 6px rgba(26, 22, 17, 0.08), 0 1px 3px rgba(197, 175, 75, 0.1);
+  --shadow-lg: 0 10px 15px rgba(26, 22, 17, 0.05), 0 4px 6px rgba(197, 175, 75, 0.08);
+  --shadow-gold: 0 1px 3px rgba(197, 175, 75, 0.15);
+  --shadow-gold-lg: 0 8px 12px rgba(197, 175, 75, 0.12);
   
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -76,7 +82,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -124,13 +130,13 @@ h6 {
 
 a {
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
 }
 
 p {
@@ -146,13 +152,14 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-black);
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 button:hover {
   background-color: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
 button:focus,
@@ -312,6 +319,10 @@ button:focus-visible {
   color: var(--color-accent);
 }
 
+.text-tertiary {
+  color: var(--color-tertiary);
+}
+
 .text-white {
   color: var(--color-white);
 }
@@ -337,6 +348,18 @@ button:focus-visible {
   background-color: var(--color-primary);
 }
 
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-tertiary {
+  background-color: var(--color-tertiary);
+}
+
 .bg-light {
   background-color: var(--color-gray-100);
 }
@@ -352,17 +375,18 @@ button:focus-visible {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid var(--color-gray-200);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-gold-lg);
 }
 
 /* Button variants */
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-gray-900);
+  color: var(--color-white);
 }
 
 .btn-secondary:hover {
@@ -371,10 +395,20 @@ button:focus-visible {
 
 .btn-accent {
   background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .btn-accent:hover {
   background-color: var(--color-accent-dark);
+}
+
+.btn-tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
+}
+
+.btn-tertiary:hover {
+  background-color: var(--color-tertiary-dark);
 }
 
 .btn-outline {
@@ -385,7 +419,18 @@ button:focus-visible {
 
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-black);
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 /* Rating stars */
@@ -396,7 +441,7 @@ button:focus-visible {
 }
 
 .star {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 /* Image styles */
@@ -417,7 +462,7 @@ button:focus-visible {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-gold);
 }
 
 .carousel-slide {
@@ -437,17 +482,24 @@ button:focus-visible {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   background-color: var(--color-primary);
+  color: var(--color-black);
 }
 
 .badge-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-gray-900);
+  color: var(--color-white);
 }
 
 .badge-accent {
   background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.badge-tertiary {
+  background-color: var(--color-tertiary);
+  color: var(--color-white);
 }
 
 /* Animations */
@@ -497,7 +549,7 @@ button:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: linear-gradient(rgba(26, 22, 17, 0.4), rgba(26, 22, 17, 0.6));
   z-index: -1;
 }
 
@@ -506,11 +558,15 @@ button:focus-visible {
   max-width: 800px;
   padding: var(--spacing-6);
   z-index: 1;
+  border: 1px solid rgba(197, 175, 75, 0.3);
+  background-color: rgba(26, 22, 17, 0.5);
+  border-radius: var(--radius-md);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-6);
+  font-family: var(--font-family);
 }
 
 /* Price display */
@@ -532,6 +588,7 @@ button:focus-visible {
   border-radius: var(--radius-md);
   background-color: var(--color-gray-100);
   margin-bottom: var(--spacing-4);
+  border: 1px solid var(--color-gray-200);
 }
 
 .review-header {
@@ -546,6 +603,7 @@ button:focus-visible {
   height: 50px;
   border-radius: var(--radius-full);
   object-fit: cover;
+  border: 2px solid var(--color-primary-light);
 }
 
 .review-meta {
@@ -579,6 +637,7 @@ button:focus-visible {
   background-color: var(--color-gray-100);
   border-radius: var(--radius-md);
   font-size: 0.875rem;
+  border: 1px solid var(--color-gray-200);
 }
 
 /* Team member card */
@@ -592,7 +651,7 @@ button:focus-visible {
   object-fit: cover;
   border-radius: var(--radius-full);
   margin: 0 auto var(--spacing-4);
-  border: 3px solid var(--color-primary-light);
+  border: 3px solid var(--color-primary);
 }
 
 .team-name {
@@ -600,14 +659,14 @@ button:focus-visible {
 }
 
 .team-role {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-weight: 500;
   margin-bottom: var(--spacing-3);
 }
 
 /* Active navigation */
 .nav-active {
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -637,6 +696,7 @@ button:focus-visible {
   cursor: pointer;
   height: 0;
   padding-bottom: 75%; /* 4:3 aspect ratio */
+  border: 1px solid var(--color-gray-200);
 }
 
 .gallery-image img {
@@ -651,4 +711,48 @@ button:focus-visible {
 
 .gallery-image:hover img {
   transform: scale(1.05);
+}
+
+/* Golden Era Special Styles */
+.gold-border {
+  border: 1px solid var(--color-primary);
+}
+
+.gold-badge {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-black);
+  font-family: var(--font-family-heading);
+  letter-spacing: 0.5px;
+}
+
+.royal-card {
+  border: 1px solid var(--color-primary-light);
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.royal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary), var(--color-primary-dark));
+}
+
+.official-header {
+  border-bottom: 1px solid var(--color-primary-light);
+  position: relative;
+  padding-bottom: var(--spacing-3);
+}
+
+.official-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background-color: var(--color-primary);
 }
