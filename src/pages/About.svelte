@@ -28,7 +28,7 @@
     {
       name: "Frongs Frongoso",
       role: "Site Developer",
-      bio: "Frongs.",
+      bio: "That's not me.",
       image: frongs
     }
   ];
@@ -80,49 +80,6 @@
             </div>
           </div>
         {/each}
-      </div>
-    </div>
-  </section>
-  
-  <section class="approach-section">
-    <div class="container">
-      <h2 class="section-title">Our Approach</h2>
-      <div class="approach-cards">
-        <div class="approach-card">
-          <div class="card-icon">📚</div>
-          <h3>Historical Research</h3>
-          <p>
-            We conduct thorough research using primary sources, historical documents, and academic studies to provide accurate information about each infrastructure project.
-          </p>
-        </div>
-        <div class="approach-card">
-          <div class="card-icon">⚖️</div>
-          <h3>Balanced Perspective</h3>
-          <p>
-            We present multiple viewpoints and acknowledge both the achievements and controversies associated with these projects, allowing visitors to form their own opinions.
-          </p>
-        </div>
-        <div class="approach-card">
-          <div class="card-icon">🔍</div>
-          <h3>Contextual Understanding</h3>
-          <p>
-            We place each project within its historical, political, and economic context to provide a deeper understanding of the factors that influenced its development.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section class="disclaimer-section">
-    <div class="container">
-      <div class="disclaimer-box">
-        <h3>Important Disclaimer</h3>
-        <p>
-          GuiltTripAdvisor is a satirical project created for educational purposes. We are not affiliated with TripAdvisor or any official tourism organization. Our content aims to provide historical information and context about infrastructure projects from the Marcos era, but we encourage visitors to consult multiple sources and perspectives.
-        </p>
-        <p>
-          The term "Golden Age" is used critically, recognizing that this characterization is contested by many historians who point to the economic decline, human rights abuses, and corruption that also occurred during this period.
-        </p>
       </div>
     </div>
   </section>
