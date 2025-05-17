@@ -1,34 +1,35 @@
 <script>
+  import frongs from '$lib/assets/images/hnrvr.jpg';
   const teamMembers = [
     {
-      name: "Juan Dela Cruz",
+      name: "Patricia Reyes-Styles",
       role: "Founder & Historical Researcher",
       bio: "Juan has a PhD in Philippine History and has been documenting the infrastructure projects of the Marcos era for over 15 years.",
       image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      name: "Maria Santos",
+      name: "Shane Saludares",
       role: "Content Director",
       bio: "With a background in journalism, Maria ensures that all historical information is presented accurately and comprehensively.",
       image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      name: "Antonio Reyes",
+      name: "Angel Gelangre",
       role: "Infrastructure Specialist",
       bio: "Antonio is a civil engineer who provides technical analysis of the infrastructure projects featured on our platform.",
       image: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      name: "Sofia Lim",
+      name: "Raph Dequilla",
       role: "Community Manager",
       bio: "Sofia coordinates our network of local guides and ensures visitors get authentic experiences at each location.",
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      name: "Miguel Cruz",
-      role: "Digital Archivist",
-      bio: "Miguel collects and preserves historical photos and documents related to the featured infrastructure projects.",
-      image: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      name: "Frongs Frongoso",
+      role: "Site Developer",
+      bio: "Frongs.",
+      image: frongs
     }
   ];
 </script>
