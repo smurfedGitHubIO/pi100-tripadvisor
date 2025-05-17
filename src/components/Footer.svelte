@@ -2,128 +2,129 @@
   const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <h3 class="footer-logo">GuiltTrip<span class="text-primary">Advisor</span></h3>
-        <p>Discover extraordinary destinations with honest reviews and detailed information.</p>
-      </div>
-      
-      <div class="footer-links">
-        <div class="footer-section">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/">Featured Destinations</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="/">Help Center</a></li>
-            <li><a href="/">Privacy Policy</a></li>
-            <li><a href="/">Terms of Service</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <ul class="social-links">
-            <li><a href="/" aria-label="Facebook">Facebook</a></li>
-            <li><a href="/" aria-label="Instagram">Instagram</a></li>
-            <li><a href="/" aria-label="Twitter">Twitter</a></li>
-          </ul>
-        </div>
-      </div>
+<footer>
+  <div class="container footer-content">
+    <div class="footer-logo">
+      <h2>GuiltTripAdvisor</h2>
+      <p class="tagline">Revisiting the "Golden Age"</p>
     </div>
     
-    <div class="footer-bottom">
-      <p>&copy; {currentYear} GuiltTripAdvisor. All rights reserved.</p>
+    <div class="footer-links">
+      <div class="links-column">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="links-column">
+        <h3>Popular Infrastructures</h3>
+        <ul>
+          <li><a href="/infrastructure/1">San Juanico Bridge</a></li>
+          <li><a href="/infrastructure/2">Cultural Center of the Philippines</a></li>
+          <li><a href="/infrastructure/3">Philippine Heart Center</a></li>
+        </ul>
+      </div>
+      
+      <div class="links-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {currentYear} GuiltTripAdvisor - A satirical project</p>
+      <p class="disclaimer">This website is a fictional parody and not affiliated with TripAdvisor.</p>
     </div>
   </div>
 </footer>
 
 <style>
-  .footer {
-    background-color: var(--color-gray-800);
-    color: var(--color-gray-300);
-    padding: var(--spacing-12) 0 var(--spacing-4);
-    margin-top: var(--spacing-16);
+  footer {
+    background-color: var(--accent-brown);
+    color: var(--light-gold);
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
   
   .footer-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-8);
-    margin-bottom: var(--spacing-8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
   }
   
-  .footer-brand {
-    max-width: 350px;
+  .footer-logo h2 {
+    color: var(--primary-gold);
+    margin-bottom: 0.25rem;
   }
   
-  .footer-logo {
-    font-family: var(--font-family-heading);
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-3);
-    color: var(--color-white);
+  .tagline {
+    font-style: italic;
+    font-size: 0.9rem;
   }
   
   .footer-links {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--spacing-6);
-  }
-  
-  .footer-section h4 {
-    color: var(--color-white);
-    margin-bottom: var(--spacing-4);
-    font-size: 1.25rem;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-section li {
-    margin-bottom: var(--spacing-2);
-  }
-  
-  .footer-section a {
-    color: var(--color-gray-400);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-  }
-  
-  .footer-section a:hover {
-    color: var(--color-primary-light);
-  }
-  
-  .social-links {
     display: flex;
-    gap: var(--spacing-3);
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .links-column h3 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .links-column ul {
+    list-style: none;
+  }
+  
+  .links-column li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .links-column a {
+    color: var(--light-gold);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .links-column a:hover {
+    color: var(--primary-gold);
+    text-decoration: underline;
   }
   
   .footer-bottom {
-    padding-top: var(--spacing-6);
-    border-top: 1px solid var(--color-gray-700);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
     text-align: center;
-    font-size: 0.875rem;
-    color: var(--color-gray-500);
+    font-size: 0.9rem;
   }
   
-  @media (min-width: 768px) {
+  .disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
     .footer-content {
-      grid-template-columns: 1fr 2fr;
+      flex-direction: column;
+      gap: 1rem;
     }
     
     .footer-links {
-      grid-template-columns: repeat(3, 1fr);
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 </style>

@@ -1,301 +1,193 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import infrastructures from '../data/infrastructures';
-  import InfrastructureCarousel from '../components/InfrastructureCarousel.svelte';
-  import InfrastructureCard from '../components/InfrastructureCard.svelte';
-  
-  let activeCategory = 'all';
-  let filteredInfrastructures = [...infrastructures];
-  
-  // Categories for filter
-  const categories = [
-    { id: 'all', name: 'All' },
-    { id: 'hotel', name: 'Hotels' },
-    { id: 'restaurant', name: 'Restaurants' },
-    { id: 'attraction', name: 'Attractions' },
-    { id: 'vacation-rental', name: 'Vacation Rentals' }
-  ];
-  
-  function filterByCategory(category: string) {
-    activeCategory = category;
-    
-    if (category === 'all') {
-      filteredInfrastructures = [...infrastructures];
-    } else {
-      filteredInfrastructures = infrastructures.filter(item => item.category === category);
-    }
-  }
-  
-  // Get URL search params on mount
-  onMount(() => {
-    const url = new URL(window.location.href);
-    const category = url.searchParams.get('category');
-    
-    if (category) {
-      filterByCategory(category);
-    }
-  });
+  import Carousel from '../components/Carousel.svelte';
+  import InfrastructureGrid from '../components/InfrastructureGrid.svelte';
 </script>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Discover Amazing Places</h1>
-    <p>Find and review the best destinations around the world</p>
-    <div class="hero-cta">
-      <a href="#explore" class="btn btn-primary">Explore Now</a>
-      <a href="#categories" class="btn btn-outline">Browse Categories</a>
-    </div>
-  </div>
-</section>
-
-<section class="featured-section">
-  <InfrastructureCarousel 
-    infrastructures={infrastructures}
-    title="Featured Destinations"
-    subtitle="Explore our top-rated locations loved by travelers"
-  />
-</section>
-
-<section id="categories" class="categories-section">
-  <div class="section-header">
-    <h2>Browse by Category</h2>
-    <p>Find the perfect place for your next adventure</p>
-  </div>
-  
-  <div class="category-filters">
-    {#each categories as category}
-      <button 
-        class="category-btn" 
-        class:active={activeCategory === category.id}
-        on:click={() => filterByCategory(category.id)}
-      >
-        {category.name}
-      </button>
-    {/each}
-  </div>
-  
-  <div id="explore" class="infrastructure-grid">
-    {#each filteredInfrastructures as infrastructure}
-      <div class="grid-item">
-        <InfrastructureCard {infrastructure} />
+<div class="home">
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover the "Golden Age" of Infrastructure</h1>
+        <p class="hero-subtitle">
+          Experience the grandeur of the Marcos era's most celebrated infrastructure projects
+        </p>
       </div>
-    {/each}
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="cta-content">
-    <h2>Ready for your next adventure?</h2>
-    <p>Join thousands of travelers who trust TripExplorer for their journey</p>
-    <a href="#explore" class="btn btn-secondary">Start Exploring</a>
-  </div>
-</section>
+    </div>
+  </section>
+  
+  <section class="featured-section">
+    <div class="container">
+      <Carousel />
+    </div>
+  </section>
+  
+  <section class="info-banner">
+    <div class="container">
+      <div class="banner-content">
+        <h2>Experience Historical Tourism</h2>
+        <p>
+          GuiltTripAdvisor allows you to explore the controversial legacy of the Marcos administration's 
+          infrastructure projects. Visit historical landmarks, understand their historical context, 
+          and form your own opinion about this complex period in Philippine history.
+        </p>
+        <a href="/about" class="btn banner-btn">Learn About Our Mission</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="grid-section">
+    <div class="container">
+      <InfrastructureGrid />
+    </div>
+  </section>
+  
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="section-title">What Our Users Say</h2>
+      <div class="testimonial">
+        <div class="quote-icon">❝</div>
+        <p class="quote-text">
+          This platform offers an intriguing glimpse into the infrastructure legacy of the Marcos era.
+          It's fascinating to see these historical landmarks through a different lens and understand 
+          their historical significance. A must-visit for anyone interested in Philippine history!
+        </p>
+        <div class="quote-author">— Maria Santos, History Professor</div>
+      </div>
+    </div>
+  </section>
+</div>
 
 <style>
-  .hero {
-    height: 80vh;
-    min-height: 500px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg');
+  .hero-section {
+    background-image: url('https://images.pexels.com/photos/1057840/pexels-photo-1057840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    margin-bottom: var(--space-12);
     position: relative;
+    color: white;
+    padding: 6rem 0;
+    margin-bottom: 2rem;
   }
   
-  .hero::after {
+  .hero-section::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, rgba(249, 249, 251, 1), transparent);
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   }
   
   .hero-content {
-    max-width: 800px;
-    padding: var(--space-4);
-    z-index: 1;
-  }
-  
-  .hero h1 {
-    font-size: var(--font-4xl);
-    margin-bottom: var(--space-4);
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero p {
-    font-size: var(--font-xl);
-    margin-bottom: var(--space-8);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-4);
-  }
-  
-  .hero-cta .btn {
-    padding: var(--space-3) var(--space-6);
-    font-size: var(--font-lg);
-    font-weight: 500;
-  }
-  
-  .hero-cta .btn-outline {
-    border-color: white;
-    color: white;
-  }
-  
-  .hero-cta .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .featured-section,
-  .categories-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-4);
-    margin-bottom: var(--space-16);
-  }
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: var(--space-8);
-  }
-  
-  .section-header h2 {
-    font-size: var(--font-3xl);
-    margin-bottom: var(--space-2);
-    color: var(--neutral-900);
-  }
-  
-  .section-header p {
-    color: var(--neutral-600);
-    font-size: var(--font-lg);
-  }
-  
-  .category-filters {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    margin-bottom: var(--space-8);
-  }
-  
-  .category-btn {
-    background-color: white;
-    border: 1px solid var(--neutral-300);
-    color: var(--neutral-700);
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-lg);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-  }
-  
-  .category-btn:hover {
-    border-color: var(--primary-800);
-    color: var(--primary-800);
-  }
-  
-  .category-btn.active {
-    background-color: var(--primary-800);
-    border-color: var(--primary-800);
-    color: white;
-  }
-  
-  .infrastructure-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: var(--space-6);
-  }
-  
-  .cta-section {
-    background-color: var(--primary-800);
-    color: white;
-    padding: var(--space-16) 0;
-    text-align: center;
-    margin-top: var(--space-16);
-  }
-  
-  .cta-content {
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--space-4);
+    text-align: center;
   }
   
-  .cta-section h2 {
-    font-size: var(--font-3xl);
-    margin-bottom: var(--space-4);
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  .cta-section p {
-    font-size: var(--font-lg);
-    margin-bottom: var(--space-8);
-    opacity: 0.9;
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--light-gold);
   }
   
-  .cta-section .btn {
-    padding: var(--space-3) var(--space-6);
-    font-size: var(--font-lg);
-    font-weight: 500;
-    background-color: white;
-    color: var(--primary-800);
+  .featured-section {
+    margin-bottom: 2rem;
   }
   
-  .cta-section .btn:hover {
-    background-color: var(--neutral-100);
+  .info-banner {
+    background-color: var(--accent-brown);
+    color: white;
+    padding: 3rem 0;
+    margin: 3rem 0;
+  }
+  
+  .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .banner-content h2 {
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner-content p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--light-gold);
+  }
+  
+  .banner-btn {
+    background-color: var(--primary-gold);
+    color: var(--accent-brown);
+    font-weight: bold;
+  }
+  
+  .testimonial-section {
+    background-color: var(--very-light-brown);
+    padding: 4rem 0;
+    margin-top: 3rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .quote-icon {
+    font-size: 5rem;
+    color: var(--primary-gold);
+    opacity: 0.3;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+  }
+  
+  .quote-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .quote-author {
+    font-weight: bold;
+    color: var(--accent-brown);
   }
   
   @media (max-width: 768px) {
-    .hero {
-      height: 70vh;
+    .hero-section {
+      padding: 4rem 0;
     }
     
-    .hero h1 {
-      font-size: var(--font-3xl);
+    .hero-title {
+      font-size: 2rem;
     }
     
-    .hero p {
-      font-size: var(--font-lg);
+    .hero-subtitle {
+      font-size: 1rem;
     }
     
-    .hero-cta {
-      flex-direction: column;
-      gap: var(--space-3);
-    }
-    
-    .infrastructure-grid {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: var(--font-2xl);
-    }
-    
-    .hero p {
-      font-size: var(--font-base);
-    }
-    
-    .section-header h2 {
-      font-size: var(--font-2xl);
-    }
-    
-    .section-header p {
-      font-size: var(--font-base);
-    }
-    
-    .infrastructure-grid {
-      grid-template-columns: 1fr;
+    .quote-text {
+      font-size: 1.1rem;
     }
   }
 </style>

@@ -1,35 +1,29 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
+  export let images: string[] = [];
+  let currentImageIndex = 0;
+  let showLightbox = false;
   
-  export let images: { url: string; alt: string }[] = [];
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+  }
   
-  let currentIndex = 0;
-  let isLightboxOpen = false;
-  let touchStartX = 0;
-  let touchEndX = 0;
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  }
   
   function openLightbox(index: number) {
-    currentIndex = index;
-    isLightboxOpen = true;
+    currentImageIndex = index;
+    showLightbox = true;
     document.body.style.overflow = 'hidden';
   }
   
   function closeLightbox() {
-    isLightboxOpen = false;
+    showLightbox = false;
     document.body.style.overflow = '';
   }
   
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-  }
-  
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-  }
-  
   function handleKeydown(event: KeyboardEvent) {
-    if (!isLightboxOpen) return;
+    if (!showLightbox) return;
     
     if (event.key === 'Escape') {
       closeLightbox();
@@ -39,142 +33,75 @@
       prevImage();
     }
   }
-  
-  function handleTouchStart(event: TouchEvent) {
-    touchStartX = event.touches[0].clientX;
-  }
-  
-  function handleTouchMove(event: TouchEvent) {
-    touchEndX = event.touches[0].clientX;
-  }
-  
-  function handleTouchEnd() {
-    if (touchStartX - touchEndX > 50) {
-      // Swipe left, show next image
-      nextImage();
-    } else if (touchEndX - touchStartX > 50) {
-      // Swipe right, show previous image
-      prevImage();
-    }
-  }
-  
-  onMount(() => {
-    window.addEventListener('keydown', handleKeydown);
-    
-    return () => {
-      window.removeEventListener('keydown', handleKeydown);
-      document.body.style.overflow = '';
-    };
-  });
 </script>
 
-<section class="image-gallery">
-  <div class="gallery-grid">
-    {#if images.length > 0}
-      <div class="main-image" on:click={() => openLightbox(0)}>
-        <img src={images[0].url} alt={images[0].alt} loading="eager" />
-      </div>
-    {/if}
-    
-    <div class="thumbnail-grid">
-      {#each images.slice(1, 5) as image, index}
-        <div class="thumbnail" on:click={() => openLightbox(index + 1)}>
-          <img src={image.url} alt={image.alt} loading="lazy" />
-          {#if index === 3 && images.length > 5}
-            <div class="more-photos">
-              <span>+{images.length - 5} more</span>
-            </div>
-          {/if}
-        </div>
-      {/each}
-    </div>
+<svelte:window on:keydown={handleKeydown} />
+
+<div class="gallery">
+  <div class="main-image vintage-border">
+    <img src={images[0]} alt="Main view" on:click={() => openLightbox(0)} />
   </div>
   
-  {#if isLightboxOpen}
-    <div 
-      class="lightbox"
-      on:click|self={closeLightbox}
-      on:touchstart={handleTouchStart}
-      on:touchmove={handleTouchMove}
-      on:touchend={handleTouchEnd}
-      transition:fade={{ duration: 200 }}
-    >
-      <button class="close-button" on:click={closeLightbox}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      
-      <button class="nav-button prev" on:click|stopPropagation={prevImage}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 18l-6-6 6-6"></path>
-        </svg>
-      </button>
-      
-      <div class="lightbox-content">
-        <img
-          src={images[currentIndex].url}
-          alt={images[currentIndex].alt}
-          transition:fade={{ duration: 200 }}
-        />
-        <div class="image-caption">
-          <span>{currentIndex + 1} / {images.length}</span>
-          <p>{images[currentIndex].alt}</p>
-        </div>
+  <div class="thumbnails">
+    {#each images.slice(1) as image, i}
+      <div 
+        class="thumbnail vintage-border"
+        on:click={() => openLightbox(i + 1)}
+      >
+        <img src={image} alt={`Thumbnail ${i + 1}`} />
       </div>
-      
-      <button class="nav-button next" on:click|stopPropagation={nextImage}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18l6-6-6-6"></path>
-        </svg>
-      </button>
+    {/each}
+  </div>
+</div>
+
+{#if showLightbox}
+  <div class="lightbox" on:click={closeLightbox}>
+    <div class="lightbox-content" on:click|stopPropagation>
+      <button class="close-btn" on:click={closeLightbox}>×</button>
+      <button class="nav-btn prev" on:click={prevImage}>❮</button>
+      <div class="lightbox-image">
+        <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+      </div>
+      <button class="nav-btn next" on:click={nextImage}>❯</button>
+      <div class="image-counter">{currentImageIndex + 1} / {images.length}</div>
     </div>
-  {/if}
-</section>
+  </div>
+{/if}
 
 <style>
-  .image-gallery {
-    margin-bottom: var(--space-8);
-  }
-  
-  .gallery-grid {
+  .gallery {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: var(--space-2);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    height: 450px;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
   
   .main-image {
-    grid-row: span 2;
-    height: 450px;
-    cursor: pointer;
+    height: 400px;
     overflow: hidden;
+    cursor: pointer;
   }
   
   .main-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-normal);
+    transition: transform 0.5s ease;
   }
   
   .main-image:hover img {
     transform: scale(1.05);
   }
   
-  .thumbnail-grid {
+  .thumbnails {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: var(--space-2);
-    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    height: 400px;
   }
   
   .thumbnail {
-    position: relative;
     overflow: hidden;
     cursor: pointer;
   }
@@ -183,29 +110,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform var(--transition-normal);
+    transition: transform 0.5s ease;
   }
   
   .thumbnail:hover img {
-    transform: scale(1.05);
-  }
-  
-  .more-photos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .more-photos span {
-    color: white;
-    font-weight: 600;
-    font-size: var(--font-lg);
+    transform: scale(1.1);
   }
   
   .lightbox {
@@ -215,112 +124,105 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
   }
   
   .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    height: 80%;
   }
   
-  .lightbox-content img {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-  }
-  
-  .image-caption {
-    color: white;
-    margin-top: var(--space-4);
-    text-align: center;
-  }
-  
-  .image-caption span {
-    font-size: var(--font-sm);
-    color: var(--neutral-400);
-    margin-right: var(--space-2);
-  }
-  
-  .close-button {
-    position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
-    background: transparent;
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  .lightbox-image {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   
-  .nav-button {
+  .lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .nav-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color var(--transition-fast);
+    transition: all 0.3s ease;
   }
   
-  .nav-button:hover {
+  .nav-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
   
-  .nav-button.prev {
-    left: var(--space-4);
+  .nav-btn.prev {
+    left: -70px;
   }
   
-  .nav-button.next {
-    right: var(--space-4);
+  .nav-btn.next {
+    right: -70px;
+  }
+  
+  .image-counter {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
   }
   
   @media (max-width: 768px) {
-    .gallery-grid {
+    .gallery {
       grid-template-columns: 1fr;
-      height: auto;
     }
     
     .main-image {
       height: 300px;
     }
     
-    .thumbnail-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 120px;
+    .thumbnails {
+      height: auto;
+      grid-template-rows: repeat(2, 150px);
     }
     
-    .nav-button {
-      width: 40px;
-      height: 40px;
+    .nav-btn.prev {
+      left: 10px;
     }
-  }
-  
-  @media (max-width: 640px) {
-    .thumbnail-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 100px);
+    
+    .nav-btn.next {
+      right: 10px;
     }
   }
 </style>

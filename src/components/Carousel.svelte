@@ -1,294 +1,393 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  import type { Infrastructure } from '../types/types';
-  import { navigate } from 'svelte-routing';
-  
-  export let items: Infrastructure[] = [];
-  export let autoplay = true;
-  export let interval = 5000;
+  import { onMount } from 'svelte';
+  import { infrastructureStore } from '../stores/infrastructureStore';
+  import { push } from 'svelte-spa-router';
   
   let currentIndex = 0;
-  let timer: number;
-  let touchStartX = 0;
-  let touchEndX = 0;
-  let carouselElement: HTMLElement;
+  let isDragging = false;
+  let startX = 0;
+  let initialTranslate = 0;
+  let currentTranslate = 0;
+  let animationFrameId: number;
   
-  function setNextSlide() {
-    currentIndex = (currentIndex + 1) % items.length;
-  }
+  // Responsive settings
+  let slidesToShow = 3;
+  let isMobile = false;
   
-  function setPrevSlide() {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-  }
+  onMount(() => {
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    const interval = setInterval(() => {
+      if (!isDragging) {
+        nextSlide();
+      }
+    }, 5000);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', checkScreenSize);
+      cancelAnimationFrame(animationFrameId);
+    };
+  });
   
-  function startAutoplay() {
-    if (autoplay) {
-      timer = window.setInterval(setNextSlide, interval);
+  function checkScreenSize() {
+    if (window.innerWidth < 768) {
+      slidesToShow = 1;
+      isMobile = true;
+    } else if (window.innerWidth < 1024) {
+      slidesToShow = 2;
+      isMobile = false;
+    } else {
+      slidesToShow = 3;
+      isMobile = false;
     }
   }
   
-  function stopAutoplay() {
-    clearInterval(timer);
+  function nextSlide() {
+    if (currentIndex < $infrastructureStore.length - slidesToShow) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+  }
+  
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = $infrastructureStore.length - slidesToShow;
+    }
   }
   
   function goToSlide(index: number) {
     currentIndex = index;
-    if (autoplay) {
-      stopAutoplay();
-      startAutoplay();
-    }
   }
   
-  function handleTouchStart(e: TouchEvent) {
-    touchStartX = e.touches[0].clientX;
+  function navigateToInfrastructure(id: number) {
+    push(`/infrastructure/${id}`);
   }
   
-  function handleTouchEnd(e: TouchEvent) {
-    touchEndX = e.changedTouches[0].clientX;
-    handleSwipe();
+  // Touch and mouse events for dragging functionality
+  function handleDragStart(e: MouseEvent | TouchEvent) {
+    isDragging = true;
+    startX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    initialTranslate = currentTranslate;
+    cancelAnimationFrame(animationFrameId);
   }
   
-  function handleSwipe() {
-    const minSwipeDistance = 50;
-    const distance = touchEndX - touchStartX;
+  function handleDragMove(e: MouseEvent | TouchEvent) {
+    if (!isDragging) return;
+    const currentX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const diff = currentX - startX;
+    currentTranslate = initialTranslate + diff;
+    animationFrameId = requestAnimationFrame(updateSlidePosition);
+  }
+  
+  function handleDragEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - initialTranslate;
     
-    if (distance > minSwipeDistance) {
-      setPrevSlide();
-    } else if (distance < -minSwipeDistance) {
-      setNextSlide();
+    // If dragged enough to change slide
+    if (Math.abs(movedBy) > 100) {
+      if (movedBy < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
     }
     
-    if (autoplay) {
-      stopAutoplay();
-      startAutoplay();
-    }
+    cancelAnimationFrame(animationFrameId);
   }
   
-  function navigateToInfrastructure() {
-    navigate(`/infrastructure/${items[currentIndex].id}`);
+  function updateSlidePosition() {
+    // This would be used for smooth dragging animation
+    // We'll just use the built-in transition for simplicity
   }
-  
-  onMount(() => {
-    startAutoplay();
-  });
-  
-  onDestroy(() => {
-    stopAutoplay();
-  });
 </script>
 
-<div 
-  class="carousel" 
-  bind:this={carouselElement}
-  on:touchstart={handleTouchStart}
-  on:touchend={handleTouchEnd}
->
-  <div class="carousel-inner">
-    {#each items as item, i}
-      <div 
-        class="carousel-slide"
-        class:active={i === currentIndex}
-        on:click={navigateToInfrastructure}
-      >
-        <img src={item.images[0]} alt={item.name} class="slide-image" />
-        <div class="slide-overlay"></div>
-        <div class="slide-content">
-          <div class="slide-badge">{item.location}</div>
-          <h2 class="slide-title">{item.name}</h2>
-          <p class="slide-description">{item.shortDescription}</p>
-          <button class="slide-btn">View Details</button>
-        </div>
-      </div>
-    {/each}
+<div class="carousel-container">
+  <h2 class="section-title">Discover Infrastructure Projects</h2>
+  
+  <div class="carousel-controls">
+    <button class="control-btn prev" on:click={prevSlide}>❮</button>
+    <button class="control-btn next" on:click={nextSlide}>❯</button>
   </div>
   
-  <button class="carousel-control prev" on:click={() => { setPrevSlide(); stopAutoplay(); }} aria-label="Previous slide">
-    <span>&#10094;</span>
-  </button>
+  <div 
+    class="carousel"
+    on:mousedown={handleDragStart}
+    on:touchstart={handleDragStart}
+    on:mousemove={handleDragMove}
+    on:touchmove={handleDragMove}
+    on:mouseup={handleDragEnd}
+    on:touchend={handleDragEnd}
+    on:mouseleave={handleDragEnd}
+  >
+    <div 
+      class="carousel-track"
+      style="transform: translateX(-{currentIndex * (100 / slidesToShow)}%)"
+    >
+      {#each $infrastructureStore as item, i}
+        <div 
+          class="carousel-slide"
+          style="width: {100 / slidesToShow}%"
+        >
+          <div 
+            class="carousel-item"
+            on:click={() => navigateToInfrastructure(item.id)}
+          >
+            <div class="carousel-image vintage-border">
+              <img src={item.images[0]} alt={item.name} />
+              <div class="image-overlay">
+                <h3>{item.name}</h3>
+                <div class="star-rating">
+                  {#each Array(5) as _, i}
+                    <span class={i < Math.round(item.rating) ? 'star filled' : 'star'}>★</span>
+                  {/each}
+                </div>
+              </div>
+            </div>
+            <div class="carousel-content">
+              <h3>{item.name}</h3>
+              <p class="location">{item.location}</p>
+              <p class="description">{item.shortDescription}</p>
+              <div class="price">From ₱{item.price.toLocaleString()}</div>
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
   
-  <button class="carousel-control next" on:click={() => { setNextSlide(); stopAutoplay(); }} aria-label="Next slide">
-    <span>&#10095;</span>
-  </button>
-  
-  <div class="carousel-indicators">
-    {#each items as _, i}
+  <div class="carousel-dots">
+    {#each Array(Math.ceil($infrastructureStore.length / slidesToShow)) as _, i}
       <button 
-        class="indicator" 
-        class:active={i === currentIndex} 
-        on:click={() => goToSlide(i)}
-        aria-label={`Go to slide ${i + 1}`}
+        class="dot"
+        class:active={Math.floor(currentIndex / slidesToShow) === i}
+        on:click={() => goToSlide(i * slidesToShow)}
       ></button>
     {/each}
   </div>
 </div>
 
 <style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent-brown);
+  }
+  
   .carousel {
     position: relative;
     width: 100%;
-    height: 500px;
     overflow: hidden;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
+    cursor: grab;
   }
   
-  .carousel-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  .carousel:active {
+    cursor: grabbing;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
   }
   
   .carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity var(--transition-slow);
+    flex-shrink: 0;
+    padding: 0 10px;
+  }
+  
+  .carousel-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
     cursor: pointer;
   }
   
-  .carousel-slide.active {
-    opacity: 1;
+  .carousel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
   
-  .slide-image {
+  .carousel-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .carousel-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
   }
   
-  .slide-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+  .carousel-item:hover .carousel-image img {
+    transform: scale(1.1);
   }
   
-  .slide-content {
+  .image-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: var(--spacing-6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: white;
-    text-align: left;
-    transform: translateY(0);
-    transition: transform var(--transition-normal);
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
-  .carousel-slide:hover .slide-content {
-    transform: translateY(-10px);
+  .carousel-item:hover .image-overlay {
+    opacity: 1;
   }
   
-  .slide-badge {
+  .image-overlay h3 {
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+  }
+  
+  .carousel-content {
+    padding: 1.5rem;
+  }
+  
+  .carousel-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--accent-brown);
+  }
+  
+  .location {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: var(--accent-brown);
+    margin-bottom: 1rem;
+  }
+  
+  .view-btn {
     display: inline-block;
-    background-color: var(--color-accent);
-    padding: var(--spacing-1) var(--spacing-3);
-    border-radius: var(--radius-full);
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: var(--spacing-3);
-  }
-  
-  .slide-title {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-2);
-    font-weight: 600;
-  }
-  
-  .slide-description {
-    max-width: 600px;
-    margin-bottom: var(--spacing-4);
-    font-size: 1rem;
-  }
-  
-  .slide-btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: white;
-    padding: var(--spacing-2) var(--spacing-4);
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-gold);
+    color: var(--text-dark);
     border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
   }
   
-  .slide-btn:hover {
-    background-color: var(--color-primary-dark);
+  .view-btn:hover {
+    background-color: var(--secondary-gold);
     transform: translateY(-2px);
   }
   
-  .carousel-control {
+  .carousel-controls {
     position: absolute;
     top: 50%;
+    left: 0;
+    right: 0;
     transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .control-btn {
+    background-color: var(--primary-gold);
+    color: var(--text-dark);
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: var(--radius-full);
+    border-radius: 50%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0.7;
-    transition: opacity var(--transition-fast), background-color var(--transition-fast);
-    z-index: 2;
-    border: none;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    pointer-events: auto;
   }
   
-  .carousel-control:hover {
-    opacity: 1;
-    background-color: white;
+  .control-btn:hover {
+    background-color: var(--secondary-gold);
+    transform: scale(1.1);
   }
   
-  .carousel-control.prev {
-    left: var(--spacing-4);
-  }
-  
-  .carousel-control.next {
-    right: var(--spacing-4);
-  }
-  
-  .carousel-indicators {
-    position: absolute;
-    bottom: var(--spacing-4);
-    right: var(--spacing-4);
+  .carousel-dots {
     display: flex;
-    gap: var(--spacing-2);
-    z-index: 2;
+    justify-content: center;
+    margin-top: 1.5rem;
   }
   
-  .indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: var(--radius-full);
-    background-color: rgba(255, 255, 255, 0.5);
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--very-light-brown);
     border: none;
-    padding: 0;
+    margin: 0 5px;
     cursor: pointer;
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    transition: all 0.3s ease;
   }
   
-  .indicator.active {
-    background-color: white;
+  .dot.active {
+    background-color: var(--primary-gold);
     transform: scale(1.2);
   }
   
+  .star {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .star.filled {
+    color: var(--primary-gold);
+  }
+  
   @media (max-width: 768px) {
-    .carousel {
-      height: 400px;
+    .carousel-image {
+      height: 180px;
     }
     
-    .slide-title {
-      font-size: 1.5rem;
+    .carousel-content {
+      padding: 1rem;
     }
     
-    .slide-description {
-      font-size: 0.9rem;
+    .description {
+      -webkit-line-clamp: 2;
+    }
+    
+    .control-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
     }
   }
 </style>

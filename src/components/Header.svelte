@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { Link } from 'svelte-routing';
-  import SearchBar from './SearchBar.svelte';
+  import { push } from 'svelte-spa-router'
+  import SearchBar from './SearchBar.svelte'
+  import { infrastructureStore } from '../stores/infrastructureStore'
   import { onMount } from 'svelte';
   
   let isScrolled = false;
@@ -18,215 +19,179 @@
     };
   });
   
-  function toggleMobileMenu() {
+  const toggleMobileMenu = () => {
     isMobileMenuOpen = !isMobileMenuOpen;
-  }
+  };
+  
+  const navigateTo = (path: string) => {
+    push(path);
+    isMobileMenuOpen = false;
+  };
 </script>
 
 <header class:scrolled={isScrolled}>
-  <div class="header-container">
-    <div class="logo">
-      <Link to="/">
-        <h1>Trip<span>Explorer</span></h1>
-      </Link>
+  <div class="container header-container">
+    <div class="logo" on:click={() => navigateTo('/')}>
+      <h1>GuiltTripAdvisor</h1>
+      <span class="tagline">Revisiting the "Golden Age"</span>
     </div>
-    
-    <nav class="desktop-nav">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/?category=hotel">Hotels</Link></li>
-        <li><Link to="/?category=restaurant">Restaurants</Link></li>
-        <li><Link to="/?category=attraction">Attractions</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-      </ul>
-    </nav>
     
     <div class="search-container">
       <SearchBar />
     </div>
     
-    <button class="mobile-menu-button" on:click={toggleMobileMenu} aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-toggle" on:click={toggleMobileMenu}>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
+    
+    <nav class:open={isMobileMenuOpen}>
+      <ul>
+        <li><a href="/" on:click|preventDefault={() => navigateTo('/')}>Home</a></li>
+        <li><a href="/about" on:click|preventDefault={() => navigateTo('/about')}>About Us</a></li>
+      </ul>
+    </nav>
   </div>
-  
-  {#if isMobileMenuOpen}
-    <div class="mobile-menu" transition:slide={{ duration: 300 }}>
-      <nav>
-        <ul>
-          <li><Link to="/" on:click={() => isMobileMenuOpen = false}>Home</Link></li>
-          <li><Link to="/?category=hotel" on:click={() => isMobileMenuOpen = false}>Hotels</Link></li>
-          <li><Link to="/?category=restaurant" on:click={() => isMobileMenuOpen = false}>Restaurants</Link></li>
-          <li><Link to="/?category=attraction" on:click={() => isMobileMenuOpen = false}>Attractions</Link></li>
-          <li><Link to="/about" on:click={() => isMobileMenuOpen = false}>About Us</Link></li>
-        </ul>
-      </nav>
-      <div class="mobile-search">
-        <SearchBar />
-      </div>
-    </div>
-  {/if}
 </header>
 
 <style>
   header {
-    position: fixed;
+    background-color: var(--accent-brown);
+    color: var(--light-gold);
+    padding: 1rem 0;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all var(--transition-normal);
-    background-color: transparent;
-    padding: var(--space-4) 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   header.scrolled {
-    background-color: white;
-    box-shadow: var(--shadow-md);
-    padding: var(--space-2) 0;
+    padding: 0.5rem 0;
+    background-color: var(--accent-brown);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   }
   
   .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-4);
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
   }
   
   .logo h1 {
-    font-size: var(--font-xl);
-    font-weight: 700;
+    font-size: 1.75rem;
     margin: 0;
-    color: white;
+    color: var(--primary-gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  header.scrolled .logo h1 {
-    color: var(--neutral-900);
-  }
-  
-  .logo span {
-    color: var(--primary-800);
-  }
-  
-  .desktop-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .desktop-nav li {
-    margin: 0 var(--space-4);
-  }
-  
-  .desktop-nav a {
-    color: var(--neutral-900);
-    font-weight: 500;
-    text-decoration: none;
-    transition: color var(--transition-fast);
-    position: relative;
-  }
-  
-  .desktop-nav a:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--primary-800);
-    transition: width var(--transition-normal);
-  }
-  
-  .desktop-nav a:hover {
-    color: var(--primary-800);
-  }
-  
-  .desktop-nav a:hover:after {
-    width: 100%;
+  .tagline {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--light-gold);
   }
   
   .search-container {
-    width: 280px;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 1rem;
   }
   
-  .mobile-menu-button {
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-left: 1.5rem;
+  }
+  
+  nav a {
+    color: var(--light-gold);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--primary-gold);
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    background: transparent;
+    background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    z-index: 10;
   }
   
-  .mobile-menu-button span {
+  .bar {
     display: block;
-    width: 100%;
+    width: 25px;
     height: 3px;
-    background-color: var(--primary-800);
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
+    margin: 5px auto;
+    background-color: var(--light-gold);
+    transition: all 0.3s ease;
   }
   
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    z-index: 900;
-    padding: var(--space-16) var(--space-4) var(--space-4);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .mobile-menu nav {
-    margin-bottom: var(--space-6);
-  }
-  
-  .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .mobile-menu li {
-    margin-bottom: var(--space-6);
-  }
-  
-  .mobile-menu a {
-    font-size: var(--font-xl);
-    color: var(--neutral-900);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .mobile-search {
-    margin-top: auto;
-  }
-  
-  @media (max-width: 1024px) {
-    .desktop-nav {
-      display: none;
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
     }
     
     .search-container {
-      display: none;
+      width: 100%;
+      max-width: none;
+      margin: 1rem 0;
+      order: 3;
     }
     
-    .mobile-menu-button {
-      display: flex;
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    
+    nav {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      order: 4;
+    }
+    
+    nav.open {
+      height: auto;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    nav li {
+      margin: 1rem 0;
+      margin-left: 0;
     }
   }
-  
 </style>

@@ -1,132 +1,196 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
-  import { fade } from 'svelte/transition';
+  import { push } from 'svelte-spa-router';
+  import { infrastructureStore } from '../stores/infrastructureStore';
   
-  const dispatch = createEventDispatcher();
+  let searchQuery = '';
+  let searchResults: any[] = [];
+  let isSearching = false;
   
-  let searchTerm = '';
-  let isFocused = false;
-  
-  function handleSubmit() {
-    if (searchTerm.trim()) {
-      dispatch('search', searchTerm);
-      // In a real app, this would navigate to search results
-      console.log('Searching for:', searchTerm);
+  const handleSearch = () => {
+    if (searchQuery.trim() === '') {
+      searchResults = [];
+      return;
     }
-  }
+    
+    isSearching = true;
+    const query = searchQuery.toLowerCase();
+    searchResults = $infrastructureStore.filter(item => 
+      item.name.toLowerCase().includes(query) || 
+      item.location.toLowerCase().includes(query)
+    );
+  };
   
-  function handleKeydown(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
-      isFocused = false;
+  const clearSearch = () => {
+    searchQuery = '';
+    searchResults = [];
+  };
+  
+  const navigateToInfrastructure = (id: number) => {
+    push(`/infrastructure/${id}`);
+    clearSearch();
+  };
+  
+  const handleInput = () => {
+    handleSearch();
+  };
+  
+  const handleSubmit = (e: Event) => {
+    e.preventDefault();
+    if (searchResults.length > 0) {
+      navigateToInfrastructure(searchResults[0].id);
     }
-  }
+  };
 </script>
 
-<div class="search-bar" class:focused={isFocused}>
-  <form on:submit|preventDefault={handleSubmit}>
-    <div class="search-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </div>
-    <input
-      type="text"
-      placeholder="Search destinations, hotels..."
-      bind:value={searchTerm}
-      on:focus={() => isFocused = true}
-      on:blur={() => isFocused = false}
-      on:keydown={handleKeydown}
-    />
-    {#if searchTerm}
-      <button 
-        type="button" 
-        class="clear-button"
-        on:click={() => searchTerm = ''}
-        transition:fade={{ duration: 100 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
+<div class="search-wrapper">
+  <form on:submit={handleSubmit}>
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search infrastructures..."
+        bind:value={searchQuery}
+        on:input={handleInput}
+      />
+      {#if searchQuery}
+        <button type="button" class="clear-btn" on:click={clearSearch}>×</button>
+      {/if}
+      <button type="submit" class="search-btn">
+        <span class="search-icon">🔍</span>
       </button>
-    {/if}
-    <button type="submit" class="search-button">Search</button>
+    </div>
   </form>
+  
+  {#if searchResults.length > 0}
+    <div class="search-results">
+      {#each searchResults as result}
+        <div class="result-item" on:click={() => navigateToInfrastructure(result.id)}>
+          <div class="result-img">
+            <img src={result.images[0]} alt={result.name} />
+          </div>
+          <div class="result-info">
+            <h4>{result.name}</h4>
+            <p>{result.location}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+  {:else if isSearching && searchQuery}
+    <div class="search-results">
+      <div class="no-results">No results found</div>
+    </div>
+  {/if}
 </div>
 
 <style>
-  .search-bar {
+  .search-wrapper {
     position: relative;
     width: 100%;
-    transition: all var(--transition-normal);
   }
   
-  .search-bar.focused {
-    transform: translateY(-2px);
-  }
-  
-  form {
+  .search-bar {
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--neutral-300);
+    border: 2px solid var(--primary-gold);
+    border-radius: 4px;
     overflow: hidden;
-    transition: all var(--transition-fast);
-    box-shadow: var(--shadow-sm);
-  }
-  
-  .search-bar.focused form {
-    border-color: var(--primary-800);
-    box-shadow: 0 0 0 3px rgba(0, 132, 137, 0.1);
-  }
-  
-  .search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 var(--space-2);
-    color: var(--neutral-600);
   }
   
   input {
     flex: 1;
+    padding: 0.6rem 1rem;
     border: none;
-    padding: var(--space-2) var(--space-1);
-    font-size: var(--font-sm);
     outline: none;
-    background: transparent;
+    font-size: 1rem;
+    color: var(--text-dark);
   }
   
-  .clear-button {
-    background: transparent;
+  .clear-btn {
+    background: none;
     border: none;
-    padding: var(--space-1);
-    color: var(--neutral-500);
+    font-size: 1.2rem;
+    color: #777;
     cursor: pointer;
+    padding: 0 0.5rem;
+  }
+  
+  .search-btn {
+    background-color: var(--primary-gold);
+    border: none;
+    color: var(--text-dark);
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-btn:hover {
+    background-color: var(--secondary-gold);
+  }
+  
+  .search-icon {
+    font-size: 1.2rem;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 2px solid var(--primary-gold);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .result-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-button {
-    background-color: var(--primary-800);
-    color: white;
-    border: none;
-    padding: var(--space-2) var(--space-4);
-    font-weight: 500;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
     cursor: pointer;
-    transition: background-color var(--transition-fast);
+    transition: background-color 0.3s;
   }
   
-  .search-button:hover {
-    background-color: var(--primary-700);
+  .result-item:last-child {
+    border-bottom: none;
   }
   
-  @media (max-width: 640px) {
-    .search-button {
-      padding: var(--space-2);
-    }
+  .result-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .result-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .result-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .result-info h4 {
+    margin: 0 0 0.25rem;
+    color: var(--accent-brown);
+  }
+  
+  .result-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .no-results {
+    padding: 1rem;
+    text-align: center;
+    color: #777;
   }
 </style>
