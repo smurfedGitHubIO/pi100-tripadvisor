@@ -38,14 +38,14 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="gallery">
-  <div class="main-image vintage-border">
+  <div class="main-image">
     <img src={images[0]} alt="Main view" on:click={() => openLightbox(0)} />
   </div>
   
   <div class="thumbnails">
     {#each images.slice(1) as image, i}
       <div 
-        class="thumbnail vintage-border"
+        class="thumbnail"
         on:click={() => openLightbox(i + 1)}
       >
         <img src={image} alt={`Thumbnail ${i + 1}`} />

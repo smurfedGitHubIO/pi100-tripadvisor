@@ -137,7 +137,7 @@
             class="carousel-item"
             on:click={() => navigateToInfrastructure(item.id)}
           >
-            <div class="carousel-image vintage-border">
+            <div class="carousel-image">
               <img src={item.images[0]} alt={item.name} />
               <div class="image-overlay">
                 <h3>{item.name}</h3>

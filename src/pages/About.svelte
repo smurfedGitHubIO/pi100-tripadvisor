@@ -57,7 +57,7 @@
             We believe that by examining these projects through a historical lens, visitors can develop a more informed understanding of this complex period in Philippine history.
           </p>
         </div>
-        <div class="mission-image vintage-border">
+        <div class="mission-image">
           <img src="https://images.pexels.com/photos/1422407/pexels-photo-1422407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Historical building" />
         </div>
       </div>
@@ -70,7 +70,7 @@
       <div class="team-grid">
         {#each teamMembers as member}
           <div class="team-member">
-            <div class="member-image vintage-border">
+            <div class="member-image">
               <img src={member.image} alt={member.name} />
             </div>
             <div class="member-info">
@@ -103,20 +103,21 @@
   }
   
   .about-header {
-    background-color: var(--accent-brown);
+    background-color: white;
     color: white;
     padding: 4rem 0;
     text-align: center;
   }
   
   .about-header h1 {
-    color: var(--primary-gold);
+    color: var(--accent-brown);
     margin-bottom: 1rem;
+    font-size: 4rem;
   }
   
   .subtitle {
-    font-size: 1.2rem;
-    color: var(--light-gold);
+    font-size: 1.5rem;
+    color: var(--primary-gold);
     font-style: italic;
   }
   
@@ -161,7 +162,7 @@
   
   .team-section {
     padding: 4rem 0;
-    background-color: var(--very-light-brown);
+    background-color: white;
   }
   
   .team-grid {

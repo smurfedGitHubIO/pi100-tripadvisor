@@ -13,7 +13,7 @@
   <div class="grid">
     {#each $infrastructureStore as item}
       <div class="grid-item" on:click={() => navigateToInfrastructure(item.id)}>
-        <div class="grid-image vintage-border">
+        <div class="grid-image">
           <img src={item.images[0]} alt={item.name} />
           <div class="rating-badge">
             <span class="rating-value">{item.rating.toFixed(1)}</span>
