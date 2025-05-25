@@ -4,7 +4,7 @@
   let showCarousel = false;
 
   function navigate(direction: 'prev' | 'next') {
-    currentIndex = direction === 'next' 
+    currentIndex = direction === 'next'
       ? (currentIndex + 1) % images.length
       : (currentIndex - 1 + images.length) % images.length;
   }
@@ -35,12 +35,17 @@
 <!-- Thumbnail Grid -->
 <div class="thumbnail-grid">
   {#each images as image, i}
-    <img 
-      src={image} 
-      alt={`Thumbnail ${i}`}
-      on:click={() => open(i)}
-      class="thumbnail"
-    />
+    <button 
+      type="button" 
+      on:click={() => open(i)} 
+      class="thumbnail-btn"
+    >
+      <img 
+        src={image} 
+        alt={`Thumbnail ${i}`}
+        class="thumbnail"
+      />
+    </button>
   {/each}
 </div>
 
@@ -80,16 +85,23 @@
     gap: 1rem;
     padding: 1rem;
   }
-  
+
+  .thumbnail-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
   .thumbnail {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    cursor: pointer;
     transition: transform 0.2s;
+    display: block;
   }
-  
-  .thumbnail:hover {
+
+  .thumbnail-btn:hover .thumbnail {
     transform: scale(1.02);
   }
 
@@ -106,21 +118,21 @@
     justify-content: center;
     z-index: 1000;
   }
-  
+
   .carousel-container {
     position: relative;
     width: 90%;
     max-width: 1000px;
     max-height: 90vh;
   }
-  
+
   .carousel-image {
     width: 100%;
     max-height: 80vh;
     object-fit: contain;
     display: block;
   }
-  
+
   .close-btn {
     position: absolute;
     top: -40px;
@@ -131,7 +143,7 @@
     font-size: 2rem;
     cursor: pointer;
   }
-  
+
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -145,10 +157,10 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
-  
+
   .prev { left: 20px; }
   .next { right: 20px; }
-  
+
   .counter {
     position: absolute;
     bottom: -30px;
@@ -164,13 +176,13 @@
     .thumbnail-grid {
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .nav-btn {
       width: 40px;
       height: 40px;
       font-size: 1.2rem;
     }
-    
+
     .prev { left: 10px; }
     .next { right: 10px; }
   }
