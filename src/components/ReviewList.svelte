@@ -75,24 +75,6 @@
       </div>
       <span class="review-count">{reviews.length} reviews</span>
     </div>
-    
-    <div class="rating-bars">
-      {#each [5, 4, 3, 2, 1] as rating}
-        {@const count = reviews.filter(r => r.rating === rating).length}
-        {@const percentage = (count / reviews.length) * 100}
-        <div 
-          class="rating-bar-row"
-          class:active={filterRating === rating}
-          on:click={() => filterByRating(rating)}
-        >
-          <span class="rating-label">{rating} stars</span>
-          <div class="rating-bar">
-            <div class="rating-fill" style="width: {percentage}%"></div>
-          </div>
-          <span class="rating-count">{count}</span>
-        </div>
-      {/each}
-    </div>
   </div>
   
   <div class="reviews-list">
@@ -183,7 +165,7 @@
     color: #777;
   }
   
-  .rating-bars {
+  /* .rating-bars {
     flex: 1;
   }
   
@@ -245,7 +227,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
+   */
   .reviews-list {
     display: flex;
     flex-direction: column;

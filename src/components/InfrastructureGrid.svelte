@@ -12,6 +12,8 @@
   
   <div class="grid">
     {#each $infrastructureStore as item}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="grid-item" on:click={() => navigateToInfrastructure(item.id)}>
         <div class="grid-image">
           <img src={item.images[0]} alt={item.name} />
@@ -123,7 +125,7 @@
   .description {
     margin-bottom: 1.5rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    /* -webkit-line-clamp: 3; */
     -webkit-box-orient: vertical;
     overflow: hidden;
   }

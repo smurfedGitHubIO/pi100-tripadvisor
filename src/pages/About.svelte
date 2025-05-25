@@ -234,12 +234,6 @@
     transform: scale(1.05);
   }
 
-  .member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .member-info {
     padding: 1.25rem 1rem;
   }

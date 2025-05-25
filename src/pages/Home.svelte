@@ -55,33 +55,6 @@
 </div>
 
 <style>
-  /* Add styles for the new introduction section */
-  .introduction-section {
-    padding: 3rem 0;
-    background-color: #fff8e1; /* soft light background */
-    color: #4b2e2e;
-  }
-
-  .introduction-section h2 {
-    text-align: center;
-    color: var(--primary-red);
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-  }
-
-  .introduction-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  .hero-intro {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: var(--light-gold);
-  }
   :root {
     /* Red-gold palette with darker reds */
     --primary-red: #7a1f1f;
@@ -238,14 +211,6 @@
   .quote-author {
     font-weight: bold;
     color: var(--accent-brown);
-  }
-
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    margin-top: 3rem;
   }
 
   @media (max-width: 768px) {

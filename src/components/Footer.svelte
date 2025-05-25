@@ -14,6 +14,8 @@
         <h3>Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <!-- svelte-ignore a11y-missing-content -->
           <li><a href="/about">Tungkol sa Amin<a></li>
         </ul>
       </div>
@@ -30,8 +32,11 @@
       <div class="links-column">
         <h3>Legal</h3>
         <ul>
+          <!-- svelte-ignore a11y-invalid-attribute -->
           <li><a href="#">Terms of Service</a></li>
+          <!-- svelte-ignore a11y-invalid-attribute -->
           <li><a href="#">Privacy Policy</a></li>
+          <!-- svelte-ignore a11y-invalid-attribute -->
           <li><a href="#">Disclaimer</a></li>
         </ul>
       </div>

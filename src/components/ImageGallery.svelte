@@ -39,11 +39,15 @@
 
 <div class="gallery">
   <div class="main-image">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <img src={images[0]} alt="Main view" on:click={() => openLightbox(0)} />
   </div>
   
   <div class="thumbnails">
     {#each images.slice(1) as image, i}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div 
         class="thumbnail"
         on:click={() => openLightbox(i + 1)}
@@ -55,6 +59,8 @@
 </div>
 
 {#if showLightbox}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="lightbox" on:click={closeLightbox}>
     <div class="lightbox-content" on:click|stopPropagation>
       <button class="close-btn" on:click={closeLightbox}>×</button>

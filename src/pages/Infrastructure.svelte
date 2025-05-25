@@ -540,9 +540,5 @@
     .history-content {
       grid-template-columns: 1fr;
     }
-    
-    .history-image {
-      margin-bottom: 1.5rem;
-    }
   }
 </style>

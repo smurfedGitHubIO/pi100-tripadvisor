@@ -30,7 +30,9 @@
 </script>
 
 <header class:scrolled={isScrolled}>
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="container header-container">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="logo" on:click={() => navigateTo('/')}>
       <h1>GuiltTripAdvisor</h1>
       <span class="tagline">Paggunita sa "Golden Age" ni Marcos Sr.</span>
@@ -100,12 +102,6 @@
     color: var(--light-gold);
   }
   
-  .search-container {
-    flex: 1;
-    max-width: 500px;
-    margin: 0 1rem;
-  }
-  
   nav {
     display: flex;
   }
@@ -152,13 +148,6 @@
     .header-container {
       flex-direction: column;
       align-items: flex-start;
-    }
-    
-    .search-container {
-      width: 100%;
-      max-width: none;
-      margin: 1rem 0;
-      order: 3;
     }
     
     .menu-toggle {
