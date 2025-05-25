@@ -268,7 +268,7 @@ Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng 
   {
     id: 5,
     name: "Manila Film Center",
-    location: "Manila",
+    location: "Manilatest",
     address: "CCP Complex, Roxas Boulevard, Manila",
     shortDescription: "An architectural showcase built primarily from coconut lumber and materials, commissioned by Imelda Marcos.",
     description: "The Coconut Palace, also known as Tahanang Pilipino, is a government building located in the Cultural Center of the Philippines Complex. It was commissioned by Former First Lady Imelda Marcos in 1978 to showcase Filipino craftsmanship and ingenuity, as well as the versatility of the coconut as a material.",
