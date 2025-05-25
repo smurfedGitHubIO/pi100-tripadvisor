@@ -3,11 +3,13 @@
   let currentImageIndex = 0;
   let showLightbox = false;
   
-  function nextImage() {
+  function nextImage(e: MouseEvent) {
+    e.stopPropagation();
     currentImageIndex = (currentImageIndex + 1) % images.length;
   }
   
-  function prevImage() {
+  function prevImage(e: MouseEvent) {
+    e.stopPropagation();
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
   }
   
@@ -28,9 +30,9 @@
     if (event.key === 'Escape') {
       closeLightbox();
     } else if (event.key === 'ArrowRight') {
-      nextImage();
+      nextImage(event);
     } else if (event.key === 'ArrowLeft') {
-      prevImage();
+      prevImage(event);
     }
   }
 </script>
@@ -39,15 +41,16 @@
 
 <div class="gallery">
   <div class="main-image">
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <img src={images[0]} alt="Main view" on:click={() => openLightbox(0)} />
+    <img 
+      src={images[0]} 
+      alt="Main view" 
+      on:click={() => openLightbox(0)}
+      class="clickable-image"
+    />
   </div>
   
   <div class="thumbnails">
     {#each images.slice(1) as image, i}
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div 
         class="thumbnail"
         on:click={() => openLightbox(i + 1)}
@@ -59,16 +62,24 @@
 </div>
 
 {#if showLightbox}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="lightbox" on:click={closeLightbox}>
+  <div 
+    class="lightbox" 
+    on:click={closeLightbox}
+  >
     <div class="lightbox-content" on:click|stopPropagation>
-      <button class="close-btn" on:click={closeLightbox}>×</button>
-      <button class="nav-btn prev" on:click={prevImage}>❮</button>
-      <div class="lightbox-image">
-        <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+      <button class="close-btn" on:click|stopPropagation={closeLightbox}>×</button>
+      
+      <div class="image-container">
+        <img 
+          src={images[currentImageIndex]} 
+          alt={`Image ${currentImageIndex + 1}`}
+          on:click|stopPropagation
+        />
       </div>
-      <button class="nav-btn next" on:click={nextImage}>❯</button>
+      
+      <button class="nav-btn prev" on:click|stopPropagation={prevImage}>❮</button>
+      <button class="nav-btn next" on:click|stopPropagation={nextImage}>❯</button>
+      
       <div class="image-counter">{currentImageIndex + 1} / {images.length}</div>
     </div>
   </div>
@@ -85,7 +96,6 @@
   .main-image {
     height: 400px;
     overflow: hidden;
-    cursor: pointer;
   }
   
   .main-image img {
@@ -93,9 +103,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    cursor: pointer;
   }
   
-  .main-image:hover img {
+  .main-image img:hover {
     transform: scale(1.05);
   }
   
@@ -134,6 +145,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    touch-action: none; /* Prevent zooming */
   }
   
   .lightbox-content {
@@ -143,7 +155,7 @@
     height: 80%;
   }
   
-  .lightbox-image {
+  .image-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -151,10 +163,11 @@
     justify-content: center;
   }
   
-  .lightbox-image img {
+  .image-container img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    pointer-events: none; /* Prevent image interactions */
   }
   
   .close-btn {
@@ -166,6 +179,7 @@
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 1001;
   }
   
   .nav-btn {
@@ -184,6 +198,7 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 1001;
   }
   
   .nav-btn:hover {
@@ -191,11 +206,11 @@
   }
   
   .nav-btn.prev {
-    left: -70px;
+    left: 20px;
   }
   
   .nav-btn.next {
-    right: -70px;
+    right: 20px;
   }
   
   .image-counter {
@@ -207,6 +222,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.3rem 1rem;
     border-radius: 20px;
+    z-index: 1001;
   }
   
   @media (max-width: 768px) {
@@ -221,6 +237,12 @@
     .thumbnails {
       height: auto;
       grid-template-rows: repeat(2, 150px);
+    }
+    
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
     }
     
     .nav-btn.prev {
