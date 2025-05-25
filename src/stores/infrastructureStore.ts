@@ -9,16 +9,17 @@ const mfc2 = '/images/Infra/Manila Film Center/2.jpg';
 const mfc3 = '/images/Infra/Manila Film Center/3.jpg';
 const mfc4 = '/images/Infra/Manila Film Center/4.jpg';
 const mfc5 = '/images/Infra/Manila Film Center/5.jpg';
-// import folk1 from '$lib/assets/images/Infra/Folk Arts Theater/1.jpg';
-// import folk2 from '$lib/assets/images/Infra/Folk Arts Theater/2.jpg';
-// import folk3 from '$lib/assets/images/Infra/Folk Arts Theater/3.jpg';
-// import folk4 from '$lib/assets/images/Infra/Folk Arts Theater/4.jpg';
-// import folk5 from '$lib/assets/images/Infra/Folk Arts Theater/5.jpg';
-// import mfc1 from '$lib/assets/images/Infra/Manila Film Center/1.jpg';
-// import mfc2 from '$lib/assets/images/Infra/Manila Film Center/2.jpg';
-// import mfc3 from '$lib/assets/images/Infra/Manila Film Center/3.jpg';
-// import mfc4 from '$lib/assets/images/Infra/Manila Film Center/4.jpg';
-// import mfc5 from '$lib/assets/images/Infra/Manila Film Center/5.jpg';
+const ccp1 = '/images/Infra/CCP/1.jpg';
+const ccp2 = '/images/Infra/CCP/2.jpg';
+const ccp3 = '/images/Infra/CCP/3.jpg';
+const ccp4 = '/images/Infra/CCP/4.jpg';
+const ccp5 = '/images/Infra/CCP/5.jpg';
+const coco1 = '/images/Infra/Tahanang Filipino (Coconut Palace)/1.jpg';
+const coco2 = '/images/Infra/Tahanang Filipino (Coconut Palace)/2.jpg';
+const coco3 = '/images/Infra/Tahanang Filipino (Coconut Palace)/3.jpg';
+const coco4 = '/images/Infra/Tahanang Filipino (Coconut Palace)/4.jpg';
+const coco5 = '/images/Infra/Tahanang Filipino (Coconut Palace)/5.jpg';
+
 
 // Mock data for infrastructures
 const infrastructureData = [
@@ -33,13 +34,7 @@ const infrastructureData = [
     cost: 48000000,
     price: 150,
     architect: "Parsons Brinkerhoff",
-    images: [
-      "https://images.pexels.com/photos/4064432/pexels-photo-4064432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4064436/pexels-photo-4064436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4064226/pexels-photo-4064226.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4064224/pexels-photo-4064224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/11492206/pexels-photo-11492206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ],
+    images: [ ccp1, ccp2, ccp3, ccp4, ccp5 ],
     historicalImage: "https://images.pexels.com/photos/4947810/pexels-photo-4947810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1975",
     history: "Ang Cultural Center of the Philippines o Sentrong Pangkultura ng Pilipinas (CCP) ay itinatag noong 1966 sa utos ni Imelda Marcos, ang dating Unang Ginang ng Pilipinas, sa ilalim ng administrasyon ni Pangulong Ferdinand Marcos. Layunin nitong maging pangunahing institusyon para sa pangalaga, pagtataguyod, at pagpapaunlad ng sining at kulturang Pilipino. Nais ng CCP na gawing abot-kaya ang sining para sa mas maraming mamamayan at itanghal ang Pilipinas sa pandaigdigang entablado ng sining at kultura.\
@@ -345,13 +340,7 @@ Ang trahedyang ito ay nananatiling isa sa mga pinakakontrobersyal na bahagi ng k
     cost: 15000000,
     price: 150,
     architect: "Leandro V. Locsin",
-    images: [
-      "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/795662/pexels-photo-795662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/11431628/pexels-photo-11431628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ],
+    images: [ coco1, coco2, coco3, coco4, coco5 ],
     historicalImage: "https://images.pexels.com/photos/3867521/pexels-photo-3867521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1974",
     history: "Ang Coconut Palace ay ipinag-utos ipatayo noong 1978 ng dating First Lady Imelda Marcos bilang paghahanda sa inaasahang pagbisita ni Pope John Paul II. Layunin nitong ipakita ang ganda at yaman ng Pilipinas sa pamamagitan ng isang gusaling nakatuon sa gamit ng niyog—isa sa pangunahing likas na yaman ng bansa. Kaiba sa iba pang mga gusali na idinisenyo ni Leandro Locsin, ang Coconut Palace ay disenyo ni Francisco Mañosa. Ang pagkakaiba nila ay makikita sa istilo ng arkitektura: habang si Locsin ay kilala sa modernong estilo, ginamit ni Mañosa sa Coconut Palace ang lokal at katutubong materyales at tradisyunal na konsepto, lalo na ang paggamit ng niyog bilang pangunahing elemento sa gusali.  Ang gusali ay gawa sa humigit-kumulang 70% ng mga produktong niyog na sumailalim pa sa mga kemikal na proseso, kabilang ang kahoy, ugat, puno, balat, bunga, bulaklak, at bao ng niyog.\
