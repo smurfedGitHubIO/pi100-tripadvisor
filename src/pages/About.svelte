@@ -27,8 +27,8 @@
     },
     {
       name: "Justin Clyde Frongoso",
-      role: "Katha",
-      bio: "Isang katha na nangangarap maging direktor at patnubay.",
+      role: "Developer",
+      bio: "Retired TFT veteran.",
       image: frongs
     }
   ];
