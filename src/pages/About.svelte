@@ -1,5 +1,5 @@
 <script>
-  import frongs from '$lib/assets/images/Frongoso.jpg';
+  import frongs from '$lib/assets/images/Team/Frongoso.jpg';
   const teamMembers = [
     {
       name: "Patricia Reyes-Styles",

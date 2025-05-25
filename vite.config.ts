@@ -4,6 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [svelte()],
+  assetsInclude: ['**/*.JPG', '**/*.jpg', '**/*.png', '**/*.jpeg'],
   resolve: {
     alias: {
       $lib: path.resolve('./src/lib'),

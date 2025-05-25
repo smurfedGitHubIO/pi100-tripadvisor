@@ -1,4 +1,14 @@
 import { writable } from 'svelte/store';
+import folk1 from '$lib/assets/images/Infra/Folk Arts Theater/1.jpg';
+import folk2 from '$lib/assets/images/Infra/Folk Arts Theater/2.jpg';
+import folk3 from '$lib/assets/images/Infra/Folk Arts Theater/3.jpg';
+import folk4 from '$lib/assets/images/Infra/Folk Arts Theater/4.jpg';
+import folk5 from '$lib/assets/images/Infra/Folk Arts Theater/5.jpg';
+import mfc1 from '$lib/assets/images/Infra/Manila Film Center/1.jpg';
+import mfc2 from '$lib/assets/images/Infra/Manila Film Center/2.jpg';
+import mfc3 from '$lib/assets/images/Infra/Manila Film Center/3.jpg';
+import mfc4 from '$lib/assets/images/Infra/Manila Film Center/4.jpg';
+import mfc5 from '$lib/assets/images/Infra/Manila Film Center/5.jpg';
 
 // Mock data for infrastructures
 const infrastructureData = [
@@ -12,7 +22,7 @@ const infrastructureData = [
     yearBuilt: "1969-1973",
     cost: 48000000,
     price: 150,
-    architect: "Designed by the international engineering firm Parsons Brinkerhoff",
+    architect: "Parsons Brinkerhoff",
     images: [
       "https://images.pexels.com/photos/4064432/pexels-photo-4064432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/4064436/pexels-photo-4064436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -26,7 +36,7 @@ const infrastructureData = [
     \
 Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Locsin, ang CCP ay pormal na binuksan noong 1969 sa pamamagitan ng isang engrandeng pagtatanghal na pinamagatang Golden Salakot: Isang Dularawan. Ito ang pinakaunang estrukturang itinayo bilang bahagi ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kagandahan, at modernidad ang lungsod ng Maynila.",
     controversy: "Hindi lamang ito simpleng gusali para sa pagtatanghal. Ang CCP ay ginamit ng administrasyong Marcos bilang simbolo ng soft power at state propaganda, na nagpapakita ng imahe ng isang moderno, organisado, at makasining na pamahalaan. Kasama ng iba pang mga proyektong tulad ng Folk Arts Theater at Philippine International Convention Center (PICC), ang CCP ay bahagi ng mas malawak na arkitekturang monumental. Ito ay binubuo ng mga estrukturang may malalaking sukat, modernong disenyo, at matitibay na materyales na may layuning ipakita ang kapangyarihan at kaunlaran ng Bagong Lipunan",
-    rating: 4.7,
+    rating: 2.0,
     reviews: [
       {
         name: "Carlos Mendoza",
@@ -73,21 +83,17 @@ Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Lo
     shortDescription: "The premier arts and culture complex showcasing Philippine and international performances and exhibitions.",
     description: "The Cultural Center of the Philippines (CCP) is a complex of buildings designed by Leandro V. Locsin, built on a reclaimed land along Roxas Boulevard in Manila. It was established to preserve, develop and promote arts and culture in the Philippines. The CCP was initiated by First Lady Imelda Marcos in 1966.",
     yearBuilt: "1966-1969",
-    cost: 35000000,
+    cost: 40000000,
     price: 200,
     architect: "Leandro V. Locsin",
-    images: [
-      "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1209978/pexels-photo-1209978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/3900437/pexels-photo-3900437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6039244/pexels-photo-6039244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6039245/pexels-photo-6039245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ],
+    images: [ folk1, folk2, folk3, folk4, folk5],
     historicalImage: "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1970",
-    history: "The main building, designed by National Artist for Architecture Leandro V. Locsin, was built in 1969. The CCP was inaugurated on September 8, 1969, with a performance of 'Dularawan,' a musical epic based on Filipino folk traditions. It became the centerpiece of Imelda Marcos' vision for the 'City of Man.'",
-    controversy: "While the CCP has been praised for its architectural significance and contribution to Philippine arts, it has been criticized for its lavish construction during a time of economic hardship. Critics argue it represented the Marcos regime's focus on creating a façade of progress through grand projects while neglecting basic needs.",
-    rating: 4.5,
+    history: "Ang Folk Arts Theater, na kilala ngayon bilang Tanghalang Francisco Balagtas, ay matatagpuan sa loob ng Cultural Center of the Philippines (CCP) Complex. Ipinatayo ito noong 1974 sa atas ni Imelda Marcos, bilang tugon sa desisyong idaos sa Pilipinas ang Miss Universe 1974. Dahil gaganapin ang patimpalak sa panahon ng tag-ulan, kinailangan ng isang saradong teatro na may sapat na kapasidad para sa hindi bababa sa walong libong manonood. Sa halip na magtayo ng pansamantalang tolda, nagpasya ang pamahalaan na magpatayo ng isang matibay at maraming gamit na estruktura na kayang itayo sa loob ng napakaikling panahon.\
+Bukod sa pagiging venue ng Miss Universe, nakita rin ni Imelda ang teatro bilang isang permanenteng tahanan ng sining-bayan, isang espasyo kung saan ang \"arts of the people\" ay maipapamalas at mapapalaganap. Ang layunin nito ay itanghal, isulong, at ipagdiwang ang kulturang Pilipino, habang nagsisilbi rin bilang isang entablado para sa mga lokal at internasyonal na pagtatanghal.\
+Dinisenyo ito ng Pambansang Alagad ng Sining sa Arkitektura na si Leandro Locsin at itinayo sa loob lamang ng 77 araw, isang pambihirang gawaing iniuugnay sa determinasyon at grandyosong bisyon ng administrasyong Marcos. Sa oras ng pagkakakumpleto, ito ang naging pinakamalaking single-span building sa buong bansa. Ang arkitektura nito ay nagpapakita ng estilong brutalismo na makikita sa malawak nitong bubong na tila nakalutang sa ere at sa mga hilaw, hindi tinapalan, at hubad na kongkretong pader. Ang monumentalidad ng gusali ay nagpapahiwatig ng kapangyarihan, katatagan, at ambisyon ng estado.",
+    controversy: "Hindi maikakaila ang malalim na ugnayan ng gusali sa bisyon at propaganda ng rehimeng Marcos. Bahagi ito ng tinaguriang \"edifice complex\" ni Imelda, ang pagkahumaling sa pagtatayo ng malalaking gusali bilang simbolo ng pambansang pag-unlad at karangalan. Tulad ng ibang gusali sa CCP Complex, ginamit ang teatro bilang entablado ng mga seremonyang pampubliko na naglalayong magpakita ng pagkakaisa at lehitimasyon ng rehimen.",
+    rating: 1.5,
     reviews: [
       {
         name: "Rafael Cruz",
@@ -136,8 +142,8 @@ Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Lo
     shortDescription: "A specialized medical facility focusing on cardiovascular care, established during the Marcos administration.",
     description: "The Philippine Heart Center is a government-owned and controlled corporation and specialty hospital dedicated to cardiovascular care. It was established on February 14, 1975, under Presidential Decree No. 673, signed by President Ferdinand Marcos. It was part of a series of specialized medical centers established during the Marcos era.",
     yearBuilt: "1973-1975",
-    cost: 85000000,
-    price: 100,
+    cost: 3600000000,
+    price: 150,
     architect: "Jorge Ramos and Associates",
     images: [
       "https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -148,9 +154,10 @@ Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Lo
     ],
     historicalImage: "https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1976",
-    history: "The Philippine Heart Center was inaugurated on February 14, 1975, Valentine's Day, with Dr. Avenilo P. Aventura as its first Executive Director. It was established as part of the First Lady Imelda Marcos' project to develop specialized medical centers to improve healthcare in the Philippines.",
-    controversy: "While the Heart Center has provided crucial specialized care to many Filipinos, critics point out that its establishment came at a time when basic healthcare services remained inadequate for many citizens. Some question whether resources should have been directed toward improving primary healthcare instead of specialized facilities accessible primarily to those who could afford them.",
-    rating: 4.3,
+    history: "Ang ideya para sa PICC ay nagsimula kay Imelda Marcos matapos niyang mapagtanto na itinuturing ang Pilipinas bilang posibleng lugar para sa mga pandaigdigang kumperensya ng United Nations. Kinumpirma ang mga kaisipang ito noong 1976 nang magpasya ang Pilipinas na maging host ng pinagsamang pagpupulong ng World Bank-IMF. Simula noon, ang PICC ay nag-host ng iba't ibang mahahalagang kaganapan tulad ng Miss Universe Pageant, World Bank’s International Monetary Fund Annual Meeting, APEC Summit, ASEAN Summit, World Law Conference, at iba't ibang konsiyerto.\
+Nagsimula ang konstruksyon ng PICC noong Setyembre 1974. Idinisenyo ito ni Leandro V. Locsin (isang Filipino National Artist) kasama ang Trans-Asia Philippines Inc. bilang mga inhinyero at ang H. R. Lopez Company bilang tagapamahala ng proyekto. Ang arkitektura nito ay brutalist, at ang napakalaki, parihabang harapan, patag na bloke, at paggamit ng mga cantilever ay nagbibigay-diin sa natatanging istilo ni Locsin. Natapos ito sa loob lamang ng dalawang taon, bahagyang dahil sa panggigipit ni Imelda, at pinasinayaan noong Setyembre 1976.",
+    controversy: "Ang PICC ay isa sa mga unang high-tech, \"futuristic\" na gusali sa bansa dahil sa mataas na antas ng teknikal na sopistikasyon nito para sa dekada 1970. Ito rin ay naging isa sa mga pangunahing cultural at arkitektural na simbolo ng Pilipinas at nagtataglay ng mahahalagang koleksyon ng sining mula sa ilan sa mga kilalang artista ng bansa. Dahil sa mataas na pagtingin dito, nakaranas ang PICC ng ilang insidente sa seguridad sa nakaraan, kabilang ang aksidenteng pagkalabit ng baril noong 2019 at isang banta sa bomba noong 2023. Matagumpay na nalutas ang parehong banta nang medyo mabilis at mahusay.",
+    rating: 1.6,
     reviews: [
       {
         name: "Roberto Lim",
@@ -217,7 +224,7 @@ Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Lo
     controversy: "Ngunit, ang gusali–katulad ng ibang mga gusali sa CCP Complex–ay naging sanhi ng malaking pangungutang mga Marcos sa mga international financial institutions. Mula rin sa Proclamation No. 1611 noong January 21, 1977, isinautos ni Marcos Sr. ang Chamber of Commerce na magsagawa ng malawakang fund campaign para lamang matugunan ang mga gastos para sa Philippine International Trade Fair na isinagawa sa PHILCITE. \
 \
 Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng mga Elizalde.",
-    rating: 4.0,
+    rating: 1.0,
     reviews: [
       {
         name: "Jason Wong",
@@ -269,18 +276,14 @@ Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng 
     cost: 37000000,
     price: 300,
     architect: "Francisco Mañosa",
-    images: [
-      "https://images.pexels.com/photos/6775268/pexels-photo-6775268.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6186830/pexels-photo-6186830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/6492403/pexels-photo-6492403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/2736139/pexels-photo-2736139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/4502965/pexels-photo-4502965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ],
+    images: [ mfc1, mfc2, mfc3, mfc4, mfc5 ],
     historicalImage: "https://images.pexels.com/photos/6492403/pexels-photo-6492403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1981",
-    history: "The Coconut Palace was built in 1978-1981 and features an octagonal shape and extensive use of coconut products, including lumber, shells, and coconut husks. It was originally intended to host Pope John Paul II during his 1981 visit to the Philippines, but the Pope declined to stay there, reportedly finding it too opulent in a country with widespread poverty.",
-    controversy: "The Coconut Palace has been criticized as a symbol of the Marcos regime's excesses. Built at a cost of approximately 37 million pesos (equivalent to about $5 million at the time), it was funded through the coconut levy imposed on coconut farmers, many of whom lived in poverty. Critics argue that the money should have been used to improve the livelihoods of these farmers instead.",
-    rating: 4.2,
+    history: "Ang Manila Film Center ay itinayo noong 1981 sa utos ni Imelda Marcos. Layunin nitong maging pangunahing tanghalan ng pelikulang Pilipino at pandaigdigang sinema, at magsilbing sentro ng kaalaman at pagpapalitan ng kultura sa pamamagitan ng pelikula. Isa ito sa mga pangunahing proyekto ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kultura, at modernidad ang lungsod ng Maynila.\
+Dinisenyo ni Froilan Hong at pinangasiwaan ng pintor at direktor na si Behn Cervantes bilang artistic director, ang Manila Film Center ay itinayo sa loob lamang ng 77 araw upang umabot sa deadline ng unang Manila International Film Festival noong Enero 1982. Sa kabila ng pagmamadali sa konstruksyon, isinagawa ito sa istilong Neoclassical at ginamitan ng mga modernong materyales upang bigyang anyo ang isang makabagong templong pangkultura.",
+    controversy: "Bilang bahagi ng ambisyosong layunin ni Imelda Marcos na gawing pelikulang kabisera ng Asya ang Maynila na makapapantay sa Cannes, naging laman ng mga pandaigdigang pahayagan ang proyektong ito. Subalit, ang mabilisang pagtatayo ng Manila Film Center ay nagbunga ng padalus-dalos na desisyon, kabilang na ang pagpapatuloy ng konstruksiyon sa kabila ng kakulangan sa kahandaan. Habang ginagawa ang ikaanim na palapag ng gusali, gumuho ang istruktura at bumaon sa mabilis matuyong semento ang hindi matukoy na bilang ng mga manggagawa. Ayon sa ilang ulat, hindi ipinahinto ang konstruksiyon upang iligtas ang mga biktima, at agad itong tinambakan ng bagong semento upang ituloy ang pagtatayo (Magno 1998, 172).\
+Ang trahedyang ito ay nananatiling isa sa mga pinakakontrobersyal na bahagi ng kasaysayan ng proyektong pangkultura ng Marcos regime. Bagamat itinayo ito bilang simbolo ng sining at pag-unlad, ang Manila Film Center ay naging paalala ng kawalang-habag at sakripisyo ng buhay ng mga manggagawang Pilipino alang-alang sa imahe ng modernidad. Tulad ng CCP at PICC, ito ay bahagi ng arkitekturang monumental ng Bagong Lipunan—malalaking estruktura na may layuning ipakita ang kapangyarihan, kaunlaran, at pambansang prestihiyo. Ngunit sa kabila ng marangyang disenyo, dala rin nito ang bigat ng kasaysayan at ang mga boses ng mga naisantabi sa ngalan ng propaganda.",
+    rating: 1.2,
     reviews: [
       {
         name: "Teresa Villaruel",
@@ -341,46 +344,33 @@ Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng 
     ],
     historicalImage: "https://images.pexels.com/photos/3867521/pexels-photo-3867521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1974",
-    history: "The Folk Arts Theater was constructed in 1974 in a record-breaking 77 days to serve as the venue for the 1974 Miss Universe Pageant, which the Philippines hosted during martial law. After the pageant, it became a venue for cultural performances, particularly those highlighting Filipino traditional and folk arts.",
-    controversy: "While less controversial than other Marcos-era projects, the Folk Arts Theater has been cited as an example of the regime's focus on constructing grand showcases for international audiences while martial law was in effect. Critics argue that the rapid construction and lavish international events were designed to present a positive image of the Philippines that masked the political repression occurring at the time.",
-    rating: 3.8,
+    history: "Ang Coconut Palace ay ipinag-utos ipatayo noong 1978 ng dating First Lady Imelda Marcos bilang paghahanda sa inaasahang pagbisita ni Pope John Paul II. Layunin nitong ipakita ang ganda at yaman ng Pilipinas sa pamamagitan ng isang gusaling nakatuon sa gamit ng niyog—isa sa pangunahing likas na yaman ng bansa. Kaiba sa iba pang mga gusali na idinisenyo ni Leandro Locsin, ang Coconut Palace ay disenyo ni Francisco Mañosa. Ang pagkakaiba nila ay makikita sa istilo ng arkitektura: habang si Locsin ay kilala sa modernong estilo, ginamit ni Mañosa sa Coconut Palace ang lokal at katutubong materyales at tradisyunal na konsepto, lalo na ang paggamit ng niyog bilang pangunahing elemento sa gusali.  Ang gusali ay gawa sa humigit-kumulang 70% ng mga produktong niyog na sumailalim pa sa mga kemikal na proseso, kabilang ang kahoy, ugat, puno, balat, bunga, bulaklak, at bao ng niyog.\
+Subalit sa kabila ng engrandeng disenyo at layunin, tinanggihan ng Santo Papa ang alok na manatili sa Coconut Palace. Ayon sa kanya, hindi nararapat ang ganitong karangyaan sa isang bansang lugmok sa matinding kahirapan.",
+    controversy: "Ang Coconut Palace ay isang malaking proyekto na gumamit ng tinatayang 2,000 puno ng niyog na higit sa 70 taon na ang tanda. Ang bubong ay gawa sa mga tabla ng niyog, ang mga haligi ay mula sa katawan ng puno, at ang mga pader ay binuo gamit ang tinatawag na “coconut bricks” na hinaluan ng hibla ng lana at semento mula sa balat ng niyog. Bukod pa rito, ang gate ng palasyo ay pinalamutian ng mga heometrikong disenyo mula sa mahigit 4,000 balat ng niyog. Sa loob ng palasyo, makikita rin ang iba’t ibang produkto mula sa niyog. Isa sa mga tampok nito ay ang 36-na talampakang hapag-kainan na nilagyan ng 47,000 piraso ng balat ng niyog na may iba’t ibang hugis.\
+Matapos ang pagkakatapos nito noong 1981, nagsilbi ang Coconut Palace sa iba’t ibang layunin: mula sa pagiging opisina ng pamahalaan, hanggang sa lunan ng mga sosyal at opisyal na pagtitipon.",
+    rating: 1.8,
     reviews: [
       {
-        name: "Paulo Mendoza",
+        name: "Shane Lovely Joy Saludares",
         avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         rating: 4,
         date: "2023-11-10",
         title: "Historical Performance Venue",
-        comment: "Attended a cultural performance here and was struck by the venue's history. The architecture is showing its age but still impressive. The exhibit about the 1974 Miss Universe pageant was particularly interesting as a snapshot of how the Marcos regime used international events.",
+        comment: "Ang pagkakagawa sa Coconut Palace ay detalyado at malinaw na pinag-isipan mula sa konsepto hanggang sa disenyo. Ginamit dito ang niyog—isang puno na may malaking papel sa ekonomiya at kultura ng Pilipinas. Sa katunayan, madalas itong tinatawag na \"Tree of Life\" dahil halos lahat ng bahagi nito ay may gamit: mula sa kahoy, ugat, balat, bao, bulaklak, bunga, hanggang sa dagta. Ang malikhaing paggamit sa bawat bahagi ng niyog sa pagbuo ng palasyo ay tunay na kahanga-hanga, at nagbibigay ng pambihirang pagkakakilanlan sa estruktura. Dahil dito, maraming turista at bisita ang naaakit sa lugar, at maari itong maging mapagkakakitaang venue para sa mga pagtitipon, kasalan, o iba pang mahahalagang okasyon.\
+        Gayunpaman, kung masusuri natin ang kasaysayan sa likod ng Coconut Palace, mas mauunawaan natin ang masalimuot na kahulugan nito. Ang pagpapatayo ng palasyo ay hindi lamang tungkol sa sining at likha, kundi tungkol din sa pampulitikang imahe at propaganda. Makikita rito ang tinatawag na \"edifice complex\", kung saan ang mga lider ay may labis na pagnanais na magpatayo ng mga engrandeng gusali upang ipakita ang kaunlaran, kapangyarihan, at karangyaan—kahit na taliwas ito sa aktwal na kalagayan ng bayan.\
+        Ipinatayo ni Imelda Marcos ang Coconut Palace upang ipakita sa Pope John Paul II ang isang maganda at mayamang mukha ng Pilipinas. Ngunit sa halip na humanga, tinanggihan ng Santo Papa ang alok na tumuloy sa palasyo. Sa kanyang simpleng desisyon, nakita ang kanyang katalinuhan, malasakit, at paninindigan sa prinsipyo. Naiintindihan niya ang realidad ng kahirapang nararanasan ng mga Pilipino noong panahong iyon, at hindi siya pumayag na makiisa sa isang palabas ng karangyaan habang naghihirap ang nakararami.\
+        Sa huli, ang Coconut Palace ay isang istrukturang maaaring hangaan sa aspetong arkitektural, ngunit nagiging simbolo rin ito ng mapanlinlang na representasyon ng yaman—isang magandang mukha na tumatakip sa tunay na sakit ng lipunan. Isa itong paalala kung paanong ang kagandahan ng isang gusali ay maaring magtago ng masalimuot na katotohanan ng kasaysayan.",
         source: "GuiltTripAdvisor"
       },
       {
-        name: "Luisa Garcia",
+        name: "Pope John Paul II",
         avatar: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         rating: 3,
         date: "2023-09-19",
         title: "Needs Renovation",
-        comment: "The historical significance is undeniable, but the facility needs major renovation. The exhibits about its creation during martial law are informative but could be more comprehensive in addressing the political context of the time.",
+        comment: "Ako si Pope John Paul II, at sa panahon ng aking inaasahang pagbisita sa Pilipinas, ipinag-utos ni dating Unang Ginang Imelda Marcos ang pagpapatayo ng isang gusali bilang aking matutuluyan—ang tinatawag ngayong Coconut Palace.\
+Nang makita ko ito, hindi ko maikakailang ito ay isang engrandeng obra—marangya at puno ng simbolismo ng likas na yaman ng bansa, lalo na ang niyog. Ngunit sa aking pagtanaw sa kapaligiran at kalagayan ng mga mamamayan, tila ba ang karangyaan ng gusaling ito ay malayo sa katotohanang sinasapitan ng maraming Pilipino.",
         source: "Facebook"
-      },
-      {
-        name: "Benjamin Tan",
-        avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        rating: 5,
-        date: "2023-07-30",
-        title: "Architectural Innovation",
-        comment: "As an architecture student, I found this building fascinating. Built in just 77 days, it showcases Leandro Locsin's genius in creating a functional space that incorporates Filipino design elements. The historical tour provides good context about its creation.",
-        source: "GuiltTripAdvisor",
-        response: "Thank you for appreciating the architectural aspects of the Folk Arts Theater. We're proud to showcase National Artist Locsin's work and its historical significance."
-      },
-      {
-        name: "Gabriela Santos",
-        avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        rating: 3,
-        date: "2023-05-25",
-        title: "Interesting History, Dated Facility",
-        comment: "The cultural performance was good, but the venue is showing its age. The historical exhibit about the Miss Universe pageant and martial law era was interesting but felt somewhat sanitized. Worth visiting for the historical significance.",
-        source: "Instagram"
       }
     ]
   }

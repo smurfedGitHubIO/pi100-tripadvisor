@@ -132,17 +132,12 @@
           <section id="history" class="section">
             <h2>Historical Context</h2>
             <div class="history-content">
-              <div class="history-image vintage-border">
-                <img src={infrastructure.historicalImage} alt="Historical photo" />
-                <div class="image-caption">Historical photo, circa {infrastructure.historicalImageYear}</div>
-              </div>
-              <div class="history-text">
-                <p>{infrastructure.history}</p>
-                <h3>Controversy</h3>
-                <p>{infrastructure.controversy}</p>
-              </div>
+              <p>{infrastructure.history}</p>
+              <h3>Controversy</h3>
+              <p>{infrastructure.controversy}</p>
             </div>
           </section>
+
           
           <section id="reviews" class="section">
             <ReviewList reviews={infrastructure.reviews} />
@@ -363,42 +358,36 @@
     font-size: 1.2rem;
   }
   
+  /* Updated history section styling */
   .history-content {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Optional: prevents text from overflowing */
+    padding: 1rem 0;
+    line-height: 1.6; /* Better readability */
+  }
+
+  .history-content p,
+  .history-content h3 {
+    margin-bottom: 1rem; /* Spacing between paragraphs and headings */
+  }
+
+  .content-sidebar-layout {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 2fr 1fr; /* Main content and sidebar */
     gap: 2rem;
+    align-items: start;
   }
-  
-  .history-image {
-    position: relative;
-  }
-  
-  .history-image img {
+
+  .main-content {
     width: 100%;
-    height: auto;
-    display: block;
   }
-  
-  .image-caption {
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 0.9rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+  @media (max-width: 768px) {
+    .content-sidebar-layout {
+      grid-template-columns: 1fr; /* Stack layout for smaller screens */
+    }
   }
-  
-  .history-text {
-    line-height: 1.7;
-  }
-  
-  .history-text h3 {
-    margin: 1.5rem 0 1rem;
-    color: var(--accent-brown);
-  }
+
   
   .sidebar {
     position: sticky;
