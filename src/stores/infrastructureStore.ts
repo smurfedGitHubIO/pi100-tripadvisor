@@ -19,7 +19,11 @@ const coco2 = '/images/Infra/Tahanang Filipino (Coconut Palace)/2.jpg';
 const coco3 = '/images/Infra/Tahanang Filipino (Coconut Palace)/3.jpg';
 const coco4 = '/images/Infra/Tahanang Filipino (Coconut Palace)/4.jpg';
 const coco5 = '/images/Infra/Tahanang Filipino (Coconut Palace)/5.jpg';
-
+const picc1 = '/images/Infra/PICC/1.jpg';
+const picc2 = '/images/Infra/PICC/2.jpg';
+const picc3 = '/images/Infra/PICC/3.jpg';
+const picc4 = '/images/Infra/PICC/4.jpg';
+const picc5 = '/images/Infra/PICC/5.jpg';
 
 // Mock data for infrastructures
 const infrastructureData = [
@@ -150,13 +154,7 @@ Dinisenyo ito ng Pambansang Alagad ng Sining sa Arkitektura na si Leandro Locsin
     cost: 3600000000,
     price: 150,
     architect: "Jorge Ramos and Associates",
-    images: [
-      "https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ],
+    images: [ picc1, picc2, picc3, picc4, picc5 ],
     historicalImage: "https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1976",
     history: "Ang ideya para sa PICC ay nagsimula kay Imelda Marcos matapos niyang mapagtanto na itinuturing ang Pilipinas bilang posibleng lugar para sa mga pandaigdigang kumperensya ng United Nations. Kinumpirma ang mga kaisipang ito noong 1976 nang magpasya ang Pilipinas na maging host ng pinagsamang pagpupulong ng World Bank-IMF. Simula noon, ang PICC ay nag-host ng iba't ibang mahahalagang kaganapan tulad ng Miss Universe Pageant, World Bank’s International Monetary Fund Annual Meeting, APEC Summit, ASEAN Summit, World Law Conference, at iba't ibang konsiyerto.\
