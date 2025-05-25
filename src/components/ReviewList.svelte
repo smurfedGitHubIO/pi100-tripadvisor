@@ -95,24 +95,6 @@
     </div>
   </div>
   
-  <div class="reviews-controls">
-    <div class="sorting">
-      <label for="sort">Sort by: </label>
-      <select id="sort" bind:value={sortOption} on:change={() => sortReviews(sortOption)}>
-        <option value="newest">Newest first</option>
-        <option value="oldest">Oldest first</option>
-        <option value="highest">Highest rating</option>
-        <option value="lowest">Lowest rating</option>
-      </select>
-    </div>
-    
-    {#if filterRating > 0}
-      <button class="clear-filter" on:click={() => filterByRating(0)}>
-        Clear filter ({filterRating}-star)
-      </button>
-    {/if}
-  </div>
-  
   <div class="reviews-list">
     {#if filteredReviews.length === 0}
       <div class="no-reviews">No reviews match your filter</div>

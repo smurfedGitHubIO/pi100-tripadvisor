@@ -1,5 +1,5 @@
 <script>
-  import frongs from '$lib/assets/images/hnrvr.jpg';
+  import frongs from '$lib/assets/images/Frongoso.jpg';
   const teamMembers = [
     {
       name: "Patricia Reyes-Styles",
@@ -26,9 +26,9 @@
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
     {
-      name: "Frongs Frongoso",
-      role: "Site Developer",
-      bio: "That's not me.",
+      name: "Justin Clyde Frongoso",
+      role: "Katha",
+      bio: "Isang katha na nangangarap maging direktor at patnubay.",
       image: frongs
     }
   ];
@@ -36,42 +36,52 @@
 
 <div class="about-page">
   <section class="about-header">
-    <div class="container">
-      <h1>About GuiltTripAdvisor</h1>
-      <p class="subtitle">Revisiting the "Golden Age" of Philippine Infrastructure</p>
-    </div>
-  </section>
-  
-  <section class="mission-section">
-    <div class="container">
-      <div class="mission-content">
-        <div class="mission-text">
-          <h2>Our Mission</h2>
-          <p>
-            GuiltTripAdvisor was founded to provide a comprehensive and balanced perspective on the infrastructure projects built during the Ferdinand Marcos administration in the Philippines (1965-1986). This period, often referred to by supporters as the "Golden Age," saw the construction of numerous significant infrastructure projects across the country.
-          </p>
-          <p>
-            Our goal is to document these structures, provide historical context about their creation, acknowledge their cultural significance, and present a nuanced understanding of their legacy, including the controversies surrounding their financing and construction.
-          </p>
-          <p>
-            We believe that by examining these projects through a historical lens, visitors can develop a more informed understanding of this complex period in Philippine history.
-          </p>
-        </div>
-        <div class="mission-image">
-          <img src="https://images.pexels.com/photos/1422407/pexels-photo-1422407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Historical building" />
-        </div>
+    <div class="overlay">
+      <div class="header-content">
+        <h1>Tungkol sa GuiltTripAdvisor</h1>
+        <p class="subtitle">Paggunita sa Golden Age ni Marcos Sr.</p>
       </div>
     </div>
   </section>
-  
+
+  <section class="mission-section">
+    <div class="wide-container mission-content">
+      <div class="mission-text">
+        <h2>Aming Misyon</h2>
+        <p>
+          Sa GuiltTripAdvisor ay matatagpuan ang iba’t ibang halimbawa ng arkitekturang Pilipino—mga gusaling kahanga-hanga sa paningin ngunit may mga kwentong bumabalot sa bawat haligi at disenyo.
+        </p>
+        <p>
+          Sa likod ng kanilang engrandeng anyo, may mga kasaysayang dapat halukayin. Kanino nga ba talaga ang tagumpay na ito? Sa bayan ba, o sa iilang apelyidong pilit na inuukit ang kanilang pangalan sa marmol ng kasaysayan?
+        </p>
+        <p>
+          Halina’t pasukin natin ang mundo ng edifice complex—isang paglalakbay sa pagitan ng ningning ng karangyaan at ang kapalit nito ay ang yaman ng bayan.
+        </p>
+        <p>
+          Ang Cultural Center of the Philippines (CCP) Complex ay maituturing na kauna-unahang pambansang teatro ng Pilipinas matapos makamit ang kasarinlan. Orihinal itong planong itayo sa Quezon City bilang bahagi ng proyektong pangkultura ng Philippine-American Cultural Foundation. Gayunman, hindi ito natuloy, ngunit ito ay muling iminungkahi ni Unang Ginang Imelda Marcos noong 1965.
+        </p>
+        <p>
+          Itinayo ito sa nabawing lupain sa Manila Bay, at umabot sa ₱65 milyon ang gastos sa konstruksyon. Isinagawa ito sa isang panahong puno ng pagbabagong pampulitika at pangkultura. Ayon kay urban planning scholar Gavin Shatkin, idinisenyo ang CCP upang mapahanga ang lokal at pandaigdigang bisita sa laki at karangyaan nito—isang simbolo ng ambisyon ng administrasyong Marcos.
+        </p>
+        <p>
+          Subalit sa likod ng marangyang disenyo ay nakatago ang mga kontrobersiya. Ang orihinal na badyet ay ₱15 milyon lamang ngunit tumaas ito hanggang ₱50 milyon, dahilan upang umutang ng $7 milyon mula sa ibang bansa. Isa lamang ito sa maraming proyektong ipinagawa ni Imelda Marcos gamit ang dayuhang utang. Bagama’t nagpakita ito ng tila kaunlaran, lalong lumubha ang krisis sa ekonomiya ng Pilipinas.
+        </p>
+      </div>
+      <div class="mission-image">
+        <img src="https://images.pexels.com/photos/1422407/pexels-photo-1422407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Historical building" />
+      </div>
+    </div>
+  </section>
+
+    <!-- Team section with improved alignment -->
   <section class="team-section">
-    <div class="container">
-      <h2 class="section-title">Meet Our Team</h2>
+    <div class="wide-container">
+      <h2 class="section-title">Kilalanin ang mga Miyembro</h2>
       <div class="team-grid">
         {#each teamMembers as member}
           <div class="team-member">
-            <div class="member-image">
-              <img src={member.image} alt={member.name} />
+            <div class="member-image-container">
+              <img class="member-image" src={member.image} alt={member.name} />
             </div>
             <div class="member-info">
               <h3>{member.name}</h3>
@@ -83,258 +93,198 @@
       </div>
     </div>
   </section>
-  
-  <section class="contact-section">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="contact-info">
-        <p>
-          Have questions, suggestions, or feedback? We'd love to hear from you! Reach out to our team at <strong>info@guilttrip.example.com</strong>.
-        </p>
-        <button class="contact-btn">Send Us a Message</button>
-      </div>
-    </div>
-  </section>
 </div>
 
 <style>
+  :root {
+    --accent-brown: #4B3F36;
+    --primary-gold: #D4AF37;
+    --secondary-gold: #c49b2e;
+    --text-dark: #2d2d2d;
+    --bg-soft: #f8f6f3;
+  }
+
   .about-page {
-    width: 100%;
+    background-color: var(--bg-soft);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
   }
-  
+
+  .wide-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
   .about-header {
-    background-color: white;
-    color: white;
-    padding: 4rem 0;
+    background: url("https://images.pexels.com/photos/1422407/pexels-photo-1422407.jpeg?auto=compress&cs=tinysrgb&w=1600") center center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
     text-align: center;
+    color: white;
   }
-  
+
   .about-header h1 {
-    color: var(--accent-brown);
-    margin-bottom: 1rem;
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
   }
-  
+
   .subtitle {
-    font-size: 1.5rem;
-    color: var(--primary-gold);
+    font-size: 1.25rem;
     font-style: italic;
+    color: #f1eac8;
   }
-  
+
   .section-title {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
     color: var(--accent-brown);
   }
-  
+
   .mission-section {
-    padding: 4rem 0;
-    background-color: white;
+    padding: 3rem 0;
   }
-  
+
   .mission-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
   }
-  
+
   .mission-text h2 {
+    margin-bottom: 1rem;
     color: var(--accent-brown);
-    margin-bottom: 1.5rem;
   }
-  
+
   .mission-text p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    max-width: 80ch; /* Limits line length for readability */
   }
-  
-  .mission-image {
-    height: 400px;
-    overflow: hidden;
-  }
-  
+
   .mission-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .team-section {
+    padding: 3rem 0;
+    background-color: white;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .team-member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .member-image-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .member-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
   }
-  
-  .team-section {
-    padding: 4rem 0;
-    background-color: white;
+
+  .team-member:hover .member-image {
+    transform: scale(1.05);
   }
-  
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .team-member {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-10px);
-  }
-  
-  .member-image {
-    height: 250px;
-    overflow: hidden;
-  }
-  
+
   .member-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .member-info {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem;
   }
-  
+
   .member-info h3 {
+    margin: 0 0 0.5rem;
     color: var(--accent-brown);
-    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
   }
-  
+
   .member-role {
+    font-weight: bold;
     color: var(--primary-gold);
-    font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
   }
-  
+
   .member-bio {
-    color: #666;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
   }
-  
-  .approach-section {
-    padding: 4rem 0;
-    background-color: white;
-  }
-  
-  .approach-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-  
-  .approach-card {
-    background-color: var(--very-light-brown);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 2px solid var(--primary-gold);
-  }
-  
-  .approach-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .approach-card h3 {
-    color: var(--accent-brown);
-    margin-bottom: 1rem;
-  }
-  
-  .approach-card p {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .disclaimer-section {
-    padding: 4rem 0;
-    background-color: var(--very-light-brown);
-  }
-  
-  .disclaimer-box {
-    background-color: #fff3cd;
-    border: 2px solid #ffeeba;
-    border-radius: 8px;
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .disclaimer-box h3 {
-    color: #856404;
-    margin-bottom: 1rem;
-  }
-  
-  .disclaimer-box p {
-    color: #856404;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-  
-  .contact-section {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: white;
-  }
-  
-  .contact-info {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact-info p {
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-  }
-  
-  .contact-btn {
-    padding: 1rem 2rem;
-    background-color: var(--primary-gold);
-    color: var(--text-dark);
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .contact-btn:hover {
-    background-color: var(--secondary-gold);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+
   @media (max-width: 992px) {
     .mission-content {
       grid-template-columns: 1fr;
     }
-    
+
     .mission-image {
       order: -1;
     }
-    
-    .approach-cards {
-      grid-template-columns: 1fr;
-    }
   }
-  
+
   @media (max-width: 768px) {
-    .about-header {
-      padding: 3rem 0;
+    .team-member {
+      flex: 1 1 100%;
+      max-width: 100%;
     }
-    
-    .team-grid {
-      grid-template-columns: 1fr;
+
+    .about-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
     }
   }
 </style>

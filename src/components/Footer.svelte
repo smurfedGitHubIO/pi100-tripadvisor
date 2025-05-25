@@ -6,20 +6,20 @@
   <div class="container footer-content">
     <div class="footer-logo">
       <h2>GuiltTripAdvisor</h2>
-      <p class="tagline">Revisiting the "Golden Age"</p>
+      <p class="tagline">Paggunita sa "Golden Age" ni Marcos Sr.</p>
     </div>
     
     <div class="footer-links">
       <div class="links-column">
-        <h3>Navigation</h3>
+        <h3>Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
+          <li><a href="/about">Tungkol sa Amin<a></li>
         </ul>
       </div>
       
       <div class="links-column">
-        <h3>Popular Infrastructures</h3>
+        <h3>Popular na Gusali</h3>
         <ul>
           <li><a href="/infrastructure/1">San Juanico Bridge</a></li>
           <li><a href="/infrastructure/2">Cultural Center of the Philippines</a></li>
@@ -41,7 +41,7 @@
   <div class="footer-bottom">
     <div class="container">
       <p>&copy; {currentYear} GuiltTripAdvisor - A satirical project</p>
-      <p class="disclaimer">This website is a fictional parody and not affiliated with TripAdvisor.</p>
+      <p class="disclaimer">Ang likhang ito ay piksyonal na parody at hindi sa kahit ano paraan affiliated sa TripAdvisor.</p>
     </div>
   </div>
 </footer>

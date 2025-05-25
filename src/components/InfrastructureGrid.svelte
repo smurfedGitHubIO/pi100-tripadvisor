@@ -8,7 +8,7 @@
 </script>
 
 <div class="infrastructure-grid">
-  <h2 class="section-title">Explore All Infrastructures</h2>
+  <h2 class="section-title">Tuklasin ang iba't-ibang gusali</h2>
   
   <div class="grid">
     {#each $infrastructureStore as item}

@@ -4,13 +4,13 @@ import { writable } from 'svelte/store';
 const infrastructureData = [
   {
     id: 1,
-    name: "San Juanico Bridge",
-    location: "Leyte and Samar",
-    address: "San Juanico Strait, between Leyte and Samar",
+    name: "Cultural Center of the Philippines",
+    location: "Manila",
+    address: "CCP Complex, Roxas Boulevard, Pasay City, Metro Manila",
     shortDescription: "The iconic bridge connecting the islands of Leyte and Samar, often called 'The Bridge of Love'.",
     description: "The San Juanico Bridge is the longest bridge in the Philippines spanning a body of water, with a length of 2.16 kilometers (1.34 mi). It was built as part of the Pan-Philippine Highway now called the Maharlika Highway, a network of roads, bridges, and ferry services that connect the islands of Luzon, Samar, Leyte, and Mindanao.",
     yearBuilt: "1969-1973",
-    cost: 21700000,
+    cost: 48000000,
     price: 150,
     architect: "Designed by the international engineering firm Parsons Brinkerhoff",
     images: [
@@ -22,8 +22,10 @@ const infrastructureData = [
     ],
     historicalImage: "https://images.pexels.com/photos/4947810/pexels-photo-4947810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1975",
-    history: "Construction of the San Juanico Bridge began in 1969 and was completed in 1973. The bridge was inaugurated on July 2, 1973, as part of the 'infrastructure boom' during the Marcos era. The project was funded through a loan from Japan's Overseas Technical Cooperation Agency (now part of JICA).",
-    controversy: "The bridge has been the subject of controversy, with some viewing it as a 'gift' from President Marcos to his wife Imelda, who hailed from Leyte. Critics argue that its construction prioritized political connections over economic necessity, though defenders point to its economic benefits for the region.",
+    history: "Ang Cultural Center of the Philippines o Sentrong Pangkultura ng Pilipinas (CCP) ay itinatag noong 1966 sa utos ni Imelda Marcos, ang dating Unang Ginang ng Pilipinas, sa ilalim ng administrasyon ni Pangulong Ferdinand Marcos. Layunin nitong maging pangunahing institusyon para sa pangalaga, pagtataguyod, at pagpapaunlad ng sining at kulturang Pilipino. Nais ng CCP na gawing abot-kaya ang sining para sa mas maraming mamamayan at itanghal ang Pilipinas sa pandaigdigang entablado ng sining at kultura.\
+    \
+Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Locsin, ang CCP ay pormal na binuksan noong 1969 sa pamamagitan ng isang engrandeng pagtatanghal na pinamagatang Golden Salakot: Isang Dularawan. Ito ang pinakaunang estrukturang itinayo bilang bahagi ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kagandahan, at modernidad ang lungsod ng Maynila.",
+    controversy: "Hindi lamang ito simpleng gusali para sa pagtatanghal. Ang CCP ay ginamit ng administrasyong Marcos bilang simbolo ng soft power at state propaganda, na nagpapakita ng imahe ng isang moderno, organisado, at makasining na pamahalaan. Kasama ng iba pang mga proyektong tulad ng Folk Arts Theater at Philippine International Convention Center (PICC), ang CCP ay bahagi ng mas malawak na arkitekturang monumental. Ito ay binubuo ng mga estrukturang may malalaking sukat, modernong disenyo, at matitibay na materyales na may layuning ipakita ang kapangyarihan at kaunlaran ng Bagong Lipunan",
     rating: 4.7,
     reviews: [
       {
@@ -33,9 +35,7 @@ const infrastructureData = [
         date: "2023-12-15",
         title: "Engineering Marvel",
         comment: "This bridge is truly an engineering marvel, especially considering when it was built. The views from the bridge are spectacular, and learning about its history was fascinating. A must-visit for anyone interested in Philippine infrastructure.",
-        source: "GuiltTripAdvisor",
-        response: "Thank you for your review! We're glad you appreciated both the engineering and historical aspects of the San Juanico Bridge."
-      },
+        source: "GuiltTripAdvisor",},
       {
         name: "Francesca Lopez",
         avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -67,9 +67,9 @@ const infrastructureData = [
   },
   {
     id: 2,
-    name: "Cultural Center of the Philippines",
+    name: "Folk Arts Theater",
     location: "Manila",
-    address: "CCP Complex, Roxas Boulevard, Pasay City, Metro Manila",
+    address: "CCP Complex, Roxas Boulevard, Manila",
     shortDescription: "The premier arts and culture complex showcasing Philippine and international performances and exhibitions.",
     description: "The Cultural Center of the Philippines (CCP) is a complex of buildings designed by Leandro V. Locsin, built on a reclaimed land along Roxas Boulevard in Manila. It was established to preserve, develop and promote arts and culture in the Philippines. The CCP was initiated by First Lady Imelda Marcos in 1966.",
     yearBuilt: "1966-1969",
@@ -130,7 +130,7 @@ const infrastructureData = [
   },
   {
     id: 3,
-    name: "Philippine Heart Center",
+    name: "Philippine International Convention Center",
     location: "Quezon City",
     address: "East Avenue, Quezon City, Metro Manila",
     shortDescription: "A specialized medical facility focusing on cardiovascular care, established during the Marcos administration.",
@@ -193,7 +193,7 @@ const infrastructureData = [
   },
   {
     id: 4,
-    name: "Bataan Nuclear Power Plant",
+    name: "PHILCITE",
     location: "Morong, Bataan",
     address: "Napot Point, Morong, Bataan",
     shortDescription: "The never-operational nuclear power plant that became one of the most controversial projects of the Marcos era.",
@@ -211,8 +211,12 @@ const infrastructureData = [
     ],
     historicalImage: "https://images.pexels.com/photos/2934284/pexels-photo-2934284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     historicalImageYear: "1982",
-    history: "Construction of the BNPP began in 1976 and was completed in 1984 at a cost of over $2.3 billion. The Westinghouse Electric Company was awarded the contract. Following the 1986 Chernobyl disaster and the fall of the Marcos regime, President Corazon Aquino decided not to operate the plant due to safety concerns and issues of corruption associated with the project.",
-    controversy: "The BNPP has been a subject of immense controversy. Critics point to alleged corruption in the contract awarding process, with Westinghouse reportedly paying commissions to secure the deal. The plant's location near fault lines and the Mount Natib volcano raised serious safety concerns. The Philippines continued to pay debt for the plant until 2007, despite it never producing a single watt of electricity.",
+    history: "Pinagawa ni Imelda ang Philippine Center for International Trade and Exhibitions (PHILCITE) dahil hinangad niyang magkaroon ng espasyo para sa internasyonal na kalakalan. Katulad ng karamihan sa mga gusali ng CCP Complex, ang PHILCITE ay dinisenyo ni Leandro Locsin. Mayroon itong lawak na 5,400 square meters at taas na 16 meters. Patunay sa pagka-engrande ng gusali ang pagkakaroon nito ng modernong information center, mahigit 10 exhibition areas, at anim na project screens. \
+    \
+ Sang-ayon sa tema ng mga gusaling ipinatayo sa ilalim ni Imelda, ang PHILCITE ay tinawag ng dating First Lady na “Forum for Filipino Enterprise” bilang “nostalgic allegory” para sa ancient Rome at “utopian metaphor” para sa New Society ng mga Marcos.",
+    controversy: "Ngunit, ang gusali–katulad ng ibang mga gusali sa CCP Complex–ay naging sanhi ng malaking pangungutang mga Marcos sa mga international financial institutions. Mula rin sa Proclamation No. 1611 noong January 21, 1977, isinautos ni Marcos Sr. ang Chamber of Commerce na magsagawa ng malawakang fund campaign para lamang matugunan ang mga gastos para sa Philippine International Trade Fair na isinagawa sa PHILCITE. \
+\
+Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng mga Elizalde.",
     rating: 4.0,
     reviews: [
       {
@@ -256,7 +260,7 @@ const infrastructureData = [
   },
   {
     id: 5,
-    name: "Coconut Palace",
+    name: "Manila Film Center",
     location: "Manila",
     address: "CCP Complex, Roxas Boulevard, Manila",
     shortDescription: "An architectural showcase built primarily from coconut lumber and materials, commissioned by Imelda Marcos.",
@@ -319,7 +323,7 @@ const infrastructureData = [
   },
   {
     id: 6,
-    name: "Folk Arts Theater",
+    name: "Tahanang Filipino (Coconut Palace)",
     location: "Manila",
     address: "CCP Complex, Roxas Boulevard, Manila",
     shortDescription: "An open-air theater built to host the 1974 Miss Universe Pageant and other cultural performances during the Marcos era.",

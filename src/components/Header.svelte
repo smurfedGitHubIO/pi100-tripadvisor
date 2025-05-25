@@ -33,11 +33,7 @@
   <div class="container header-container">
     <div class="logo" on:click={() => navigateTo('/')}>
       <h1>GuiltTripAdvisor</h1>
-      <span class="tagline">Revisiting the "Golden Age"</span>
-    </div>
-    
-    <div class="search-container">
-      <SearchBar />
+      <span class="tagline">Paggunita sa "Golden Age" ni Marcos Sr.</span>
     </div>
     
     <button class="menu-toggle" on:click={toggleMobileMenu}>
@@ -49,7 +45,7 @@
     <nav class:open={isMobileMenuOpen}>
       <ul>
         <li><a href="/" on:click|preventDefault={() => navigateTo('/')}>Home</a></li>
-        <li><a href="/about" on:click|preventDefault={() => navigateTo('/about')}>About Us</a></li>
+        <li><a href="/about" on:click|preventDefault={() => navigateTo('/about')}>Tungkol sa Amin</a></li>
       </ul>
     </nav>
   </div>

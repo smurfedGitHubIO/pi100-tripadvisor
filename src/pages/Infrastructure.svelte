@@ -111,11 +111,11 @@
             <h2>Information</h2>
             <div class="info-grid">
               <div class="info-item">
-                <div class="info-label">Year Built</div>
+                <div class="info-label">Taon Ginawa</div>
                 <div class="info-value">{infrastructure.yearBuilt}</div>
               </div>
               <div class="info-item">
-                <div class="info-label">Cost</div>
+                <div class="info-label">Build Cost</div>
                 <div class="info-value">₱{infrastructure.cost.toLocaleString()}</div>
               </div>
               <div class="info-item">
@@ -123,7 +123,7 @@
                 <div class="info-value">₱{infrastructure.price.toLocaleString()}</div>
               </div>
               <div class="info-item">
-                <div class="info-label">Architect/Engineer</div>
+                <div class="info-label">Arkitekt/Inhenyero</div>
                 <div class="info-value">{infrastructure.architect}</div>
               </div>
             </div>

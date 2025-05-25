@@ -1,15 +1,15 @@
 :root {
-  --primary-gold: #D4AF37;
-  --secondary-gold: #CFB53B;
-  --light-gold: #F5DEB3;
-  --accent-brown: #8B4513;
-  --light-brown: #A0522D;
-  --very-light-brown: #DEB887;
-  --text-dark: #3A3A3A;
-  --text-light: #F5F5F5;
-  --background-cream: #FFF8E1;
-  --background-dark: #3A3A3A;
-  
+  --primary-gold: #7A2A17;        /* very dark red-gold */
+  --secondary-gold: #8F3B20;      /* deep burnt orange-gold */
+  --light-gold: #B8754F;          /* muted golden amber */
+  --accent-brown: #5A1F14;        /* very dark reddish brown */
+  --light-brown: #7A3A28;         /* dark rusty brown */
+  --very-light-brown: #A9674B;    /* deeper warm tan with red undertones */
+  --text-dark: #2B150E;           /* very dark reddish brown almost black */
+  --text-light: #E8D8CC;          /* creamy off-white with warm tint */
+  --background-cream: #F9E9DD;    /* soft creamy peach */
+  --background-dark: #2B150E;     /* deep dark red-brown */
+
   font-family: 'Times New Roman', Times, serif;
   line-height: 1.5;
   font-weight: 400;
