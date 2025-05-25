@@ -2,6 +2,8 @@
   export let images: string[] = [];
   let currentImageIndex = 0;
   let showLightbox = false;
+  let touchStartX = 0;
+  let touchEndX = 0;
   
   function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -33,23 +35,42 @@
       prevImage();
     }
   }
+
+  function handleTouchStart(event: TouchEvent) {
+    touchStartX = event.changedTouches[0].screenX;
+  }
+
+  function handleTouchEnd(event: TouchEvent) {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+  }
+
+  function handleSwipe() {
+    const threshold = 50; // minimum swipe distance
+    if (touchStartX - touchEndX > threshold) {
+      nextImage();
+    } else if (touchEndX - touchStartX > threshold) {
+      prevImage();
+    }
+  }
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
 <div class="gallery">
   <div class="main-image">
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <img src={images[0]} alt="Main view" on:click={() => openLightbox(0)} />
+    <img 
+      src={images[0]} 
+      alt="Main view" 
+      on:click={() => openLightbox(0)}
+      class="clickable-image"
+    />
   </div>
   
   <div class="thumbnails">
     {#each images.slice(1) as image, i}
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div 
-        class="thumbnail"
+        class="thumbnail clickable-image"
         on:click={() => openLightbox(i + 1)}
       >
         <img src={image} alt={`Thumbnail ${i + 1}`} />
@@ -59,16 +80,33 @@
 </div>
 
 {#if showLightbox}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="lightbox" on:click={closeLightbox}>
     <div class="lightbox-content" on:click|stopPropagation>
       <button class="close-btn" on:click={closeLightbox}>×</button>
-      <button class="nav-btn prev" on:click={prevImage}>❮</button>
-      <div class="lightbox-image">
-        <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+      
+      <div class="carousel">
+        <button class="nav-btn prev" on:click={prevImage}>❮</button>
+        
+        <div class="slider-container">
+          <div 
+            class="slider-track"
+            style="transform: translateX(-{currentImageIndex * 100}%)"
+          >
+            {#each images as image, i}
+              <div class="slide">
+                <img 
+                  src={image} 
+                  alt={`Image ${i + 1}`} 
+                  class={i === currentImageIndex ? 'active' : ''}
+                />
+              </div>
+            {/each}
+          </div>
+        </div>
+        
+        <button class="nav-btn next" on:click={nextImage}>❯</button>
       </div>
-      <button class="nav-btn next" on:click={nextImage}>❯</button>
+      
       <div class="image-counter">{currentImageIndex + 1} / {images.length}</div>
     </div>
   </div>
@@ -85,7 +123,6 @@
   .main-image {
     height: 400px;
     overflow: hidden;
-    cursor: pointer;
   }
   
   .main-image img {
@@ -93,9 +130,10 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    cursor: pointer;
   }
   
-  .main-image:hover img {
+  .main-image img:hover {
     transform: scale(1.05);
   }
   
@@ -141,17 +179,39 @@
     width: 90%;
     max-width: 1000px;
     height: 80%;
+    display: flex;
+    flex-direction: column;
   }
   
-  .lightbox-image {
+  .carousel {
+    position: relative;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .slide {
+    min-width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
-  .lightbox-image img {
+
+  .slide img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -166,6 +226,7 @@
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 10;
   }
   
   .nav-btn {
@@ -184,6 +245,7 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 10;
   }
   
   .nav-btn:hover {
@@ -191,22 +253,47 @@
   }
   
   .nav-btn.prev {
-    left: -70px;
+    left: 20px;
   }
   
   .nav-btn.next {
-    right: -70px;
+    right: 20px;
   }
   
   .image-counter {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  
+  .carousel-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .carousel-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .carousel-thumbnail:hover {
+    opacity: 0.8;
+  }
+  
+  .carousel-thumbnail.active {
+    opacity: 1;
+    border-color: white;
   }
   
   @media (max-width: 768px) {
@@ -223,12 +310,15 @@
       grid-template-rows: repeat(2, 150px);
     }
     
-    .nav-btn.prev {
-      left: 10px;
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
     }
     
-    .nav-btn.next {
-      right: 10px;
+    .carousel-thumbnail {
+      width: 40px;
+      height: 40px;
     }
   }
 </style>
