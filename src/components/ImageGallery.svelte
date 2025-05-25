@@ -34,12 +34,18 @@
 <!-- Thumbnail Grid Below Carousel -->
 <div class="thumbnail-grid">
   {#each images as image, i}
-    <img 
-      src={image} 
-      alt={`Thumbnail ${i}`}
+    <button 
+      type="button"
+      class="thumbnail-button {i === currentIndex ? 'active' : ''}"
       on:click={() => currentIndex = i}
-      class="thumbnail {i === currentIndex ? 'active' : ''}"
-    />
+      aria-label={`View image ${i + 1}`}
+    >
+      <img 
+        src={image} 
+        alt={`Thumbnail ${i + 1}`}
+        class="thumbnail"
+      />
+    </button>
   {/each}
 </div>
 
@@ -112,22 +118,34 @@
     margin: 0 auto;
   }
   
+  .thumbnail-button {
+    background: none;
+    border: 2px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+    overflow: hidden;
+  }
+  
   .thumbnail {
     width: 100%;
     height: 80px;
     object-fit: cover;
-    cursor: pointer;
-    transition: all 0.2s;
-    border-radius: 4px;
-    border: 2px solid transparent;
+    display: block;
   }
   
-  .thumbnail:hover {
+  .thumbnail-button:hover {
     transform: scale(1.05);
     border-color: #007acc;
   }
 
-  .thumbnail.active {
+  .thumbnail-button:focus {
+    outline: 2px solid #007acc;
+    outline-offset: 2px;
+  }
+
+  .thumbnail-button.active {
     border-color: #007acc;
     transform: scale(1.05);
   }
