@@ -1,14 +1,24 @@
 import { writable } from 'svelte/store';
-import folk1 from '$lib/assets/images/Infra/Folk Arts Theater/1.jpg';
-import folk2 from '$lib/assets/images/Infra/Folk Arts Theater/2.jpg';
-import folk3 from '$lib/assets/images/Infra/Folk Arts Theater/3.jpg';
-import folk4 from '$lib/assets/images/Infra/Folk Arts Theater/4.jpg';
-import folk5 from '$lib/assets/images/Infra/Folk Arts Theater/5.jpg';
-import mfc1 from '$lib/assets/images/Infra/Manila Film Center/1.jpg';
-import mfc2 from '$lib/assets/images/Infra/Manila Film Center/2.jpg';
-import mfc3 from '$lib/assets/images/Infra/Manila Film Center/3.jpg';
-import mfc4 from '$lib/assets/images/Infra/Manila Film Center/4.jpg';
-import mfc5 from '$lib/assets/images/Infra/Manila Film Center/5.jpg';
+const folk1 = '/images/Infra/Folk Arts Theater/1.jpg';
+const folk2 = '/images/Infra/Folk Arts Theater/2.jpg';
+const folk3 = '/images/Infra/Folk Arts Theater/3.jpg';
+const folk4 = '/images/Infra/Folk Arts Theater/4.jpg';
+const folk5 = '/images/Infra/Folk Arts Theater/5.jpg';
+const mfc1 = '/images/Infra/Manila Film Center/1.jpg';
+const mfc2 = '/images/Infra/Manila Film Center/2.jpg';
+const mfc3 = '/images/Infra/Manila Film Center/3.jpg';
+const mfc4 = '/images/Infra/Manila Film Center/4.jpg';
+const mfc5 = '/images/Infra/Manila Film Center/5.jpg';
+// import folk1 from '$lib/assets/images/Infra/Folk Arts Theater/1.jpg';
+// import folk2 from '$lib/assets/images/Infra/Folk Arts Theater/2.jpg';
+// import folk3 from '$lib/assets/images/Infra/Folk Arts Theater/3.jpg';
+// import folk4 from '$lib/assets/images/Infra/Folk Arts Theater/4.jpg';
+// import folk5 from '$lib/assets/images/Infra/Folk Arts Theater/5.jpg';
+// import mfc1 from '$lib/assets/images/Infra/Manila Film Center/1.jpg';
+// import mfc2 from '$lib/assets/images/Infra/Manila Film Center/2.jpg';
+// import mfc3 from '$lib/assets/images/Infra/Manila Film Center/3.jpg';
+// import mfc4 from '$lib/assets/images/Infra/Manila Film Center/4.jpg';
+// import mfc5 from '$lib/assets/images/Infra/Manila Film Center/5.jpg';
 
 // Mock data for infrastructures
 const infrastructureData = [
