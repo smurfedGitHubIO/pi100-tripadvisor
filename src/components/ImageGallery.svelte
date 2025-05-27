@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-  export const ssr = false;
-</script>
-
 <script lang="ts">
   export let images: string[] = [];
   let zoomedIndex: number | null = null;
