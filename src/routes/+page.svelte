@@ -61,9 +61,9 @@
 <section class="vintage-banner">
   <div class="overlay"></div>
   <div class="container banner-content">
-    <h2>The "Golden Age" of Infrastructure</h2>
-    <p>Examining the complex legacy of massive construction projects during the Marcos administration</p>
-    <a href="/about" class="banner-button">Learn More About Our Mission</a>
+    <h2>Ang "Golden Age" ni Marcos Sr. </h2>
+    <p>Pagsusuri sa masalimuot na pamana ng mga malalaking proyektong konstruksyon noong administrasyon ni Marcos</p>
+    <a href="/about" class="banner-button">Alamin Pa Tungkol sa Aming Misyon</a>
   </div>
 </section>
 
