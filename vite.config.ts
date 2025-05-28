@@ -1,14 +1,6 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import path from 'path';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [svelte()],
-  assetsInclude: ['**/*.JPG', '**/*.jpg', '**/*.png', '**/*.jpeg'],
-  resolve: {
-    alias: {
-      $lib: path.resolve('./src/lib'),
-      $assets: path.resolve('./src/assets'), // Optional for direct access to assets
-    },
-  },
-})
+  plugins: [sveltekit()]
+});

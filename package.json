@@ -1,27 +1,29 @@
 {
   "name": "guilt-trip-advisor",
+  "version": "0.0.1",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "^5.7.2",
-    "@sveltejs/kit": "^2.21.1",
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "@tsconfig/svelte": "^3.0.0",
-    "svelte": "^4.2.20",
-    "svelte-check": "^3.0.1",
-    "svelte-spa-router": "^3.3.0",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.2",
-    "vite": "^5.2.0"
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "svelte": "^4.2.7",
+    "svelte-check": "^3.6.0",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.0.3"
   },
+  "type": "module",
   "dependencies": {
-    "tinro": "^0.6.12"
+    "svelte-carousel": "^1.0.25"
   }
 }
