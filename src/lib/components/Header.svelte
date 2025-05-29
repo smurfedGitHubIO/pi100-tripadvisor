@@ -46,7 +46,7 @@
           <a href="/infrastructure">Mga Gusali</a>
         </li>
         <li class:active={$page.url.pathname === '/about'}>
-          <a href="/about">Tungkol sa Amin</a>
+          <a href="/about">Sanggunian</a>
         </li>
       </ul>
     </nav>

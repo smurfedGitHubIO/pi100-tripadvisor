@@ -22,8 +22,8 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="hero-content" in:fade={{ duration: 800 }}>
-      <h1>Infrastructure Projects</h1>
-      <p class="subtitle">Exploring the architectural and engineering legacies of the Marcos era</p>
+      <h1>Mga Gusali</h1>
+      <p class="subtitle">Tuklasin ang legasiya ng Marcos era</p>
       <div class="search-container">
         <SearchBar />
       </div>
@@ -52,6 +52,14 @@
 </section>
 
 <style>
+  :root {
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 3rem;
+  }
+
   .infrastructure-hero {
     height: 400px;
     background-image: url('https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg');
@@ -62,6 +70,7 @@
     align-items: center;
     color: white;
     margin-bottom: var(--space-5);
+    padding: 0 var(--space-2);
   }
   
   .overlay {
@@ -77,12 +86,12 @@
     position: relative;
     z-index: 10;
     text-align: center;
+    padding: var(--space-2);
   }
   
   .hero-content h1 {
     font-size: 3rem;
     margin-bottom: var(--space-2);
-    color: white;
   }
   
   .subtitle {
@@ -94,31 +103,64 @@
   .search-container {
     max-width: 600px;
     margin: 0 auto;
+    padding: var(--space-1);
   }
-  
+
+  .container.section {
+    padding: var(--space-3);
+  }
+
   .infrastructure-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-3);
   }
-  
-  @media (max-width: 992px) {
+
+  @media (max-width: 1200px) {
     .infrastructure-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   @media (max-width: 768px) {
+    .infrastructure-hero {
+      height: 300px;
+      padding: 0 var(--space-1);
+    }
+
     .hero-content h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
-    
+
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      padding: 0 var(--space-1);
     }
-    
+
     .infrastructure-grid {
       grid-template-columns: 1fr;
+    }
+
+    .search-container {
+      padding: var(--space-1);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .infrastructure-hero {
+      height: 250px;
+    }
+
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+    }
+
+    .infrastructure-grid {
+      gap: var(--space-2);
     }
   }
 </style>

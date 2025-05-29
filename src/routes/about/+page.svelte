@@ -78,147 +78,193 @@
   </div>
 </section>
 
+<section class="container section">
+  <h2>Mga Sanggunian</h2>
+  <div class="gold-separator"></div>
+  <ul class="references">
+    <li>Adobo Magazine. “The Cultural Center of the Philippines Announces Three-Year Rehabilitation of Main Building.” Adobo Magazine, September 5, 2022. <a href="https://www.adobomagazine.com/arts-culture/arts-culture-the-cultural-center-of-the-philippines-announces-three-year-rehabilitation-of-main-building/" target="_blank">https://www.adobomagazine.com/arts-culture/arts-culture-the-cultural-center-of-the-philippines-announces-three-year-rehabilitation-of-main-building/</a>.</li>
+    <li>Afinidad-Bernardo, Deni Rose M. “Edifice Complex | 31 Years of Amnesia.” Philstar, n.d. Accessed May 20, 2025. <a href="https://newslab.philstar.com/31-years-of-amnesia/building-spree" target="_blank">https://newslab.philstar.com/31-years-of-amnesia/building-spree</a>.</li>
+    <li>Aguilar, Karl. “From Opening Flair to Uncertain Future: The Saga of Folk Arts Theater.” The Urban Roamer, September 5, 2016. <a href="https://www.theurbanroamer.com/folk-arts-theater/" target="_blank">https://www.theurbanroamer.com/folk-arts-theater/</a>.</li>
+    <li>Andrew, Kim. The Philippine Center for International Trade and Exhibit (PhilCite) located in the reclaimed area of the CCP Complex in Pasay City, circa 1984, photograph. <a href="https://www.facebook.com/photo.php?fbid=1866080356973186&id=1646483675599523&set=a.1734035076844382&locale=zh_HK" target="_blank">https://www.facebook.com/photo.php?fbid=1866080356973186&id=1646483675599523&set=a.1734035076844382&locale=zh_HK</a>.</li>
+    <li>Ateneo ML Museum. n.d. “Edifice Complex: Building on the Backs of the Filipino People.” Martial Law in the Philippines. <a href="https://learn.martiallawmuseum.ph/magaral/edifice-complex-building-on-the-backs-of-the-filipino-people/" target="_blank">https://learn.martiallawmuseum.ph/magaral/edifice-complex-building-on-the-backs-of-the-filipino-people/</a>.</li>
+    <li>Brutalistpilipinas (@brutalistpilipinas). 2023. “This aerial photo shows the last building to be built (and the first one to go) within Locsin's Cultural Center of the Philippines Complex:..” Instagram, January 20. <a href="https://www.instagram.com/brutalistpilipinas/p/Cnopl0WrxGE/?hl=en" target="_blank">https://www.instagram.com/brutalistpilipinas/p/Cnopl0WrxGE/?hl=en</a>.</li>
+    <li>Cahiles, Magkilat, Bernie. 2022. “Imelda played a crucial role in trade and love.” Manila Bulletin, March 25. <a href="https://mb.com.ph/2022/3/25/imelda-played-a-crucial-role-in-trade-and-love" target="_blank">https://mb.com.ph/2022/3/25/imelda-played-a-crucial-role-in-trade-and-love</a>.</li>
+    <li>Canlas, MH. “Designed Better Extended: CCP Theater.” BluPrint, January 1, 2018. <a href="https://bluprint-onemega.com/architecture/heritage/designed-better-extended-ccp-theater/" target="_blank">https://bluprint-onemega.com/architecture/heritage/designed-better-extended-ccp-theater/</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+    <li>Comet Photo AG (Zürich). National Theater/Tanghalang Pambansa by Leandro Locsin, 1969, Pasay City, Metro Manila. ETH-Bibliothek Zürich, Bildarchiv. <a href="http://doi.org/10.3932/ethz-a-000988485" target="_blank">http://doi.org/10.3932/ethz-a-000988485</a>.</li>
+    <li>Cordero, Ted. 2024. “Star City property eyed for sale; P15B in revenues expected for gov't — DOF.” GMA News Online, August 10. <a href="https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t" target="_blank">https://www.gmanetwork.com/news/money/companies/916623/star-city-property-eyed-for-sale-p15b-in-revenues-expected-for-gov-t</a>.</li>
+  </ul>
+</section>
+
 <style>
+  /* Reset and base styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
   .about-hero {
-    height: 400px;
-    background-image: url('https://images.pexels.com/photos/2129796/pexels-photo-2129796.jpeg');
-    background-size: cover;
-    background-position: center;
     position: relative;
+    background: url('/images/hero-background.jpg') center/cover no-repeat;
+    height: 50vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
-    margin-bottom: var(--space-5);
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 10;
     text-align: center;
   }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: var(--space-2);
-    color: white;
+
+  .about-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
-  
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
   .subtitle {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 300;
   }
-  
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
   .about-content {
-    max-width: 900px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  
-  .mission-section {
-    margin-bottom: var(--space-5);
-  }
-  
-  h2 {
-    color: var(--brown-dark);
-    margin-bottom: var(--space-2);
-  }
-  
+
   .gold-separator {
-    width: 80px;
-    height: 3px;
-    background-color: var(--gold-primary);
-    margin-bottom: var(--space-3);
+    width: 60px;
+    height: 4px;
+    background: gold;
+    margin: 1rem 0;
   }
-  
-  .gold-separator.center {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
+
   .team-intro {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto var(--space-4);
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
   }
-  
+
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
-  
+
   .team-card {
-    display: flex;
-    background-color: white;
-    border-radius: var(--radius-md);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
   }
-  
-  .team-image {
-    flex: 0 0 120px;
+
+  .team-card:hover {
+    transform: translateY(-5px);
   }
-  
+
   .team-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
-  
+
   .team-info {
-    flex: 1;
-    padding: var(--space-2);
+    padding: 1rem;
   }
-  
-  .team-info h3 {
-    margin-top: 0;
-    margin-bottom: 4px;
-    font-size: 1.2rem;
-  }
-  
+
   .team-role {
-    color: var(--gold-dark);
-    font-weight: 600;
-    margin-bottom: var(--space-1);
-    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    margin: 0.5rem 0;
   }
-  
-  .team-bio {
-    font-size: 0.9rem;
-    margin-bottom: 0;
+
+  .references {
+    list-style: none;
+    padding: 0;
   }
-  
-  @media (max-width: 992px) {
+
+  .references li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .references a {
+    color: #0066cc;
+    text-decoration: underline;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-hero {
+      height: 40vh;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 2rem 1rem;
+    }
+
     .team-grid {
       grid-template-columns: 1fr;
-      gap: var(--space-3);
     }
   }
-  
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.5rem;
+
+  @media (max-width: 480px) {
+    .about-hero {
+      height: 35vh;
     }
-    
-    .subtitle {
-      font-size: 1.2rem;
+
+    .team-intro {
+      font-size: 1rem;
     }
-    
-    .team-card {
-      flex-direction: column;
-    }
-    
-    .team-image {
-      height: 200px;
+
+    .references li {
+      font-size: 0.85rem;
     }
   }
 </style>

@@ -80,32 +80,36 @@
   .section-header {
     text-align: center;
     margin-bottom: var(--space-4);
+    padding: 0 1rem;
   }
-  
+
   .section-header h2 {
     color: var(--brown-dark);
     position: relative;
     display: inline-block;
     margin-bottom: var(--space-1);
+    font-size: 2rem;
   }
-  
+
   .section-header h2::after {
     content: '';
     position: absolute;
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px;
     height: 3px;
     background-color: var(--gold-primary);
   }
-  
+
   .section-header p {
     color: var(--gray);
     max-width: 700px;
     margin: 0 auto;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
-  
+
   .carousel-container {
     height: 400px;
     margin-bottom: var(--space-4);
@@ -113,14 +117,15 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
-  
+
   .infrastructure-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-3);
     margin-bottom: var(--space-4);
+    padding: 0 1rem;
   }
-  
+
   .vintage-banner {
     position: relative;
     background-image: url('https://images.pexels.com/photos/2362004/pexels-photo-2362004.jpeg');
@@ -131,7 +136,7 @@
     color: white;
     text-align: center;
   }
-  
+
   .overlay {
     position: absolute;
     top: 0;
@@ -140,24 +145,25 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
   }
-  
+
   .banner-content {
     position: relative;
     z-index: 1;
+    padding: 0 1rem;
   }
-  
+
   .banner-content h2 {
     color: var(--gold-primary);
     font-size: 2.5rem;
     margin-bottom: var(--space-2);
   }
-  
+
   .banner-content p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto var(--space-3);
   }
-  
+
   .banner-button {
     display: inline-block;
     background-color: var(--gold-primary);
@@ -168,20 +174,20 @@
     transition: all var(--transition-normal);
     text-decoration: none;
   }
-  
+
   .banner-button:hover {
     background-color: var(--gold-light);
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-decoration: none;
   }
-  
+
   .quote-section {
     background-color: var(--cream);
     padding: var(--space-5) 0;
     margin-bottom: var(--space-5);
   }
-  
+
   blockquote {
     font-family: var(--font-heading);
     font-size: 1.8rem;
@@ -191,9 +197,9 @@
     margin: 0 auto;
     color: var(--brown-dark);
     position: relative;
-    padding: 0 var(--space-3);
+    padding: 0 1rem;
   }
-  
+
   blockquote::before,
   blockquote::after {
     content: '"';
@@ -203,18 +209,17 @@
     position: absolute;
     line-height: 1;
   }
-  
+
   blockquote::before {
     left: 0;
     top: -20px;
   }
-  
+
   blockquote::after {
-    content: '"';
     right: 0;
     bottom: -40px;
   }
-  
+
   cite {
     display: block;
     margin-top: var(--space-2);
@@ -222,28 +227,80 @@
     font-style: normal;
     color: var(--gray);
   }
-  
+
+  /* Tablet (<= 992px) */
   @media (max-width: 992px) {
-    .infrastructure-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
     .carousel-container {
       height: 300px;
     }
-    
+
     .infrastructure-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2);
     }
-    
+
     .banner-content h2 {
       font-size: 2rem;
     }
-    
+
     blockquote {
       font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile (<= 768px) */
+  @media (max-width: 768px) {
+    .carousel-container {
+      height: 250px;
+    }
+
+    .infrastructure-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+
+    .banner-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .banner-content p {
+      font-size: 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+    }
+
+    .section-header p {
+      font-size: 0.95rem;
+    }
+
+    blockquote {
+      font-size: 1.2rem;
+    }
+
+    .banner-button {
+      padding: var(--space-1) var(--space-2);
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Smallest screens (<= 480px) */
+  @media (max-width: 480px) {
+    .carousel-container {
+      height: 200px;
+    }
+
+    .banner-content h2 {
+      font-size: 1.5rem;
+    }
+
+    .banner-content p {
+      font-size: 0.9rem;
+    }
+
+    blockquote {
+      font-size: 1rem;
     }
   }
 </style>

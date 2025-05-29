@@ -130,6 +130,8 @@
 <style>
   .infrastructure-container {
     padding-top: var(--space-4);
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
   }
   
   .infrastructure-header {
@@ -139,6 +141,7 @@
   .infrastructure-header h1 {
     margin-bottom: var(--space-2);
     color: var(--brown-dark);
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
   }
   
   .infrastructure-meta {
@@ -164,6 +167,7 @@
     align-items: center;
     gap: 6px;
     color: var(--gray);
+    font-size: 0.95rem;
   }
   
   .gallery-section {
@@ -184,31 +188,12 @@
     margin-bottom: var(--space-3);
   }
   
-  .about-section, .features-section, .reviews-section {
+  .about-section, .reviews-section {
     margin-bottom: var(--space-4);
   }
   
   .description {
     line-height: 1.7;
-  }
-  
-  .features-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .features-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: var(--space-1);
-    padding: var(--space-1) 0;
-  }
-  
-  .features-list svg {
-    color: var(--gold-primary);
-    flex-shrink: 0;
-    margin-top: 4px;
   }
   
   .reviews-container {
@@ -236,16 +221,9 @@
     color: var(--gold-dark);
   }
   
-  .learn-more {
-    display: inline-block;
-    margin-top: var(--space-1);
-    color: var(--red-primary);
-    font-weight: 600;
-  }
-  
   .not-found {
     text-align: center;
-    padding: var(--space-5) 0;
+    padding: var(--space-5) var(--space-3);
   }
   
   .back-button {
@@ -258,7 +236,8 @@
     margin-top: var(--space-3);
     text-decoration: none;
   }
-  
+
+  /* Responsive Styles */
   @media (max-width: 992px) {
     .infrastructure-content {
       grid-template-columns: 1fr;
@@ -270,6 +249,63 @@
       flex-direction: column;
       align-items: flex-start;
       gap: var(--space-1);
+    }
+
+    .infrastructure-header h1 {
+      font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .infrastructure-container {
+      padding-top: var(--space-3);
+    }
+
+    .info-card {
+      padding: var(--space-2);
+    }
+
+    .gallery-section {
+      margin-bottom: var(--space-3);
+    }
+
+    .about-section, .reviews-section {
+      margin-bottom: var(--space-3);
+    }
+
+    .reviews-container {
+      margin-top: var(--space-2);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .infrastructure-header h1 {
+      font-size: clamp(1.2rem, 7vw, 1.5rem);
+    }
+
+    .location, .year {
+      font-size: 0.9rem;
+    }
+
+    .infrastructure-meta {
+      gap: var(--space-1);
+    }
+
+    .info-card {
+      margin-bottom: var(--space-2);
+      padding: var(--space-2);
+    }
+
+    .container {
+      padding-left: var(--space-2);
+      padding-right: var(--space-2);
+    }
+
+    .not-found {
+      padding: var(--space-4) var(--space-2);
+    }
+
+    .back-button {
+      padding: var(--space-1) var(--space-2);
+      font-size: 0.9rem;
     }
   }
 </style>
