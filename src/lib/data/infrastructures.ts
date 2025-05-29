@@ -112,15 +112,6 @@ export const infrastructures: Infrastructure[] = [
         comment: 'Batay sa akda ni Talitha Espiritu na “The Marcos Romance and the Cultural Center of the Philippines: The Melodrama of a Therapeutic Cultural Policy,” ibinahagi niya rito na bagamat ipinakilala ang Folk Arts Theater bilang isang pasilidad para sa pagtatanghal at pagpapalaganap ng kulturang bayan, ginamit ito bilang entablado ng propaganda para sa mga internasyonal na bisita gaya ng sa Miss Universe 1974. Ang mga palabas tulad ng Kasaysayan ng Lahi ay nagmistulang makulay na pagtatanghal ng pagkakaisa ng bansa, ngunit sa likod nito ay ang sapilitang paglahok ng mga katutubong grupo na itinuring bilang mga "live displays.” Sa halip na tunay itanghal at kilalanin ang kultura ng bayan, naging kasangkapan ang teatro sa pagpapalaganap ng magandang imahe ng administrasyon habang patuloy na inaapi at isinasantabi ang mismong mga komunidad na kinakatawan nito.',
         helpful: 18
       },
-      {
-        id: 3,
-        name: 'Miguel Ramos',
-        avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
-        date: 'August 5, 2024',
-        rating: 5,
-        comment: 'As an architecture enthusiast, I was mesmerized by Locsin\'s design. The CCP stands as a testament to Filipino creativity and vision, despite its complicated historical context.',
-        helpful: 27
-      }
     ],
     features: [
       'Multiple performance venues including the Main Theater',
@@ -217,22 +208,13 @@ export const infrastructures: Infrastructure[] = [
       {
         id: 2,
         name: 'Fred Elizalde',
-        avatar: 'https://randomuser.me/api/portraits/men/43.jpg',
+        avatar: '/images/Reviewer/Anonymous.jpg',
         date: 'September 30, 2020',
         rating: 4,
         comment: `Ako ang naging chairman ng PHILCITE at naging malaking tulong ang dating First Lady Imelda Marcos upang magkaroon kami ng pondo at sa maikling oras ay makapag-imbita ng iba’t ibang bansa sa Philippine International Trade Fair, isang konsepto ng trade fair na naglalayong ma-enganyo ang mga dayuhang negosyante na makilahok.\n
         Bagamat giniba ito ay malaki pa rin ang pakinabang ng espasyo ng PHILCITE dahil dito itinayo ang Star City na pagmamay-ari ng aking pamilya.`,
         helpful: 32
       },
-      {
-        id: 3,
-        name: 'Sofia Cruz',
-        avatar: 'https://randomuser.me/api/portraits/women/28.jpg',
-        date: 'August 15, 2024',
-        rating: 5,
-        comment: 'The Heart Center stands as proof that not all infrastructure projects from that period were wasteful. This institution has saved countless lives and continues to be at the forefront of cardiac care in the region.',
-        helpful: 52
-      }
     ],
     features: [
       'Specialized cardiovascular care facilities',
