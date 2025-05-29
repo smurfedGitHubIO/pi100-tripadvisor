@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Shane Saludares',
     role: 'Lead Content Writer',
     bio: 'Exploring monuments, questioning legacies.',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg'
+    image: '/images/Team/Saludares.jpg'
   },
   {
     id: 3,

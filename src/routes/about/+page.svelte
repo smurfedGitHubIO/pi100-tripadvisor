@@ -135,7 +135,6 @@
 
   .about-hero {
     position: relative;
-    background: url('/images/hero-background.jpg') center/cover no-repeat;
     height: 50vh;
     display: flex;
     align-items: center;

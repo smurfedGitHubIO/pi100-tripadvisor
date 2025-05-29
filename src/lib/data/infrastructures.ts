@@ -35,7 +35,7 @@ export const infrastructures: Infrastructure[] = [
     Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Locsin, ang CCP ay pormal na binuksan noong 1969 sa pamamagitan ng isang engrandeng pagtatanghal na pinamagatang Golden Salakot: Isang Dularawan. Ito ang pinakaunang estrukturang itinayo bilang bahagi ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kagandahan, at modernidad ang lungsod ng Maynila.\n
     Hindi lamang ito simpleng gusali para sa pagtatanghal. Kasama ng iba pang mga proyektong tulad ng Folk Arts Theater at Philippine International Convention Center (PICC), ang CCP ay bahagi ng mas malawak na arkitekturang monumental. Ito ay binubuo ng mga estrukturang may malalaking sukat, modernong disenyo, at matitibay na materyales na may layuning ipakita ang kapangyarihan at kaunlaran ng Bagong Lipunan.`,
     price: 'Free for pedestrians, regular toll fees for vehicles',
-    rating: 4.3,
+    rating: 2.2,
     images: [
       '/images/Infra/CCP/1.JPG',
       '/images/Infra/CCP/2.jpg',
@@ -86,7 +86,7 @@ export const infrastructures: Infrastructure[] = [
     Dinisenyo ito ng Pambansang Alagad ng Sining sa Arkitektura na si Leandro Locsin at itinayo sa loob lamang ng 77 araw, isang pambihirang gawaing iniuugnay sa matayog na bisyon ng administrasyong Marcos. Sa oras ng pagkakakumpleto, ito ang naging pinakamalaking single-span building sa buong bansa. Ang arkitektura nito ay nagpapakita ng estilong brutalismo na makikita sa malawak nitong bubong at sa mga kongkretong pader.\n
     Hindi maikakaila ang malalim na ugnayan ng gusali sa bisyon at propaganda ng rehimeng Marcos. Bahagi ito ng tinaguriang "edifice complex" ni Imelda, ang pagkahumaling sa pagtatayo ng malalaking gusali bilang simbolo ng kaunlaran at modernong imahe ng bansa. Tulad ng ibang gusali sa CCP Complex, ginamit ang teatro bilang entablado ng mga seremonyang pampubliko na naglalayong magpakita ng pagkakaisa at lehitimasyon ng administrasyon.`,
     price: 'Varies by performance (₱300-₱5,000), free entrance to some exhibits',
-    rating: 4.5,
+    rating: 2.05,
     images: [
       '/images/Infra/Folk Arts Theater/1.jpg',
       '/images/Infra/Folk Arts Theater/2.jpg',
@@ -144,7 +144,7 @@ export const infrastructures: Infrastructure[] = [
     Nagsimula ang konstruksyon ng PICC noong Setyembre 1974. Idinisenyo ito ni Leandro V. Locsin (isang Filipino National Artist) kasama ang Trans-Asia Philippines Inc. bilang mga inhinyero at ang H. R. Lopez Company bilang tagapamahala ng proyekto. Ang arkitektura nito ay brutalist, at ang napakalaki, parihabang harapan, patag na bloke, at paggamit ng mga cantilever ay nagbibigay-diin sa natatanging istilo ni Locsin. Natapos ito sa loob lamang ng dalawang taon, bahagyang dahil sa panggigipit ni Imelda, at pinasinayaan noong Setyembre 1976.\n
     Ang PICC ay isa sa mga unang high-tech, "futuristic" na gusali sa bansa dahil sa mataas na antas ng teknikal na sopistikasyon nito para sa dekada 1970. Ito rin ay naging isa sa mga pangunahing kultural at arkitektural na simbolo ng Pilipinas at nagtataglay ng mahahalagang koleksyon ng sining mula sa ilan sa mga kilalang artista ng bansa. Dahil tanyag ang gusali at regular na ginagamit para sa iba’t ibang kaganapan, nakaranas ang PICC ng ilang insidente sa seguridad sa nakaraan, kabilang ang aksidenteng pagkalabit ng baril noong 2019 at isang banta sa bomba noong 2023. Matagumpay na nalutas ang parehong banta nang medyo mabilis at mahusay.\n`,
     price: '₱1,500-₱2,000 for guided tours',
-    rating: 3.9,
+    rating: 2,
     images: [
       '/images/Infra/PICC/1.jpg',
       '/images/Infra/PICC/2.jpg',
@@ -197,7 +197,7 @@ export const infrastructures: Infrastructure[] = [
     Ngunit, ang gusali–katulad ng ibang mga gusali sa CCP Complex–ay naging sanhi ng malaking pangungutang mga Marcos sa mga international financial institutions. Mula rin sa Proclamation No. 1611 noong January 21, 1977, isinautos ni Marcos Sr. ang Chamber of Commerce na magsagawa ng malawakang fund campaign para lamang matugunan ang mga gastos para sa Philippine International Trade Fair na isinagawa sa PHILCITE.\n
     Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng mga Elizalde.`,
     price: 'Varies by medical service (both private and public options available)',
-    rating: 4.6,
+    rating: 1.95,
     images: [
       '/images/Infra/PHILCITE/1.png',
       '/images/Infra/PHILCITE/2.png',
@@ -258,7 +258,7 @@ export const infrastructures: Infrastructure[] = [
     Sa hangarin ni Imelda Marcos na gawing pelikulang kabisera ng Asya ang Maynila na maihahambing sa Cannes, inilunsad ang proyekto na agad umani ng atensyon mula sa pandaigdigang midya. Subalit, minadali ang pagtatayo ng Manila Film Center, na nauwi sa mga padalus-dalos na desisyon gaya ng pagpapatuloy ng konstruksiyon kahit kulang sa kahandaan. Habang ginagawa ang ikaanim na palapag, gumuho ang istruktura at marami sa mga manggagawa ang na-trap at bumaon sa mabilis matuyong semento. Ayon sa ilang ulat, piniling ipagpatuloy ang konstruksiyon sa halip na iligtas ang mga biktima, at tinambakan na lamang ng bagong semento ang lugar upang ituloy ang pagtatayo (Magno 1998, 172).\n
     Ang trahedyang ito ay nananatiling isa sa mga pinakakontrobersyal na bahagi ng kasaysayan ng proyektong pangkultura ng Marcos regime. Bagamat itinayo ito bilang simbolo ng sining at pag-unlad, ang Manila Film Center ay naging paalala ng kawalang-habag at sakripisyo ng buhay ng mga manggagawang Pilipino alang-alang sa imahe ng modernidad. Tulad ng CCP at PICC, ito ay bahagi ng arkitekturang monumental ng Bagong Lipunan—malalaking estruktura na may layuning ipakita ang kapangyarihan, kaunlaran, at pambansang prestihiyo. Ngunit sa kabila ng marangyang disenyo, dala rin nito ang bigat ng kasaysayan at ang mga boses ng mga naisantabi sa ngalan ng propaganda.`,
     price: 'Varies by event (₱200-₱1,000)',
-    rating: 3.8,
+    rating: 1.65,
     images: [
       '/images/Infra/Manila Film Center/1.jpg',
       '/images/Infra/Manila Film Center/2.jpg',
@@ -307,7 +307,7 @@ export const infrastructures: Infrastructure[] = [
     Ang Coconut Palace ay isang malaking proyekto na gumamit ng tinatayang 2,000 puno ng niyog na higit sa 70 taon na ang tanda. Ang bubong ay gawa sa mga tabla ng niyog, ang mga haligi ay mula sa katawan ng puno, at ang mga pader ay binuo gamit ang tinatawag na “coconut bricks” na hinaluan ng hibla ng lana at semento mula sa balat ng niyog. Bukod pa rito, ang gate ng palasyo ay pinalamutian ng mga heometrikong disenyo mula sa mahigit 4,000 balat ng niyog. Sa loob ng palasyo, makikita rin ang iba’t ibang produkto mula sa niyog. Isa sa mga tampok nito ay ang 36-na talampakang hapag-kainan na nilagyan ng 47,000 piraso ng balat ng niyog na may iba’t ibang hugis.\n
     Matapos ang pagkakatapos nito noong 1981, nagsilbi ang Coconut Palace sa iba’t ibang layunin: mula sa pagiging opisina ng pamahalaan, hanggang sa lunan ng mga sosyal at opisyal na pagtitipon.`,
     price: 'Not regularly open to the public; special event prices vary',
-    rating: 3.2,
+    rating: 2.5,
     images: [
       '/images/Infra/Tahanang Filipino (Coconut Palace)/1.jpg',
       '/images/Infra/Tahanang Filipino (Coconut Palace)/2.jpg',
