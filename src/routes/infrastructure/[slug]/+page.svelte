@@ -82,22 +82,6 @@
             </div>
           </section>
         
-          <section class="features-section" in:fly={{ y: 20, duration: 500, delay: 100 }}>
-            <h2>Features</h2>
-            <div class="gold-separator"></div>
-            <ul class="features-list">
-              {#each infrastructure.features as feature}
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 11 12 14 22 4"></polyline>
-                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                  </svg>
-                  <span>{feature}</span>
-                </li>
-              {/each}
-            </ul>
-          </section>
-        
           <section class="reviews-section" in:fly={{ y: 20, duration: 500, delay: 200 }}>
             <h2>Reviews</h2>
             <div class="gold-separator"></div>
@@ -128,13 +112,6 @@
             <h3>Best Time to Visit</h3>
             <p>Weekday mornings to avoid crowds</p>
             <p>Golden hour (late afternoon) for best photography</p>
-          </div>
-          
-          <div class="info-card" in:fly={{ y: 20, duration: 500, delay: 200 }}>
-            <h3>Historical Context</h3>
-            <p>Built during President Ferdinand Marcos' administration ({infrastructure.year})</p>
-            <p>Part of the "Golden Age" infrastructure push</p>
-            <a href="/about" class="learn-more">Learn more about this era</a>
           </div>
         {/if}
       </div>

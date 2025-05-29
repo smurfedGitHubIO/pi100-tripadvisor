@@ -8,6 +8,19 @@
   export let rating: number;
   export let comment: string;
   export let helpful: number;
+
+  let expanded = false;
+  const maxChars = 300;
+
+  const isLong = comment.length > maxChars;
+  const shortComment = comment.slice(0, maxChars);
+
+  function formatComment(text: string) {
+    return text
+      .split(/\n{2,}|\r\n{2,}/)
+      .flatMap(p => p.split(/\n|\r\n/))
+      .filter(p => p.trim() !== '');
+  }
 </script>
 
 <div class="review" transition:fade={{ duration: 300 }}>
@@ -25,11 +38,27 @@
       <StarRating rating={rating} />
     </div>
   </div>
-  
+
   <div class="review-content">
-    <p>{comment}</p>
+    {#if expanded || !isLong}
+      {#each formatComment(comment) as paragraph, i}
+        <p>{paragraph}</p>
+      {/each}
+      {#if isLong}
+        <button class="see-more-inline" on:click={() => expanded = false}>
+          See less
+        </button>
+      {/if}
+    {:else}
+      <p class="truncated">
+        {shortComment}...
+        <button class="see-more-inline" on:click={() => expanded = true}>
+          See more
+        </button>
+      </p>
+    {/if}
   </div>
-  
+
   <div class="review-footer">
     <div class="helpful">
       <span>{helpful} people found this helpful</span>
@@ -52,7 +81,7 @@
     margin-bottom: var(--space-3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
-  
+
   .review-header {
     display: flex;
     justify-content: space-between;
@@ -61,12 +90,12 @@
     flex-wrap: wrap;
     gap: var(--space-1);
   }
-  
+
   .reviewer {
     display: flex;
     align-items: center;
   }
-  
+
   .avatar {
     width: 48px;
     height: 48px;
@@ -75,26 +104,47 @@
     object-fit: cover;
     border: 2px solid var(--gold-light);
   }
-  
+
   .reviewer-name {
     margin: 0;
     font-size: 1.1rem;
   }
-  
+
   .review-meta {
     font-size: 0.9rem;
     color: var(--gray);
   }
-  
+
   .review-content {
     margin-bottom: var(--space-2);
   }
-  
-  .review-content p {
-    margin-bottom: 0;
+
+   .review-content p {
+    margin-bottom: 1em;
     line-height: 1.6;
   }
-  
+
+  .truncated {
+    display: inline; /* Only for the truncated version */
+    line-height: 1.6;
+  }
+
+  .see-more-inline {
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 0.3em;
+    padding: 0;
+    text-decoration: underline;
+    display: inline;
+  }
+
+  .see-more-inline:hover {
+    color: var(--gold-dark);
+  }
+
   .review-footer {
     display: flex;
     justify-content: space-between;
@@ -103,11 +153,11 @@
     border-top: 1px solid var(--gray-light);
     font-size: 0.9rem;
   }
-  
+
   .helpful {
     color: var(--gray);
   }
-  
+
   .helpful-button {
     display: flex;
     align-items: center;
@@ -119,19 +169,19 @@
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
   }
-  
+
   .helpful-button:hover {
     background-color: var(--gold-light);
     color: var(--brown-dark);
     border-color: var(--gold-dark);
   }
-  
+
   @media (max-width: 768px) {
     .review-header {
       flex-direction: column;
       align-items: flex-start;
     }
-    
+
     .rating {
       margin-top: var(--space-1);
     }

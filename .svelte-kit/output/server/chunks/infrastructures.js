@@ -13,8 +13,8 @@ const infrastructures = [
     price: "Free for pedestrians, regular toll fees for vehicles",
     rating: 4.3,
     images: [
-      "/images/Infra/CCP/1.jpg",
-      "/images/Infra/CCP/2.JPG",
+      "/images/Infra/CCP/1.JPG",
+      "/images/Infra/CCP/2.jpg",
       "/images/Infra/CCP/3.jpg",
       "/images/Infra/CCP/4.jpg",
       "/images/Infra/CCP/5.JPG"
@@ -67,11 +67,13 @@ const infrastructures = [
     reviews: [
       {
         id: 1,
-        name: "Roberto Lim",
-        avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+        name: "Angel Gelangre",
+        avatar: "/images/Team/Gelangre.jpg",
         date: "October 20, 2024",
         rating: 5,
-        comment: "The performances at CCP are world-class. I recently watched a ballet here and was blown away by both the performance and the venue. The building itself is an architectural marvel.",
+        comment: `Ang Folk Arts Theater ay isa na namang monumento ng ilusyon ng diktadurya. Itinayo ito sa loob lamang ng 77 araw para ipagdaos ang Miss Universe Pageant noong 1974, isang palabas na isinagawa sa gitna ng matinding krisis pang-ekonomiya, kawalan ng trabaho, at lumalalang karahasang pulitikal sa ilalim ng Batas Militar. Habang libo-libong Pilipino ang naghihirap sa lansangan, pinilit ang konstruksyon ng gusaling ito sa pamamagitan ng sapilitang paggawa at paggamit ng pondo mula sa kaban ng bayan.Ipinagmalaki ang proyekto bilang patunay ng kaunlaran at kariktan ng Pilipinas sa mata ng mundo, subalit ang katotohanan ay isa itong pagtatangkang tabunan ang bulok na sistemang umiiral sa ilalim ng rehimeng Marcos. Ginamit ang sining bilang instrumento ng propaganda, isang paraan upang palabasin na maayos at masigla ang kalagayan ng bansa kahit na salungat ito sa nararanasan ng karaniwang mamamayan.
+ 
+        Sa halip na ituon ang pondo sa mga serbisyong panlipunan tulad ng mga ospital, paaralan, at pabahay para sa lumalalang kalagayan ng mamamayan, mas pinili ng pamahalaan na magpatayo ng engrandeng gusali para ipakita ang mapanlinlang na representasyon nila ng kaunlaran. Inilunsad ang mga proyektong tulad nito upang ilihis ang pansin sa tunay na lagay ng bansa at upang palakasin ang imaheng ipinupukol kay Imelda bilang tagapagtangkilik ng sining at kultura. Sa ganitong paraan, ang Folk Arts Theater ay hindi lamang gusali kundi simbolo ng pagkukunwari, isang konkretong paalala kung paanong ginamit ang arkitektura para burahin ang katotohanan at patahimikin ang masa.`,
         helpful: 35
       },
       {
@@ -124,30 +126,29 @@ const infrastructures = [
     reviews: [
       {
         id: 1,
-        name: "Carlos Mendoza",
-        avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+        name: "Polites, 1977 (verbatim, translated)",
+        avatar: "/images/Reviewer/Polites.jpg",
         date: "October 18, 2024",
         rating: 4,
-        comment: "Fascinating tour of what could have been. The guides are knowledgeable and don't shy away from discussing the controversies. A sobering reminder of the consequences of certain political decisions.",
+        comment: `Ito ay dalisay na eskultura. Dalawang malalaking bloke ng masoneriya ang pinaghiwalay at lalo pang hinubog sa pamamagitan ng pag-ukit ng mga bahagi, na nag-iwan ng malalaking nakausling patag na ibabaw na lumalabas mula sa kanilang monolitikong kalatagan. Ang mga inukit na blokeng ito ay inilagay sa tubig, kaya't ang kanilang bigat ay napigilang masyadong lumagpas sa sukat ng tao. Ang kompleks ay isang kahanga-hangang pagpapakita ng matinding bigat na tila lumulutang sa itaas ng lupa nang may tila kawalan ng bigat.`,
         helpful: 42
       },
       {
         id: 2,
-        name: "Patricia Velasco",
-        avatar: "https://randomuser.me/api/portraits/women/33.jpg",
+        name: "Raph Dequilla",
+        avatar: "/images/Team/Dequilla.jpg",
         date: "September 25, 2024",
-        rating: 3,
-        comment: "Interesting but depressing. To think of the billions spent on something that never produced any benefit... The tour itself is educational though.",
+        rating: 1,
+        comment: `Alexa play ‘Magasin’ by the Eraserheads
+
+        "Siguro'y malapit ka na ring sumali sa Supermodel of the Whole Wide Universe."
+
+        Kumpara sa iba pang proyektong edipisyo ng rehimeng Marcos, marahil ang PICC ang isa sa mas matagal at "matagumpay" na proyekto. Ito ay dahil patuloy pa rin itong ginagamit sa mga malalaking kaganapan hanggang ngayon. Ipinagmamalaki pa rin ng sentro ang pagiging pangunahing lugar para sa mga kaganapan sa Maynila at isang heritage building. Sa ganoong paraan, masasabi nating natutupad nito ang layunin nito bilang isang convention center.
+
+        "Nakita kita sa isang magasin, at sa sobrang gulat 'di ko napansin."
+
+        Gayunpaman, hindi natin dapat kalimutan ang orihinal na layunin ng pagtatayo nito, na upang matugunan ang hangarin ni Imelda na gawing kapansin-pansin ang Pilipinas sa pamamagitan ng ningning at karangyaan. Ang pagtatayo ng isang high-end, teknikal, at kahanga-hangang istraktura ay tila nagpapahiwatig na nais ng mga Marcos na magmukhang dominante sa pandaigdigang saklaw sa maikling panahon. Maaari nating sabihin na ang brutalista at unibersal na arkitektura nito ay naglalayong mas makaakit sa mga dayuhang delegado at kinatawan kaysa maging tunay na representasyon ng ating kultura at at tradisyon. Ang disenyo ay "sumasabay sa uso," at ipinagpapatuloy ang kapus-palad na trend ng mga gusaling nagiging magkakatulad na nawawalan ng anumang bakas ng kultura.`,
         helpful: 29
-      },
-      {
-        id: 3,
-        name: "Ricardo Torres",
-        avatar: "https://randomuser.me/api/portraits/men/55.jpg",
-        date: "August 12, 2024",
-        rating: 5,
-        comment: "As an engineer, I found the technical aspects of the tour fascinating. It's remarkable to see the technology of that era, even if it was never put to use. A must-visit for anyone interested in energy infrastructure or recent Philippine history.",
-        helpful: 37
       }
     ],
     features: [
@@ -183,21 +184,29 @@ const infrastructures = [
     reviews: [
       {
         id: 1,
-        name: "Elena Bautista",
-        avatar: "https://randomuser.me/api/portraits/women/55.jpg",
-        date: "October 22, 2024",
-        rating: 5,
-        comment: "My father received life-saving treatment here. The medical staff is world-class, and despite its age, the facility is well-maintained. Truly one of the positive legacies of that era.",
+        name: "Pat Reyes",
+        avatar: "/images/Team/Reyes.jpg",
+        date: "March 2, 2024",
+        rating: 2,
+        comment: `Alexa play ‘Multo’ by Cup of Joe
+
+        Ang PHILCITE ay isang tanda ng kasakiman ng mga Marcos upang ipakita ang kanilang kapangyarihan at impluwensiya. Minadali ang istruktura at sinayang lamang nila ang milyon-milyong kaban ng bayan para lamang sa isang gusali na ngayo’y giniba na at ginagamit na para sa isang komersyal at pribadong negosyo. Hindi naging sulit ang milyones na nagastos ng taong bayan. Sa halip na gamitin ito ng mga Marcos para sa taong bayan, ito ay ginamit nila para sa sariling interes at pagpapakita ng gilas sa taon ng pagsasagawa ng IMF World Conference dito sa bansa.
+
+        Ayon kay Gerard Lico (2003), isa sa naging instrumento ng rehimeng Marcos ang myth of monumentalism. Makikita ang kapangyarihan ng mga diktador base sa size at volume ng mga ipinatayo na gusali. Nabanggit ni Lico (2003) ang konsepto ng Panopticon kung saan ang naglalakihang mga gusali ay nagbibigay ng takot sa mga pinamumunuan na tila ba’y mayroong “omnipresence” si Marcos Sr. na laging nakatingin at nagbabantay sa kanilang mga ginagawa.
+
+        Sa kaso ng PHILCITE, ang pagpapakita ng kanilang kapangyarihan at ang pagkakagiba ng istruktura na ito ay isang multo ng mga nasayang na pera ng bayan. Isa itong multo na bagamat wala na ang pisikal na kaanyuan ng gusali, ang kasaysayan at ang utang ng Pilipinas ay patuloy na sinusundan ang buong bansa.`,
         helpful: 48
       },
       {
         id: 2,
-        name: "Antonio Gonzales",
+        name: "Fred Elizalde",
         avatar: "https://randomuser.me/api/portraits/men/43.jpg",
-        date: "September 30, 2024",
+        date: "September 30, 2020",
         rating: 4,
-        comment: "As someone who had to undergo cardiac procedures, I can attest to the quality of care at PHC. The building shows its age in some areas, but the expertise of the doctors is unquestionable.",
-        helpful: 31
+        comment: `Ako ang naging chairman ng PHILCITE at naging malaking tulong ang dating First Lady Imelda Marcos upang magkaroon kami ng pondo at sa maikling oras ay makapag-imbita ng iba’t ibang bansa sa Philippine International Trade Fair, isang konsepto ng trade fair na naglalayong ma-enganyo ang mga dayuhang negosyante na makilahok.
+
+        Bagamat giniba ito ay malaki pa rin ang pakinabang ng espasyo ng PHILCITE dahil dito itinayo ang Star City na pagmamay-ari ng aking pamilya.`,
+        helpful: 32
       },
       {
         id: 3,
@@ -230,7 +239,7 @@ const infrastructures = [
 
     Dinisenyo ni Froilan Hong at pinangasiwaan ng pintor at direktor na si Behn Cervantes bilang artistic director, ang Manila Film Center ay itinayo sa loob lamang ng 77 araw upang umabot sa deadline ng unang Manila International Film Festival noong Enero 1982. Sa kabila ng pagmamadali sa konstruksyon, isinagawa ito sa istilong Neoclassical at ginamitan ng mga modernong materyales upang bigyang anyo ang isang makabagong templong pangkultura.
 
-    Bilang bahagi ng ambisyosong layunin ni Imelda Marcos na gawing pelikulang kabisera ng Asya ang Maynila na makapapantay sa Cannes, naging laman ng mga pandaigdigang pahayagan ang proyektong ito. Subalit, ang mabilisang pagtatayo ng Manila Film Center ay nagbunga ng padalus-dalos na desisyon, kabilang na ang pagpapatuloy ng konstruksiyon sa kabila ng kakulangan sa kahandaan. Habang ginagawa ang ikaanim na palapag ng gusali, gumuho ang istruktura at bumaon sa mabilis matuyong semento ang hindi matukoy na bilang ng mga manggagawa. Ayon sa ilang ulat, hindi ipinahinto ang konstruksiyon upang iligtas ang mga biktima, at agad itong tinambakan ng bagong semento upang ituloy ang pagtatayo (Magno 1998, 172).
+    Sa hangarin ni Imelda Marcos na gawing pelikulang kabisera ng Asya ang Maynila na maihahambing sa Cannes, inilunsad ang proyekto na agad umani ng atensyon mula sa pandaigdigang midya. Subalit, minadali ang pagtatayo ng Manila Film Center, na nauwi sa mga padalus-dalos na desisyon gaya ng pagpapatuloy ng konstruksiyon kahit kulang sa kahandaan. Habang ginagawa ang ikaanim na palapag, gumuho ang istruktura at marami sa mga manggagawa ang na-trap at bumaon sa mabilis matuyong semento. Ayon sa ilang ulat, piniling ipagpatuloy ang konstruksiyon sa halip na iligtas ang mga biktima, at tinambakan na lamang ng bagong semento ang lugar upang ituloy ang pagtatayo (Magno 1998, 172).
 
     Ang trahedyang ito ay nananatiling isa sa mga pinakakontrobersyal na bahagi ng kasaysayan ng proyektong pangkultura ng Marcos regime. Bagamat itinayo ito bilang simbolo ng sining at pag-unlad, ang Manila Film Center ay naging paalala ng kawalang-habag at sakripisyo ng buhay ng mga manggagawang Pilipino alang-alang sa imahe ng modernidad. Tulad ng CCP at PICC, ito ay bahagi ng arkitekturang monumental ng Bagong Lipunan—malalaking estruktura na may layuning ipakita ang kapangyarihan, kaunlaran, at pambansang prestihiyo. Ngunit sa kabila ng marangyang disenyo, dala rin nito ang bigat ng kasaysayan at ang mga boses ng mga naisantabi sa ngalan ng propaganda.`,
     price: "Varies by event (₱200-₱1,000)",
@@ -245,30 +254,21 @@ const infrastructures = [
     reviews: [
       {
         id: 1,
-        name: "Rafael Ocampo",
-        avatar: "https://randomuser.me/api/portraits/men/77.jpg",
-        date: "October 5, 2024",
-        rating: 3,
-        comment: "The structure is showing its age, but there's something special about watching performances in this historic venue. The acoustics are surprisingly good for an open-air theater.",
-        helpful: 19
+        name: "Anonymous",
+        avatar: "/images/Reviewer/Anonymous.jpg",
+        date: "January 5, 1996",
+        rating: 1,
+        comment: "Nawalan ako ng ama dahil sa trahedyang pagguho ng Manila Film Center. Hindi ito basta tourist spot—ito’y libingan ng mga kaluluwang kinalimutan, na isinakripisyo para sa isang maluho at mapanlinlang na proyekto. Hindi madaling tumayo rito at isipin na ang bawat haligi ay itinayo sa ibabaw ng mga katawan, at hanggang ngayon, walang hustisya. Hindi ko mairerekomenda ang pagbisita sa lugar na ito na puno ng kasaysayan ng kalupitan at pagwawalang-bahala sa buhay ng tao",
+        helpful: 169
       },
       {
         id: 2,
-        name: "Isabella Reyes",
-        avatar: "https://randomuser.me/api/portraits/women/12.jpg",
-        date: "September 18, 2024",
-        rating: 4,
-        comment: "I attended a traditional dance performance here and was struck by how the venue itself feels like part of Philippine cultural history. The fact that it was built in just 77 days is remarkable, regardless of one's political views.",
-        helpful: 24
-      },
-      {
-        id: 3,
-        name: "Diego Macaraeg",
-        avatar: "https://randomuser.me/api/portraits/men/29.jpg",
-        date: "August 22, 2024",
-        rating: 4,
-        comment: "As an architecture student, I appreciate Locsin's design principles evident in this structure. While not as well-maintained as it could be, the Folk Arts Theater remains an important piece of Philippine architectural history.",
-        helpful: 33
+        name: "Imelda Marcos",
+        avatar: "/images/Reviewer/Imelda.jpg",
+        date: "January 4, 1996",
+        rating: 5,
+        comment: "Napakaganda ng Manila Film Center! Isang simbolo ito ng pangarap at karangyaan, na itinayo para iangat ang kultura at sining ng bansa. Hindi dapat magpatalo sa mga intriga at negatibong balita tungkol dito. Sa halip, bisitahin ninyo at damhin ang kagandahan at legacy na naiwan ko. Wala nang makakapantay dito!",
+        helpful: 15012
       }
     ],
     features: [
@@ -306,30 +306,29 @@ const infrastructures = [
     reviews: [
       {
         id: 1,
-        name: "Luis Villanueva",
+        name: "Shane Saludares",
         avatar: "https://randomuser.me/api/portraits/men/62.jpg",
         date: "October 15, 2024",
-        rating: 3,
-        comment: "A haunting reminder of the human cost of rushed development. The building has an undeniably eerie atmosphere, especially knowing its history. Worth seeing from the outside, though interior access is limited.",
+        rating: 1,
+        comment: `Ang pagkakagawa sa Coconut Palace ay detalyado at malinaw na pinag-isipan mula sa konsepto hanggang sa disenyo. Ginamit dito ang niyog—isang puno na may malaking papel sa ekonomiya at kultura ng Pilipinas. Sa katunayan, madalas itong tinatawag na "Tree of Life" dahil halos lahat ng bahagi nito ay may gamit: mula sa kahoy, ugat, balat, bao, bulaklak, bunga, hanggang sa dagta. Ang malikhaing paggamit sa bawat bahagi ng niyog sa pagbuo ng palasyo ay tunay na kahanga-hanga, at nagbibigay ng pambihirang pagkakakilanlan sa estruktura. Dahil dito, maraming turista at bisita ang naaakit sa lugar, at maari itong maging mapagkakakitaang venue para sa mga pagtitipon, kasalan, o iba pang mahahalagang okasyon.
+
+        Gayunpaman, kung masusuri natin ang kasaysayan sa likod ng Coconut Palace, mas mauunawaan natin ang masalimuot na kahulugan nito. Ang pagpapatayo ng palasyo ay hindi lamang tungkol sa sining at likha, kundi tungkol din sa pampulitikang imahe at propaganda. Makikita rito ang tinatawag na "edifice complex", kung saan ang mga lider ay may labis na pagnanais na magpatayo ng mga engrandeng gusali upang ipakita ang kaunlaran, kapangyarihan, at karangyaan—kahit na taliwas ito sa aktwal na kalagayan ng bayan.
+
+        Ipinatayo ni Imelda Marcos ang Coconut Palace upang ipakita sa Pope John Paul II ang isang maganda at mayamang mukha ng Pilipinas. Ngunit sa halip na humanga, tinanggihan ng Santo Papa ang alok na tumuloy sa palasyo. Sa kanyang simpleng desisyon, nakita ang kanyang katalinuhan, malasakit, at paninindigan sa prinsipyo. Naiintindihan niya ang realidad ng kahirapang nararanasan ng mga Pilipino noong panahong iyon, at hindi siya pumayag na makiisa sa isang palabas ng karangyaan habang naghihirap ang nakararami.
+
+        Sa huli, ang Coconut Palace ay isang istrukturang maaaring hangaan sa aspetong arkitektural, ngunit nagiging simbolo rin ito ng mapanlinlang na representasyon ng yaman—isang magandang mukha na tumatakip sa tunay na sakit ng lipunan. Isa itong paalala kung paanong ang kagandahan ng isang gusali ay maaring magtago ng masalimuot na katotohanan ng kasaysayan.`,
         helpful: 41
       },
       {
         id: 2,
-        name: "Teresa Domingo",
-        avatar: "https://randomuser.me/api/portraits/women/39.jpg",
+        name: "Anonymous",
+        avatar: "/images/Reviewer/Anonymous.jpg",
         date: "September 27, 2024",
         rating: 2,
-        comment: "The neglect of this building is evident. While historically significant, it's sad to see it in such a state of disrepair. The tragic stories associated with its construction make it a somber place to visit.",
+        comment: `Sa panahon ng inaasahang pagbisita ni Pope John Paul II sa Pilipinas, ipinag-utos ni dating Unang Ginang Imelda Marcos ang pagpapatayo ng isang gusali bilang kanyang  matutuluyan—ang tinatawag ngayong Coconut Palace.
+
+        Nang makita niya  ito, hindi niya  maikailang ito ay isang engrandeng obra—marangya at puno ng simbolismo ng likas na yaman ng bansa, lalo na ang niyog. Ngunit sa kanyang  pagtanaw sa kapaligiran at kalagayan ng mga mamamayan, tila ba ang karangyaan ng gusaling ito ay malayo sa katotohanang kinasasapitan ng maraming Pilipino.`,
         helpful: 27
-      },
-      {
-        id: 3,
-        name: "Gabriel Santos",
-        avatar: "https://randomuser.me/api/portraits/men/15.jpg",
-        date: "August 30, 2024",
-        rating: 4,
-        comment: "As someone interested in both architecture and dark history, I found the Manila Film Center fascinating. The neoclassical design contrasts starkly with its tragic past. It deserves preservation as a historical site, regardless of one's view of the era that produced it.",
-        helpful: 36
       }
     ],
     features: [
