@@ -18,7 +18,7 @@
 
 <section class="about-hero">
   <div class="overlay"></div>
-  <div class="container">
+  <div class="container hero-container">
     <div class="hero-content" in:fade={{ duration: 800 }}>
       <h1>Tungkol sa GuiltTripAdvisor</h1>
       <p class="subtitle">Exploring the Complex Legacy of the Marcos Era Infrastructure</p>
@@ -135,16 +135,28 @@
   }
 
   .about-hero {
+    height: 400px;
+    background-image: url('https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-5);
+    padding: 0 var(--space-2);
     position: relative;
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
   }
 
-  .about-hero .overlay {
+  .about-hero h1 {
+    color: white;
+  }
+
+  .overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
@@ -153,6 +165,7 @@
 
   .hero-content {
     position: relative;
+    color: white;
     z-index: 1;
   }
 
