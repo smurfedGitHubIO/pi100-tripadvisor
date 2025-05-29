@@ -104,7 +104,7 @@
       <div class="sidebar">
         {#if isVisible}
           <div class="info-card" in:fly={{ y: 20, duration: 500 }}>
-            <h3>Entry Fee</h3>
+            <h3>Halaga ng Pagpapatayo</h3>
             <p class="price">{infrastructure.price}</p>
           </div>
           

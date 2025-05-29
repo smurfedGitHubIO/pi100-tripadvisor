@@ -28,13 +28,13 @@ export const infrastructures: Infrastructure[] = [
     id: 1,
     slug: 'cultural-center-of-the-philippines',
     name: 'Cultural Center of the Philippines',
-    location: 'Samar-Leyte, Philippines',
-    year: '1973',
-    shortDescription: 'Iconic bridge connecting Samar and Leyte islands, often cited as a symbol of progress during the Marcos era.',
+    location: 'Pasay City, Metro Manila',
+    year: '1966',
+    shortDescription: 'Sentro ng sining at kultura sa Maynila na itinaguyod ni Imelda Marcos, bilang simbolo ng modernidad at pambansang karangalan.',
     description: `Ang Cultural Center of the Philippines o Sentrong Pangkultura ng Pilipinas (CCP) ay itinatag noong 1966 sa utos ni Imelda Marcos, ang dating Unang Ginang ng Pilipinas, sa ilalim ng administrasyon ni Pangulong Ferdinand Marcos. Layunin nitong maging pangunahing institusyon para sa pangalaga, pagtataguyod, at pagpapaunlad ng sining at kulturang Pilipino. Nais ng CCP na gawing abot-kaya ang sining para sa mas maraming mamamayan at itanghal ang Pilipinas sa pandaigdigang entablado ng sining at kultura.
     Dinisenyo ng Pambansang Alagad ng Sining para sa Arkitektura na si Leandro V. Locsin, ang CCP ay pormal na binuksan noong 1969 sa pamamagitan ng isang engrandeng pagtatanghal na pinamagatang Golden Salakot: Isang Dularawan. Ito ang pinakaunang estrukturang itinayo bilang bahagi ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kagandahan, at modernidad ang lungsod ng Maynila.\n
     Hindi lamang ito simpleng gusali para sa pagtatanghal. Kasama ng iba pang mga proyektong tulad ng Folk Arts Theater at Philippine International Convention Center (PICC), ang CCP ay bahagi ng mas malawak na arkitekturang monumental. Ito ay binubuo ng mga estrukturang may malalaking sukat, modernong disenyo, at matitibay na materyales na may layuning ipakita ang kapangyarihan at kaunlaran ng Bagong Lipunan.`,
-    price: 'Free for pedestrians, regular toll fees for vehicles',
+    price: 'Php 35,000,000',
     rating: 2.2,
     images: [
       '/images/Infra/CCP/1.JPG',
@@ -79,13 +79,13 @@ export const infrastructures: Infrastructure[] = [
     id: 2,
     slug: 'folk-arts-theater',
     name: 'Folk Arts Theater',
-    location: 'Manila, Philippines',
-    year: '1969',
+    location: 'Pasay City, Metro Manila',
+    year: '1974',
     shortDescription: 'Premier cultural institution showcasing Filipino arts and international performances, built during the Marcos administration.',
     description: `Ang Folk Arts Theater, na kilala ngayon bilang Tanghalang Francisco Balagtas, ay matatagpuan sa loob ng Cultural Center of the Philippines (CCP) Complex. Ipinatayo ito noong 1974 sa utos ni Imelda Marcos, bilang tugon sa desisyong idaos sa Pilipinas ang Miss Universe 1974. Bukod sa pagiging venue ng Miss Universe, nakita rin ni Imelda ang teatro bilang isang permanenteng tahanan ng sining, isang espasyo kung saan maipapamalas at mapapalaganap ang pagiging malikhain ng mga Pilipino. Ang layunin nito ay itanghal, isulong, at ipagdiwang ang kulturang Pilipino, habang nagsisilbi rin bilang isang entablado para sa mga lokal at internasyonal na pagtatanghal.\n
     Dinisenyo ito ng Pambansang Alagad ng Sining sa Arkitektura na si Leandro Locsin at itinayo sa loob lamang ng 77 araw, isang pambihirang gawaing iniuugnay sa matayog na bisyon ng administrasyong Marcos. Sa oras ng pagkakakumpleto, ito ang naging pinakamalaking single-span building sa buong bansa. Ang arkitektura nito ay nagpapakita ng estilong brutalismo na makikita sa malawak nitong bubong at sa mga kongkretong pader.\n
     Hindi maikakaila ang malalim na ugnayan ng gusali sa bisyon at propaganda ng rehimeng Marcos. Bahagi ito ng tinaguriang "edifice complex" ni Imelda, ang pagkahumaling sa pagtatayo ng malalaking gusali bilang simbolo ng kaunlaran at modernong imahe ng bansa. Tulad ng ibang gusali sa CCP Complex, ginamit ang teatro bilang entablado ng mga seremonyang pampubliko na naglalayong magpakita ng pagkakaisa at lehitimasyon ng administrasyon.`,
-    price: 'Varies by performance (₱300-₱5,000), free entrance to some exhibits',
+    price: 'Php 50,000,000',
     rating: 2.05,
     images: [
       '/images/Infra/Folk Arts Theater/1.jpg',
@@ -137,13 +137,13 @@ export const infrastructures: Infrastructure[] = [
     id: 3,
     slug: 'picc',
     name: 'Philippine International Convention Center',
-    location: 'Morong, Bataan, Philippines',
-    year: '1976-1984',
+    location: 'Pasay City, Metro Manila',
+    year: '1980',
     shortDescription: 'Never-activated nuclear facility that became one of the most controversial projects of the Marcos regime.',
     description: `Ang ideya para sa PICC ay nagsimula kay Imelda Marcos matapos niyang mapagtanto na itinuturing ang Pilipinas bilang posibleng lugar para sa mga pandaigdigang kumperensya ng United Nations. Kinumpirma ang mga kaisipang ito noong 1976 nang magpasya ang Pilipinas na maging host ng pinagsamang pagpupulong ng World Bank-IMF. Simula noon, ang PICC ay nag-host ng iba't ibang mahahalagang kaganapan tulad ng Miss Universe 1994 Pageant, World Bank’s International Monetary Fund Annual Meeting, APEC Summit, ASEAN Summit, World Law Conference, at iba't ibang konsiyerto.\n
     Nagsimula ang konstruksyon ng PICC noong Setyembre 1974. Idinisenyo ito ni Leandro V. Locsin (isang Filipino National Artist) kasama ang Trans-Asia Philippines Inc. bilang mga inhinyero at ang H. R. Lopez Company bilang tagapamahala ng proyekto. Ang arkitektura nito ay brutalist, at ang napakalaki, parihabang harapan, patag na bloke, at paggamit ng mga cantilever ay nagbibigay-diin sa natatanging istilo ni Locsin. Natapos ito sa loob lamang ng dalawang taon, bahagyang dahil sa panggigipit ni Imelda, at pinasinayaan noong Setyembre 1976.\n
     Ang PICC ay isa sa mga unang high-tech, "futuristic" na gusali sa bansa dahil sa mataas na antas ng teknikal na sopistikasyon nito para sa dekada 1970. Ito rin ay naging isa sa mga pangunahing kultural at arkitektural na simbolo ng Pilipinas at nagtataglay ng mahahalagang koleksyon ng sining mula sa ilan sa mga kilalang artista ng bansa. Dahil tanyag ang gusali at regular na ginagamit para sa iba’t ibang kaganapan, nakaranas ang PICC ng ilang insidente sa seguridad sa nakaraan, kabilang ang aksidenteng pagkalabit ng baril noong 2019 at isang banta sa bomba noong 2023. Matagumpay na nalutas ang parehong banta nang medyo mabilis at mahusay.\n`,
-    price: '₱1,500-₱2,000 for guided tours',
+    price: 'USD 65,000,000',
     rating: 2,
     images: [
       '/images/Infra/PICC/1.jpg',
@@ -189,7 +189,7 @@ export const infrastructures: Infrastructure[] = [
     id: 4,
     slug: 'philcite',
     name: 'PHILCITE',
-    location: 'Quezon City, Philippines',
+    location: 'Pasay City, Metro Manila',
     year: '1975',
     shortDescription: 'Specialized hospital for cardiovascular care established during the Marcos administration.',
     description: `Pinagawa ni Imelda ang Philippine Center for International Trade and Exhibitions (PHILCITE) dahil hinangad niyang magkaroon ng espasyo para sa internasyonal na kalakalan. Katulad ng karamihan sa mga gusali ng CCP Complex, ang PHILCITE ay dinisenyo ni Leandro Locsin. Mayroon itong lawak na 5,400 square meters at taas na 16 meters. Patunay sa pagka-engrande ng gusali ang pagkakaroon nito ng modernong information center, mahigit 10 exhibition areas, at anim na project screens.\n
@@ -250,14 +250,14 @@ export const infrastructures: Infrastructure[] = [
     id: 5,
     slug: 'manila-film-center',
     name: 'Manila Film Center',
-    location: 'Manila, Philippines',
-    year: '1974',
+    location: 'Pasay City, Metro Manila',
+    year: '1981',
     shortDescription: 'Open-air performance venue built in record time for the 1974 Miss Universe Pageant hosted during the Marcos regime.',
     description: `Ang Manila Film Center ay itinayo noong 1981 sa utos ni Imelda Marcos. Layunin nitong maging pangunahing tanghalan ng pelikulang Pilipino at pandaigdigang sinema, at magsilbing sentro ng kaalaman at pagpapalitan ng kultura sa pamamagitan ng pelikula. Isa ito sa mga pangunahing proyekto ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kultura, at modernidad ang lungsod ng Maynila.\n
     Dinisenyo ni Froilan Hong at pinangasiwaan ng pintor at direktor na si Behn Cervantes bilang artistic director, ang Manila Film Center ay itinayo sa loob lamang ng 77 araw upang umabot sa deadline ng unang Manila International Film Festival noong Enero 1982. Sa kabila ng pagmamadali sa konstruksyon, isinagawa ito sa istilong Neoclassical at ginamitan ng mga modernong materyales upang bigyang anyo ang isang makabagong templong pangkultura.\n
     Sa hangarin ni Imelda Marcos na gawing pelikulang kabisera ng Asya ang Maynila na maihahambing sa Cannes, inilunsad ang proyekto na agad umani ng atensyon mula sa pandaigdigang midya. Subalit, minadali ang pagtatayo ng Manila Film Center, na nauwi sa mga padalus-dalos na desisyon gaya ng pagpapatuloy ng konstruksiyon kahit kulang sa kahandaan. Habang ginagawa ang ikaanim na palapag, gumuho ang istruktura at marami sa mga manggagawa ang na-trap at bumaon sa mabilis matuyong semento. Ayon sa ilang ulat, piniling ipagpatuloy ang konstruksiyon sa halip na iligtas ang mga biktima, at tinambakan na lamang ng bagong semento ang lugar upang ituloy ang pagtatayo (Magno 1998, 172).\n
     Ang trahedyang ito ay nananatiling isa sa mga pinakakontrobersyal na bahagi ng kasaysayan ng proyektong pangkultura ng Marcos regime. Bagamat itinayo ito bilang simbolo ng sining at pag-unlad, ang Manila Film Center ay naging paalala ng kawalang-habag at sakripisyo ng buhay ng mga manggagawang Pilipino alang-alang sa imahe ng modernidad. Tulad ng CCP at PICC, ito ay bahagi ng arkitekturang monumental ng Bagong Lipunan—malalaking estruktura na may layuning ipakita ang kapangyarihan, kaunlaran, at pambansang prestihiyo. Ngunit sa kabila ng marangyang disenyo, dala rin nito ang bigat ng kasaysayan at ang mga boses ng mga naisantabi sa ngalan ng propaganda.`,
-    price: 'Varies by event (₱200-₱1,000)',
+    price: 'USD 25,000,000',
     rating: 1.65,
     images: [
       '/images/Infra/Manila Film Center/1.jpg',
@@ -299,14 +299,14 @@ export const infrastructures: Infrastructure[] = [
     id: 6,
     slug: 'tahanang-filipino',
     name: 'Tahanang Filipino (Coconut Palace)',
-    location: 'Manila, Philippines',
-    year: '1981-1982',
+    location: 'Pasay City, Metro Manila',
+    year: '1978',
     shortDescription: 'Controversial structure rushed for completion, known for a tragic construction accident and alleged paranormal activity.',
     description: `Ang Coconut Palace ay ipinag-utos ipatayo noong 1978 ng dating First Lady Imelda Marcos bilang paghahanda sa inaasahang pagbisita ni Pope John Paul II. Layunin nitong ipakita ang ganda at yaman ng Pilipinas sa pamamagitan ng isang gusaling nakatuon sa gamit ng niyog—isa sa pangunahing likas na yaman ng bansa. Kaiba sa iba pang mga gusali na idinisenyo ni Leandro Locsin, ang Coconut Palace ay disenyo ni Francisco Mañosa. Ang pagkakaiba nila ay makikita sa istilo ng arkitektura: habang si Locsin ay kilala sa modernong estilo, ginamit ni Mañosa sa Coconut Palace ang lokal at katutubong materyales at tradisyunal na konsepto, lalo na ang paggamit ng niyog bilang pangunahing elemento sa gusali.  Ang gusali ay gawa sa humigit-kumulang 70% ng mga produktong niyog na sumailalim pa sa mga kemikal na proseso, kabilang ang kahoy, ugat, puno, balat, bunga, bulaklak, at bao ng niyog.\n
     Subalit sa kabila ng engrandeng disenyo at layunin, tinanggihan ng Santo Papa ang alok na manatili sa Coconut Palace. Ayon sa kanya, hindi nararapat ang ganitong karangyaan sa isang bansang lugmok sa matinding kahirapan.\n
     Ang Coconut Palace ay isang malaking proyekto na gumamit ng tinatayang 2,000 puno ng niyog na higit sa 70 taon na ang tanda. Ang bubong ay gawa sa mga tabla ng niyog, ang mga haligi ay mula sa katawan ng puno, at ang mga pader ay binuo gamit ang tinatawag na “coconut bricks” na hinaluan ng hibla ng lana at semento mula sa balat ng niyog. Bukod pa rito, ang gate ng palasyo ay pinalamutian ng mga heometrikong disenyo mula sa mahigit 4,000 balat ng niyog. Sa loob ng palasyo, makikita rin ang iba’t ibang produkto mula sa niyog. Isa sa mga tampok nito ay ang 36-na talampakang hapag-kainan na nilagyan ng 47,000 piraso ng balat ng niyog na may iba’t ibang hugis.\n
     Matapos ang pagkakatapos nito noong 1981, nagsilbi ang Coconut Palace sa iba’t ibang layunin: mula sa pagiging opisina ng pamahalaan, hanggang sa lunan ng mga sosyal at opisyal na pagtitipon.`,
-    price: 'Not regularly open to the public; special event prices vary',
+    price: 'Php 37,000,000',
     rating: 2.5,
     images: [
       '/images/Infra/Tahanang Filipino (Coconut Palace)/1.jpg',
