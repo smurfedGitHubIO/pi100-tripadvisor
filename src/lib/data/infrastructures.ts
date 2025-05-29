@@ -36,8 +36,8 @@ export const infrastructures: Infrastructure[] = [
     price: 'Php 35,000,000',
     rating: 2.2,
     images: [
-      '/images/Infra/CCP/1.JPG',
-      '/images/Infra/CCP/2.jpg',
+      '/images/Infra/CCP/1.jpg',
+      '/images/Infra/CCP/2.JPG',
       '/images/Infra/CCP/3.jpg',
       '/images/Infra/CCP/4.jpg',
       '/images/Infra/CCP/5.JPG',
