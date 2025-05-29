@@ -25,7 +25,7 @@ export const teamMembers: TeamMember[] = [
     id: 3,
     name: 'Angel Gelangre',
     role: 'Architectural Photographer',
-    bio: 'PI100 Student.',
+    bio: 'Always in tune with nature.',
     image: '/images/Team/Gelangre.jpeg'
   },
   {
