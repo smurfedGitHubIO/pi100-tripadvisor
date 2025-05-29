@@ -120,6 +120,7 @@
     <li>Roads, Christopher. 1981. “The Manila National Film Centre: Philippines - (mission).” Development of communication systems, programmes and technologies 4. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000047235" target="_blank">https://unesdoc.unesco.org/ark:/48223/pf0000047235</a>.</li>
     <li>Rubel, Jeffrey. 2023. “The Cultural Center of the Philippines.” The Curiosity Cabinet. <a href="https://jeffreyrubel.substack.com/p/the-cultural-center-of-the-philippines" target="_blank">https://jeffreyrubel.substack.com/p/the-cultural-center-of-the-philippines</a>.</li>
     <li>SOC Staff. 2016. “10 Things You Didn’t Know About the Philippine International Convention Center (PICC).” Accessed 22 May 2025. <a href="https://www.swirlingovercoffee.com/10-things-you-didnt-know-about-the-philippine-international-convention-center-picc/" target="_blank">https://www.swirlingovercoffee.com/10-things-you-didnt-know-about-the-philippine-international-convention-center-picc/</a>.</li>
+    <li>Veloso-Yap, Veronica T. 1976. “Tribute to artists: The National Arts Center.” Pamana 21. Manila: Cultural Center of the Philippines.</li>
     <li>VERA Files. 2016. “The Elizalde Family.” Media Ownership Monitor Philippines 2016. Last modified November 16, 2016. <a href="https://philippines-2016.mom-gmr.org/en/owners/individual-owners/detail/owner/owner/show/the-elizalde-family/" target="_blank">https://philippines-2016.mom-gmr.org/en/owners/individual-owners/detail/owner/owner/show/the-elizalde-family/</a>.</li>
   </ul>
   </div>
