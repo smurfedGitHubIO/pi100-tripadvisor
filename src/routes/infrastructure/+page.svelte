@@ -62,7 +62,7 @@
 
   .infrastructure-hero {
     height: 400px;
-    background-image: url('https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg');
+    background-image: url('https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -89,6 +89,10 @@
     padding: var(--space-2);
   }
   
+  h1 {
+    color: white
+  }
+
   .hero-content h1 {
     font-size: 3rem;
     margin-bottom: var(--space-2);
