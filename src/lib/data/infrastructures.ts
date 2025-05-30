@@ -48,8 +48,8 @@ export const infrastructures: Infrastructure[] = [
       {
         id: 1,
         name: 'Angel Reve Gelangre',
-        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-        date: 'October 12, 2024',
+        avatar: '/images/Team/Gelangre.jpeg',
+        date: 'July 8, 2023',
         rating: 1,
         comment: `Ang Cultural Center of the Philippines (CCP) ay isang estrukturang itinayo hindi lamang para sa sining at kultura kundi bilang simbolo ng kapangyarihan, ambisyon at pagpapakitang-gilas ng rehimeng Marcos. Sa kabila ng pormal na layunin nitong itaguyod ang kultura ng Pilipinas, ang CCP ay naging sagisag ng elitismo at eksklusibong akses sa sining na hindi abot ng karaniwang mamamayan.\n
         Hindi maikakailang nagbigay ang CCP ng plataporma para sa maraming artistikong produksyon, ngunit hindi nito binubura ang katotohanang ito’y bunga ng maluhong ambisyon at layuning pampulitika. Ang gusaling ito ay itinatag sa isang panahong ginamit ang sining upang patahimikin ang masa at pagandahin ang imahe ng isang diktadurya. Ngayon, habang patuloy ang operasyon ng CCP bilang institusyong pangkultura, ang anino ng kasaysayan nito ay nananatili.`,
@@ -99,7 +99,7 @@ export const infrastructures: Infrastructure[] = [
       {
         id: 1,
         name: 'Angel Gelangre',
-        avatar: '/images/Team/Gelangre.jpg',
+        avatar: '/images/Team/Gelangre.jpeg',
         date: 'October 20, 2024',
         rating: 5,
         comment: `Ang Folk Arts Theater ay isa na namang monumento ng ilusyon ng diktadurya. Itinayo ito sa loob lamang ng 77 araw para ipagdaos ang Miss Universe Pageant noong 1974, isang palabas na isinagawa sa gitna ng matinding krisis pang-ekonomiya, kawalan ng trabaho, at lumalalang karahasang pulitikal sa ilalim ng Batas Militar. Habang libo-libong Pilipino ang naghihirap sa lansangan, pinilit ang konstruksyon ng gusaling ito sa pamamagitan ng sapilitang paggawa at paggamit ng pondo mula sa kaban ng bayan. Ipinagmalaki ang proyekto bilang patunay ng kaunlaran ng Pilipinas sa mata ng mundo, subalit ang katotohanan ay isa itong pagtatangkang tabunan ang bulok na sistemang umiiral sa ilalim ng rehimeng Marcos. Ginamit ang sining bilang instrumento ng propaganda, isang paraan upang palabasin na maayos at masigla ang kalagayan ng bansa kahit na salungat ito sa nararanasan ng karaniwang mamamayan.\n
@@ -306,7 +306,7 @@ export const infrastructures: Infrastructure[] = [
       {
         id: 1,
         name: 'Shane Saludares',
-        avatar: 'https://randomuser.me/api/portraits/men/62.jpg',
+        avatar: '/images/Team/Saludares.jpg',
         date: 'October 15, 2024',
         rating: 1,
         comment: `Ang pagkakagawa sa Coconut Palace ay detalyado at malinaw na pinag-isipan mula sa konsepto hanggang sa disenyo. Ginamit dito ang niyog—isang puno na may malaking papel sa ekonomiya at kultura ng Pilipinas. Sa katunayan, madalas itong tinatawag na "Tree of Life" dahil halos lahat ng bahagi nito ay may gamit: mula sa kahoy, ugat, balat, bao, bulaklak, bunga, hanggang sa dagta. Ang malikhaing paggamit sa bawat bahagi ng niyog sa pagbuo ng palasyo ay tunay na kahanga-hanga, at nagbibigay ng pambihirang pagkakakilanlan sa estruktura. Dahil dito, maraming turista at bisita ang naaakit sa lugar, at maari itong maging mapagkakakitaang venue para sa mga pagtitipon, kasalan, o iba pang mahahalagang okasyon.\n
