@@ -131,7 +131,7 @@ export const infrastructures: Infrastructure[] = [
     name: 'Philippine International Convention Center',
     location: 'Pasay City, Metro Manila',
     visiting_time: 'Depende sa reserbasyon; sa kasalukuyang pinapaayos.',
-    year: '1980',
+    year: '1976',
     shortDescription: 'Itinayo ang Philippine International Convention Center (PICC) noong 1976 bilang kauna-unahang convention center sa Asya, at nananatili itong aktibong ginagamit para sa mga malalaking kaganapan hanggang ngayon.',
     description: `Ang ideya para sa PICC ay nagsimula kay Imelda Marcos matapos niyang mapagtanto na itinuturing ang Pilipinas bilang posibleng lugar para sa mga pandaigdigang kumperensya ng United Nations. Kinumpirma ang mga kaisipang ito noong 1976 nang magpasya ang Pilipinas na maging host ng pinagsamang pagpupulong ng World Bank-IMF. Simula noon, ang PICC ay nag-host ng iba't ibang mahahalagang kaganapan tulad ng Miss Universe 1994 Pageant, World Bank’s International Monetary Fund Annual Meeting, APEC Summit, ASEAN Summit, World Law Conference, at iba't ibang konsiyerto.\n
     Nagsimula ang konstruksyon ng PICC noong Setyembre 1974. Idinisenyo ito ni Leandro V. Locsin (isang Filipino National Artist) kasama ang Trans-Asia Philippines Inc. bilang mga inhinyero at ang H. R. Lopez Company bilang tagapamahala ng proyekto. Ang arkitektura nito ay brutalist, at ang napakalaki, parihabang harapan, patag na bloke, at paggamit ng mga cantilever ay nagbibigay-diin sa natatanging istilo ni Locsin. Natapos ito sa loob lamang ng dalawang taon, bahagyang dahil sa panggigipit ni Imelda, at pinasinayaan noong Setyembre 1976.\n
