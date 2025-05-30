@@ -6,6 +6,7 @@ export interface Infrastructure {
   year: string;
   description: string;
   shortDescription: string;
+  visiting_time: string;
   price: string;
   rating: number;
   images: string[];
@@ -29,6 +30,7 @@ export const infrastructures: Infrastructure[] = [
     slug: 'cultural-center-of-the-philippines',
     name: 'Cultural Center of the Philippines',
     location: 'Pasay City, Metro Manila',
+    visiting_time: 'Bukas pa rin sa publiko ngunit kasalukuyang isinailalim sa malawakang renovation simula 2022. Sa kabila nito, ang CCP ay nagpapatuloy sa paghahandog ng mga palabas, eksibit, at programa.',
     year: '1966',
     shortDescription: 'Ang Cultural Center of the Philippines (CCP) ay ipinagawa noong 1969 bilang pangunahing tanghalan ng sining at kultura sa bansa at nananatiling aktibo hanggang ngayon bilang sentro ng mga pagtatanghal at gawaing kultural.',
     description: `Ang Cultural Center of the Philippines o Sentrong Pangkultura ng Pilipinas (CCP) ay itinatag noong 1966 sa utos ni Imelda Marcos, ang dating Unang Ginang ng Pilipinas, sa ilalim ng administrasyon ni Pangulong Ferdinand Marcos. Layunin nitong maging pangunahing institusyon para sa pangalaga, pagtataguyod, at pagpapaunlad ng sining at kulturang Pilipino. Nais ng CCP na gawing abot-kaya ang sining para sa mas maraming mamamayan at itanghal ang Pilipinas sa pandaigdigang entablado ng sining at kultura.\n
@@ -78,6 +80,7 @@ export const infrastructures: Infrastructure[] = [
     slug: 'folk-arts-theater',
     name: 'Folk Arts Theater',
     location: 'Pasay City, Metro Manila',
+    visiting_time: 'Mula noong 2020, nananatiling permanenteng nakasara ang gusali bunsod ng pandemya at hindi na muling binuksan mula noon. Kabilang ito sa mga estrukturang isinailalim sa malawakang redevelopment program ng Cultural Center of the Philippines.',
     year: '1974',
     shortDescription: 'Ipinatayo ni Imelda Marcos ang Folk Arts Theater noong 1974 para sa Miss Universe pageant at kalaunan ay ginamit bilang entablado ng mga iba’t ibang pagtatanghal.',
     description: `Ang Folk Arts Theater, na kilala ngayon bilang Tanghalang Francisco Balagtas, ay matatagpuan sa loob ng Cultural Center of the Philippines (CCP) Complex. Ipinatayo ito noong 1974 sa utos ni Imelda Marcos, bilang tugon sa desisyong idaos sa Pilipinas ang Miss Universe 1974. Bukod sa pagiging venue ng Miss Universe, nakita rin ni Imelda ang teatro bilang isang permanenteng tahanan ng sining, isang espasyo kung saan maipapamalas at mapapalaganap ang pagiging malikhain ng mga Pilipino. Ang layunin nito ay itanghal, isulong, at ipagdiwang ang kulturang Pilipino, habang nagsisilbi rin bilang isang entablado para sa mga lokal at internasyonal na pagtatanghal.\n
@@ -127,6 +130,7 @@ export const infrastructures: Infrastructure[] = [
     slug: 'picc',
     name: 'Philippine International Convention Center',
     location: 'Pasay City, Metro Manila',
+    visiting_time: 'Depende sa reserbasyon; sa kasalukuyang pinapaayos.',
     year: '1980',
     shortDescription: 'Itinayo ang Philippine International Convention Center (PICC) noong 1976 bilang kauna-unahang convention center sa Asya, at nananatili itong aktibong ginagamit para sa mga malalaking kaganapan hanggang ngayon.',
     description: `Ang ideya para sa PICC ay nagsimula kay Imelda Marcos matapos niyang mapagtanto na itinuturing ang Pilipinas bilang posibleng lugar para sa mga pandaigdigang kumperensya ng United Nations. Kinumpirma ang mga kaisipang ito noong 1976 nang magpasya ang Pilipinas na maging host ng pinagsamang pagpupulong ng World Bank-IMF. Simula noon, ang PICC ay nag-host ng iba't ibang mahahalagang kaganapan tulad ng Miss Universe 1994 Pageant, World Bank’s International Monetary Fund Annual Meeting, APEC Summit, ASEAN Summit, World Law Conference, at iba't ibang konsiyerto.\n
@@ -179,13 +183,14 @@ export const infrastructures: Infrastructure[] = [
     slug: 'philcite',
     name: 'PHILCITE',
     location: 'Pasay City, Metro Manila',
-    year: '1975',
+    year: '1976',
+    visiting_time: 'Permanenteng sarado.',
     shortDescription: 'Ang gusali ay ipinagawa noong 1976 ni Imelda Marcos para maging espasyo ng internasyonal na kalakalan. Ngayon, demolished na ang gusali at pinalitan ng komersyal na amusement park, ang Star City.',
     description: `Pinagawa ni Imelda ang Philippine Center for International Trade and Exhibitions (PHILCITE) dahil hinangad niyang magkaroon ng espasyo para sa internasyonal na kalakalan. Katulad ng karamihan sa mga gusali ng CCP Complex, ang PHILCITE ay dinisenyo ni Leandro Locsin. Mayroon itong lawak na 5,400 square meters at taas na 16 meters. Patunay sa pagka-engrande ng gusali ang pagkakaroon nito ng modernong information center, mahigit 10 exhibition areas, at anim na project screens.\n
     Sang-ayon sa tema ng mga gusaling ipinatayo sa ilalim ni Imelda, ang PHILCITE ay tinawag ng dating First Lady na “Forum for Filipino Enterprise” bilang “nostalgic allegory” para sa ancient Rome at “utopian metaphor” para sa New Society ng mga Marcos.\n
     Ngunit, ang gusali–katulad ng ibang mga gusali sa CCP Complex–ay naging sanhi ng malaking pangungutang mga Marcos sa mga international financial institutions. Mula rin sa Proclamation No. 1611 noong January 21, 1977, isinautos ni Marcos Sr. ang Chamber of Commerce na magsagawa ng malawakang fund campaign para lamang matugunan ang mga gastos para sa Philippine International Trade Fair na isinagawa sa PHILCITE.\n
     Sa huli, ang PHILCITE ay dinemolish noong 1990’s at pinalitan ng Star City ng mga Elizalde.`,
-    price: 'Varies by medical service (both private and public options available)',
+    price: 'USD 65,000,000',
     rating: 1.95,
     images: [
       '/images/Infra/PHILCITE/1.png',
@@ -231,6 +236,7 @@ export const infrastructures: Infrastructure[] = [
     slug: 'manila-film-center',
     name: 'Manila Film Center',
     location: 'Pasay City, Metro Manila',
+    visiting_time: 'Bukas mula 8AM hanggang 9PM, Lunes hanggang Sabado at sarado naman tuwing Linggo',
     year: '1981',
     shortDescription: 'Naging isang “mass mausoleum” matapos malibing ang ilang mga trabahador dahil sa gumuhong bubong noong 1981. Tanda ang gusali sa maluhong karakter ni Imelda na handang isakripisyo ang buhay ng mga mas nakabababa upang makuha ang kanyang gusto. ',
     description: `Ang Manila Film Center ay itinayo noong 1981 sa utos ni Imelda Marcos. Layunin nitong maging pangunahing tanghalan ng pelikulang Pilipino at pandaigdigang sinema, at magsilbing sentro ng kaalaman at pagpapalitan ng kultura sa pamamagitan ng pelikula. Isa ito sa mga pangunahing proyekto ng tinaguriang “City of Man,” ang grandyosong bisyon ni Imelda Marcos na gawing sentro ng sining, kultura, at modernidad ang lungsod ng Maynila.\n
@@ -280,6 +286,7 @@ export const infrastructures: Infrastructure[] = [
     slug: 'tahanang-filipino',
     name: 'Tahanang Filipino (Coconut Palace)',
     location: 'Pasay City, Metro Manila',
+    visiting_time: 'Bukas tuwing Martes hanggang Linggo mula 9AM hanggang 4:30PM.',
     year: '1978',
     shortDescription: 'Ninais ni Imelda ng isang “100 percent” na Pilipinong bahay. Umabot sa 37 million pesos ang paggawa sa Coconut Palace na binubuo ng 70 percent na coconut at 30 percent na indigenous materials.',
     description: `Ang Coconut Palace ay ipinag-utos ipatayo ng dating First Lady Imelda Marcos upang matupad ang hangarin niyang “100 percent Filipino house.” Layunin nitong ipakita ang ganda at yaman ng Pilipinas sa pamamagitan ng isang gusaling nakatuon sa gamit ng niyog—isa sa pangunahing likas na yaman ng bansa. Kaiba sa iba pang mga gusali na idinisenyo ni Leandro Locsin, ang Coconut Palace ay disenyo ni Francisco Mañosa. Ang pagkakaiba nila ay makikita sa istilo ng arkitektura: habang si Locsin ay kilala sa modernong estilo, ginamit ni Mañosa sa Coconut Palace ang lokal at katutubong materyales at tradisyunal na konsepto, lalo na ang paggamit ng niyog bilang pangunahing elemento sa gusali.  Ang gusali ay gawa sa humigit-kumulang 70% ng mga produktong niyog na sumailalim pa sa mga kemikal na proseso, kabilang ang kahoy, ugat, puno, balat, bunga, bulaklak, at bao ng niyog.\n

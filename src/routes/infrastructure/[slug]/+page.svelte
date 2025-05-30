@@ -110,8 +110,7 @@
           
           <div class="info-card" in:fly={{ y: 20, duration: 500, delay: 100 }}>
             <h3>Best Time to Visit</h3>
-            <p>Weekday mornings to avoid crowds</p>
-            <p>Golden hour (late afternoon) for best photography</p>
+            <p>{infrastructure.visiting_time}</p>
           </div>
         {/if}
       </div>

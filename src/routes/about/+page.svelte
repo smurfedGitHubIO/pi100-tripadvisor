@@ -44,10 +44,16 @@
         Ang Cultural Center of the Philippines (CCP) Complex ay maituturing na kauna-unahang pambansang teatro ng Pilipinas matapos makamit ang kasarinlan. Orihinal itong planong itayo sa Quezon City bilang bahagi ng proyektong pangkultura ng Philippine-American Cultural Foundation. Gayunman, hindi ito natuloy, ngunit ito ay muling iminungkahi ni Unang Ginang Imelda Marcos noong 1965.
       </p>
       <p>
-        Itinayo ito sa nabawing lupain sa Manila Bay, at umabot sa ₱65 milyon ang gastos sa konstruksyon. Isinagawa ito sa isang panahong puno ng pagbabagong pampulitika at pangkultura. Ayon kay urban planning scholar Gavin Shatkin, idinisenyo ang CCP upang mapahanga ang lokal at pandaigdigang bisita sa laki at karangyaan nito—isang simbolo ng ambisyon ng administrasyong Marcos.
+        Itinayo ito sa nabawing 28-hectare na lupain sa Manila Bay, at ayon kay Gerard Lico (2003), mismong sa permanenteng pagbabago pa lang ng kaanyuan ng coastal urban landscape ay makikita na ang diktatoryal na kapangyarihan na nais ipakita ng rehimeng Marcos. Matatagpuan sa complex na ito ang iba’t ibang proyektong ipinagawa ni Imelda Marcos gamit ang dayuhang utang. Bagama’t snagpakita ito ng tila kaunlaran, sa katunayan, lalong lumubha ang krisis sa ekonomiya ng Pilipinas.
       </p>
       <p>
-        Subalit sa likod ng marangyang disenyo ay nakatago ang mga kontrobersiya. Ang orihinal na badyet ay ₱15 milyon lamang ngunit tumaas ito hanggang ₱50 milyon, dahilan upang umutang ng $7 milyon mula sa ibang bansa. Isa lamang ito sa maraming proyektong ipinagawa ni Imelda Marcos gamit ang dayuhang utang. Bagama’t nagpakita ito ng tila kaunlaran, lalong lumubha ang krisis sa ekonomiya ng Pilipinas.
+        Habang abala sa pagtatayo ng mga engrandeng gusali, napabayaan ang mga pangunahing pangangailangan ng mga mamamayan—lalo na ang pabahay sa lungsod ng Maynila. Maraming mahihirap ang pinaalis upang bigyang-daan ang mga proyektong ito. Sa ganitong konteksto isinilang ang terminong “edifice complex,” na ipinakilala ng artistang si Behn Cervantes, upang ilarawan ang paggamit ng mga Marcos ng mga gusali bilang pampulitikang propaganda.
+      </p>
+      <p>
+        Hindi lamang ito nagdulot ng problemang pinansyal at panlipunan, kundi pati trahedya katulad ng nangyari sa Manila Film Center tragedy.
+      </p>
+      <p>
+        Patunay ang mga gusali sa CCP Complex na kahit ang mga gusali ay makikitaan ng korupsyon at pananamantala ng mga nasa kapangyarihan. 
       </p>
     </div>
   </div>
